@@ -1,7 +1,13 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  return <h1>ZeroDay Alliance SNU</h1>;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/cli" element={<Cli />}></Route>
+    </Routes>
+  );
 }
 
 export default App;
