@@ -1,29 +1,55 @@
 .header {
-  height: rem(60px);
+  height: rem(80px);
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
-  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-bottom: rem(1px) solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+}
+
+.image11 {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50px;
+}
+
+.header1 {
+  text-decoration: none;
+  color: white;
 }
 
 .link {
+  color: white;
   display: flex;
   align-items: center;
   height: 100%;
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   text-decoration: none;
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-weight: 500;
   font-size: var(--mantine-font-size-sm);
 
   @media (max-width: $mantine-breakpoint-sm) {
+    color: black;
     height: rem(42px);
     width: 100%;
   }
+  .change {
+    background-color: white;
+  }
 
   @mixin hover {
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    background-color: light-dark(
+      var(--mantine-color-gray-0),
+      var(--mantine-color-dark-6)
+    );
+    color: black;
   }
+}
+
+.draw {
+  background: linear-gradient(90deg, #071726 22%, #0a3642 68%, #0b4752 84%);
 }
 
 .subLink {
@@ -32,15 +58,27 @@
   border-radius: var(--mantine-radius-md);
 
   @mixin hover {
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+    background-color: light-dark(
+      var(--mantine-color-gray-0),
+      var(--mantine-color-dark-6)
+    );
+    color: black;
   }
 }
 
 .dropdownFooter {
-  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+  background-color: light-dark(
+    var(--mantine-color-gray-0),
+    var(--mantine-color-dark-7)
+  );
   margin: calc(var(--mantine-spacing-md) * -1);
   margin-top: var(--mantine-spacing-sm);
   padding: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);
   padding-bottom: var(--mantine-spacing-xl);
-  border-top: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+  border-top: rem(1px) solid
+    light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+}
+
+.m_d4fb9cad {
+  background-color: white;
 }
