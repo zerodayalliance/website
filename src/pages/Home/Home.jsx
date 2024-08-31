@@ -1,4 +1,4 @@
-import { MantineProvider} from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import Navbar from "../../components/Navbar";
 import Hero from "../../components/Hero";
@@ -7,7 +7,7 @@ import Faq from "../../components/FAQ";
 
 function Home() {
   return (
-    <MantineProvider>
+    <MantineProvider defaultColorScheme="dark">
       <Navbar />
       <Hero />
       <Faq />
