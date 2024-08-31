@@ -18,7 +18,7 @@ const Navbar = () => {
     useDisclosure(false);
 
   return (
-    <Box pb={80}>
+    <Box >
       <header className={classes.header}>
         <Group className={classes.appNameContainer} justify="space-around" h="100%">
           <Group>
