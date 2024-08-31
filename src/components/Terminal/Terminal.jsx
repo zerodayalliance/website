@@ -9,12 +9,15 @@ import "./Terminal.modules.css";
 const Terminal = () => {
   const [cmd, setCmd] = useState("");
   const cmdRef = useRef("");
-  const [history, setHistory] = useState([<Prompt />, <StdIn cmd={cmd} />]);
+  const [history, setHistory] = useState([
+    <Prompt key="hs0" />,
+    <StdIn cmd={cmd} key="hs1" />,
+  ]);
 
   const clearTerminal = () => {
     cmdRef.current = "";
     setCmd("");
-    setHistory([<Prompt />, <StdIn cmd="" />]);
+    setHistory([<Prompt key="shs0" />, <StdIn cmd="" key="shs1" />]);
   };
 
   const handleCmdInput = (e) => {
