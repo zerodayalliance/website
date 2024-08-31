@@ -3,7 +3,15 @@ import { IconPlus } from '@tabler/icons-react';
 import classes from './Faq.module.css';
 
 const placeholder =
-  'It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon. It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies. It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.';
+  'The community aims to bring together students interested in cybersecurity to learn, share knowledge, and work on projects focused on protecting information systems and networks.';
+const placeholder2 =
+  'Any student from our college, regardless of major or experience level, can join. We welcome both beginners and advanced members.';
+const placeholder3 =
+  'You can join by attending our events, signing up on our official website, or contacting one of the community leaders.';
+const placeholder4 =
+  'We organize workshops, hackathons, guest lectures, and Capture The Flag (CTF) competitions.';
+const placeholder5 =
+  'No prior experience is needed! Our events cater to all skill levels, so beginners are welcome';
 
 const Faq = () => {
   return (
@@ -27,28 +35,28 @@ const Faq = () => {
           }
         >
           <Accordion.Item className={classes.item} value="reset-password">
-            <Accordion.Control>How can I reset my password?</Accordion.Control>
+            <Accordion.Control>What is the purpose of the Cybersecurity Community?</Accordion.Control>
             <Accordion.Panel>{placeholder}</Accordion.Panel>
           </Accordion.Item>
 
           <Accordion.Item className={classes.item} value="another-account">
-            <Accordion.Control>Can I create more than one account?</Accordion.Control>
-            <Accordion.Panel>{placeholder}</Accordion.Panel>
+            <Accordion.Control>Who can join the community?</Accordion.Control>
+            <Accordion.Panel>{placeholder2}</Accordion.Panel>
           </Accordion.Item>
 
           <Accordion.Item className={classes.item} value="newsletter">
-            <Accordion.Control>How can I subscribe to the monthly newsletter?</Accordion.Control>
-            <Accordion.Panel>{placeholder}</Accordion.Panel>
+            <Accordion.Control>How do I join the community?</Accordion.Control>
+            <Accordion.Panel>{placeholder3}</Accordion.Panel>
           </Accordion.Item>
 
           <Accordion.Item className={classes.item} value="credit-card">
-            <Accordion.Control>Do you store credit card information securely?</Accordion.Control>
-            <Accordion.Panel>{placeholder}</Accordion.Panel>
+            <Accordion.Control>What activities does the community organize?</Accordion.Control>
+            <Accordion.Panel>{placeholder4}</Accordion.Panel>
           </Accordion.Item>
 
           <Accordion.Item className={classes.item} value="payment">
-            <Accordion.Control>What payment systems do you work with?</Accordion.Control>
-            <Accordion.Panel>{placeholder}</Accordion.Panel>
+            <Accordion.Control>Do I need prior experience in cybersecurity to participate?</Accordion.Control>
+            <Accordion.Panel>{placeholder5}</Accordion.Panel>
           </Accordion.Item>
         </Accordion>
       </Container>
