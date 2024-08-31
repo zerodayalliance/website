@@ -32,7 +32,7 @@ const faqs = [
 
 const Faq = () => {
   return (
-    <div className={classes.wrapper}  id='faq'>
+    <div className={classes.wrapper} id='faq'>
       <Container size="sm">
         <Title ta="center" className={classes.title}>
           Frequently Asked Questions
@@ -44,7 +44,15 @@ const Faq = () => {
           chevronSize={26}
           variant="separated"
           disableChevronRotation
-          styles={{ label: { color: 'var(--mantine-color-black)' }, item: { border: 0 } }}
+          styles={{
+            label: { color: 'var(--mantine-color-black)' },
+            item: {
+              border: 0,
+              backgroundColor: 'white', // Add white background here
+              borderRadius: rem(8),
+              padding: `${rem(12)} ${rem(16)}`, // Add padding for a better look
+            },
+          }}
           chevron={
             <ThemeIcon radius="xl" className={classes.gradient} size={26}>
               <IconPlus style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
