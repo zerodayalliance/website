@@ -8,13 +8,11 @@
   padding: calc(var(--mantine-spacing-xl) * 2);
   background-color: var(--mantine-color-dark-8);
 
-
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     padding: var(--mantine-spacing-xl);
   }
 }
-
 
 .image {
   max-width: 40%;
@@ -34,11 +32,8 @@
 }
 
 .title {
-  
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Greycliff CF, var(--mantine-font-family);
   line-height: 1;
   margin-bottom: var(--mantine-spacing-md);
 }
@@ -62,4 +57,17 @@
 .control {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  font-weight: 500;
+  font-size: var(--mantine-font-size-sm);
+  padding-left: var(--mantine-spacing-sm);
+  padding-right: var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  width: 20%;
+  color: white;
+  background-color: var(--mantine-color-indigo-6);
+  border: none;
+  @mixin hover {
+    background-color: var(--mantine-color-indigo-7);
+  }
 }
