@@ -1,4 +1,4 @@
-import { MantineProvider, Container, Title } from "@mantine/core";
+import { MantineProvider} from "@mantine/core";
 import "@mantine/core/styles.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
