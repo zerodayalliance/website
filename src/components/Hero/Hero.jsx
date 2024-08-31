@@ -1,7 +1,7 @@
 import back from "/src/assets/back.png";
-import "./Home1.css";
+import "./Hero.css";
 
-const Home1 = () => {
+const Hero = () => {
   return (
     <div className="fullcontent" id="home">
       <div className="left-content">
@@ -17,4 +17,4 @@ const Home1 = () => {
   );
 };
 
-export default Home1;
+export default Hero;
