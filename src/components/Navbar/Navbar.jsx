@@ -20,11 +20,11 @@ const Navbar = () => {
   return (
     <Box pb={80}>
       <header className={classes.header}>
-        <Group justify="space-around" h="100%">
+        <Group className={classes.appNameContainer} justify="space-around" h="100%">
           <Group>
-            <img className={classes.image11} src={logo} alt="Logo" />
+            <img className={classes.logo} src={logo} alt="Logo" />
             <h3>
-              <a href="/" className={classes.header1}>
+              <a href="/" className={classes.appName}>
                 ZERODAY ALLIANCE
               </a>
             </h3>
@@ -81,10 +81,10 @@ const Navbar = () => {
             Events
           </a>
           <a href="#" className={classes.link}>
-            Team
+            Teams
           </a>
           <a href="#" className={classes.link}>
-            FAQS
+            FAQs
           </a>
           <a href="#" className={classes.link}>
             Contact
