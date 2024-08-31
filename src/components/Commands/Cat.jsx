@@ -2,9 +2,6 @@ import classes from "./Commands.module.css";
 
 const Cat = (props) => {
   let { fileName } = props;
-
-  if (!fileName) return;
-
   fileName = fileName.trim();
   fileName.toLowerCase();
 
