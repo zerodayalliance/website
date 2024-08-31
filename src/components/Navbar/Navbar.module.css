@@ -5,6 +5,10 @@
   border-bottom: rem(1px) solid
     light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .image11 {
