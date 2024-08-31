@@ -1,0 +1,7 @@
+.description {
+  padding-bottom: 5px;
+}
+
+.catList li {
+  list-style-position: inside;
+}
