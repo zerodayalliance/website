@@ -4,6 +4,8 @@ import "./StdIn.modules.css";
 const StdIn = (props) => {
   const { cmd } = props;
 
+  if (!cmd) return;
+
   return (
     <>
       <span className="inCharacter">{inCharacter} </span>
