@@ -9,6 +9,13 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -19,66 +26,55 @@
 }
 
 .appName {
+  font-size: var(--mantine-font-size-xl);
+  font-weight: 500;
   text-decoration: none;
   color: white;
 }
 
 .link {
-  color: white;
   display: flex;
   align-items: center;
-  height: 100%;
-  padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
+  font-size: var(--mantine-font-size-sm);
+  padding-left: var(--mantine-spacing-sm);
+  padding-right: var(--mantine-spacing-sm);
   text-decoration: none;
   font-weight: 500;
-  font-size: var(--mantine-font-size-sm);
+  height: 100%;
+  color: white;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    color: black;
     height: rem(42px);
+    border-radius: 0px;
     width: 100%;
   }
+
   .change {
     background-color: white;
   }
 
   @mixin hover {
-    background-color: light-dark(
-      var(--mantine-color-gray-4),
-      var(--mantine-color-dark-3)
-    );
-    color: black;
+    background-color: rgba(170, 170, 170, 0.2);
+    border-radius: var(--mantine-radius-md);
+  }
+}
+
+.cliButton {
+  font-weight: 500;
+  font-size: var(--mantine-font-size-sm);
+  padding-left: var(--mantine-spacing-sm);
+  padding-right: var(--mantine-spacing-sm);
+  border-radius: var(--mantine-radius-md);
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  background-color: var(--mantine-color-indigo-6);
+
+  @mixin hover {
+    background-color: var(--mantine-color-indigo-7);
   }
 }
 
 .draw {
   background: linear-gradient(90deg, #071726 22%, #0a3642 68%, #0b4752 84%);
-}
-
-.subLink {
-  width: 100%;
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
-  border-radius: var(--mantine-radius-md);
-
-  @mixin hover {
-    background-color: light-dark(
-      var(--mantine-color-gray-0),
-      var(--mantine-color-dark-6)
-    );
-    color: black;
-  }
-}
-
-.dropdownFooter {
-  background-color: light-dark(
-    var(--mantine-color-gray-0),
-    var(--mantine-color-dark-7)
-  );
-  margin: calc(var(--mantine-spacing-md) * -1);
-  margin-top: var(--mantine-spacing-sm);
-  padding: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);
-  padding-bottom: var(--mantine-spacing-xl);
-  border-top: rem(1px) solid
-    light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
 }
