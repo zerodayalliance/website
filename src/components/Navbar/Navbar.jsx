@@ -9,18 +9,19 @@ import {
   rem,
 } from "@mantine/core";
 import logo from "/src/assets/logo1.jpg";
+import { IconTerminal2 } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
-
 import classes from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
   return (
-    <Box >
+    <Box pb={60}>
       <header className={classes.header}>
-        <Group className={classes.appNameContainer} justify="space-around" h="100%">
+        <Group className={classes.container} justify="space-around" h="100%">
           <Group>
             <img className={classes.logo} src={logo} alt="Logo" />
             <h3>
@@ -38,10 +39,10 @@ const Navbar = () => {
               Events
             </a>
             <a href="#" className={classes.link}>
-              Team
+              Teams
             </a>
             <a href="#" className={classes.link}>
-              FAQS
+              FAQs
             </a>
             <a href="#" className={classes.link}>
               Contact
@@ -49,7 +50,15 @@ const Navbar = () => {
           </Group>
 
           <Group visibleFrom="sm">
-            <Button variant="default">CLI</Button>
+            <Link to="/cli">
+              <Button
+                leftSection={<IconTerminal2 />}
+                variant="default"
+                className={classes.cliButton}
+              >
+                CLI
+              </Button>
+            </Link>
           </Group>
 
           <Burger
@@ -66,14 +75,12 @@ const Navbar = () => {
         opened={drawerOpened}
         onClose={closeDrawer}
         size="100%"
-        padding="md"
-        title="Zeroday Alliance"
+        title="ZeroDay Alliance"
         hiddenFrom="sm"
         zIndex={1000000}
       >
-        <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
+        <ScrollArea>
           <Divider my="sm" />
-
           <a href="#" className={classes.link}>
             Home
           </a>
@@ -92,8 +99,16 @@ const Navbar = () => {
 
           <Divider my="sm" />
 
-          <Group justify="center" grow pb="xl" px="md">
-            <Button variant="default">CLI</Button>
+          <Group grow justify="center" pb="xl">
+            <Link to="/cli">
+              <Button
+                leftSection={<IconTerminal2 />}
+                variant="default"
+                className={classes.cliButton}
+              >
+                CLI
+              </Button>
+            </Link>
           </Group>
         </ScrollArea>
       </Drawer>
