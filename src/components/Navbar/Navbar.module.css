@@ -1,20 +1,24 @@
 .header {
-  height: rem(80px);
+  height: rem(60px);
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   border-bottom: rem(1px) solid
     light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-.image11 {
-  height: 50px;
-  width: 50px;
+.logo {
+  height: 30px;
+  width: 30px;
   border: none;
-  border-radius: 50px;
+  border-radius: 50%;
 }
 
-.header1 {
+.appName {
   text-decoration: none;
   color: white;
 }
@@ -41,8 +45,8 @@
 
   @mixin hover {
     background-color: light-dark(
-      var(--mantine-color-gray-0),
-      var(--mantine-color-dark-6)
+      var(--mantine-color-gray-4),
+      var(--mantine-color-dark-3)
     );
     color: black;
   }
@@ -77,8 +81,4 @@
   padding-bottom: var(--mantine-spacing-xl);
   border-top: rem(1px) solid
     light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
-}
-
-.m_d4fb9cad {
-  background-color: white;
 }
