@@ -1,9 +1,6 @@
 name: Linter
 
-on:
-  push:
-    branches-ignore:
-      - main
+on: [pull_request]
 
 jobs:
   lint:
