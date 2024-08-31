@@ -32,19 +32,22 @@ const Navbar = () => {
           </Group>
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+            <a href="/#home" className={classes.link}>
               Home
             </a>
-            <a href="#" className={classes.link}>
+            <a href="/#about" className={classes.link}>
+              About
+            </a>
+            <a href="/#events" className={classes.link}>
               Events
             </a>
-            <a href="#" className={classes.link}>
+            <a href="/#teams" className={classes.link}>
               Teams
             </a>
-            <a href="#" className={classes.link}>
+            <a href="/#faq" className={classes.link}>
               FAQs
             </a>
-            <a href="#" className={classes.link}>
+            <a href="/#contact" className={classes.link}>
               Contact
             </a>
           </Group>
@@ -81,19 +84,22 @@ const Navbar = () => {
       >
         <ScrollArea>
           <Divider my="sm" />
-          <a href="#" className={classes.link}>
+          <a href="/#home" className={classes.link}>
             Home
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/#about" className={classes.link}>
+            About
+          </a>
+          <a href="/#events" className={classes.link}>
             Events
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/#teams" className={classes.link}>
             Teams
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/#faq" className={classes.link}>
             FAQs
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/#contact" className={classes.link}>
             Contact
           </a>
 
