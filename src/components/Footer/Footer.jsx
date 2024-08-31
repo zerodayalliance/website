@@ -1,27 +1,69 @@
-import { Container, Group, ActionIcon, rem } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-
+import { Anchor, Group, ActionIcon, rem } from '@mantine/core';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
 import classes from './Footer.module.css';
+import logo from "/src/assets/logo1.jpg";
+const links = [
+  { link: '#', label: 'Contact' },
+  { link: '#', label: 'Privacy' },
+  { link: '#', label: 'Blog' },
+  { link: 'https://zeroday-alliance.pages.dev/', label: 'Website' }, // Added website link
+  { link: '#', label: 'Careers' },
+];
 
 const Footer = () => {
+  const items = links.map((link) => (
+    <Anchor
+      c="dimmed"
+      key={link.label}
+      href={link.link}
+      lh={1}
+      onClick={(event) => event.preventDefault()}
+      size="sm"
+    >
+      {link.label}
+    </Anchor>
+  ));
+
   return (
     <div className={classes.footer}>
-      <Container className={classes.inner}>
-        {/* <MantineLogo size={28} /> */}
-        <Group gap={0} className={classes.links} justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandTwitter style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+      <div className={classes.inner}>
+        {/* <MantineLogo  size={28} /> */}
+        <img className={classes.image11} src={logo} alt="Logo" />
+
+        <Group className={classes.links}>{items}</Group>
+
+        <Group gap="xs" justify="flex-end" wrap="nowrap">
+          <ActionIcon
+            size="lg"
+            variant="default"
+            radius="xl"
+            component="a"
+            href="https://github.com/ZeroDay-Alliance-SNU" 
+          >
+            <IconBrandGithub style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+          <ActionIcon
+            size="lg"
+            variant="default"
+            radius="xl"
+            component="a"
+            href="https://www.linkedin.com/company/zeroday-alliance-snu/"
+          >
+            <IconBrandLinkedin style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon
+            size="lg"
+            variant="default"
+            radius="xl"
+            component="a"
+            href="https://www.instagram.com/zerodayalliance"
+          >
             <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
           </ActionIcon>
         </Group>
-      </Container>
+      </div>
     </div>
   );
 }
 
-export default Footer
+export default Footer;
