@@ -9,7 +9,7 @@ function Home() {
   return (
     <MantineProvider>
       <Navbar />
-      <Faq></Faq>
+      <Faq/>
       <Footer/>
     </MantineProvider>
   );
