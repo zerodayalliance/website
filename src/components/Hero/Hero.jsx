@@ -1,4 +1,4 @@
-import { Text, Title, TextInput, Button, Image } from '@mantine/core';
+import { Text, Title, Button, Image } from '@mantine/core';
 // import image from './image.svg';
 import logo from "/src/assets/back.png";
 import classes from './Hero.module.css';
