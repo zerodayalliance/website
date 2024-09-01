@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   align-items: center;
-  padding: calc(var(--mantine-spacing-xl) * 2);
+  padding: calc(var(--mantine-spacing-xl) * 4);
 
   background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
 

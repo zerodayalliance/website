@@ -3,10 +3,10 @@ import { IconBrandInstagram, IconBrandLinkedin, IconBrandGithub } from '@tabler/
 import classes from './Footer.module.css';
 import logo from "/src/assets/logo1.jpg";
 const links = [
-  { link: '#', label: 'Contact' },
-  { link: '#', label: 'Privacy' },
+  { link: '#', label: 'Code Of conduct' },
+  { link: '#', label: 'Gallery' },
   { link: '#', label: 'Blog' },
-  { link: 'https://zeroday-alliance.pages.dev/', label: 'Website' }, // Added website link
+  // { link: 'https://zeroday-alliance.pages.dev/', label: 'Website' }, // Added website link
   { link: '#', label: 'Careers' },
 ];
 
