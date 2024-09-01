@@ -1,0 +1,31 @@
+.container {
+  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: rem(15px) calc(var(--mantine-spacing-xl) * 1) rem(100px)
+    calc(var(--mantine-spacing-xl) * 1);
+}
+
+.heading {
+  text-align: center;
+  padding: var(--mantine-spacing-xl) 0;
+}
+
+.teamName {
+  text-align: center;
+}
+
+.teamMembers {
+  padding: var(--mantine-spacing-xl) var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  background-color: rgba(190, 190, 190, 0.1);
+}
+
+.memberCard {
+  height: rem(300px);
+  width: rem(225px);
+  padding: var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  background-color: rgba(40, 40, 40, 1);
+}
