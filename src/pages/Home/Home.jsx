@@ -1,4 +1,4 @@
-import { Center, Flex, MantineProvider } from "@mantine/core";
+import {  MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import Navbar from "../../components/Navbar";
 import Hero from "../../components/Hero";
@@ -13,7 +13,7 @@ function Home() {
       <Navbar />
       <Hero />
       <About />
-      {/* <Events/> */}
+      <Events/>
       <Faq />
       <Footer />
     </MantineProvider>
