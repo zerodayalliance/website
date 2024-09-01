@@ -43,3 +43,12 @@
     flex: 1 1 100%;
   }
 }
+.title1 {
+  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  color: var(--mantine-color-white);
+  font-size: 52px;
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+
+}
