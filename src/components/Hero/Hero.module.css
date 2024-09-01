@@ -4,7 +4,7 @@
   display: flex;
   align-items: center; /* Vertically center the content */
   justify-content: center; /* Horizontally center the content */
-  height: 30rem; /* Make the wrapper take full viewport height */
+  height: 75vh; /* Make the wrapper take full viewport height */
   padding: calc(var(--mantine-spacing-xl) * 2);
   background-color: var(--mantine-color-dark-8);
 

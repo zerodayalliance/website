@@ -32,9 +32,9 @@ const Navbar = () => {
           </Group>
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="/#home" className={classes.link}>
+            {/* <a href="/#home" className={classes.link}>
               Home
-            </a>
+            </a> */}
             <a href="/#about" className={classes.link}>
               About
             </a>

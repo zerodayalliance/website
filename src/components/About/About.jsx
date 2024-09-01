@@ -7,7 +7,7 @@ const About = () => {
     <div className={classes.wrapper}>
       <div className={classes.body}>
         <Title className={classes.title}>Know More About Us...</Title>
-        <Text fz="sm" c="dimmed">
+        <Text fz="md" c="dimmed">
           Welcome to ZeroDay Alliance, where SNU students passionate about
           cybersecurity and ethical hacking come together to learn about the
           latest security trends and zero-day vulnerabilities, collaborate on
