@@ -17,15 +17,15 @@
 .image {
   max-width: 40%;
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    max-width: 100%;
+  @media (max-width: 768px) { /* Adjusted for consistency */
+    display: none; /* Hide image on mobile */
   }
 }
 
 .body {
   padding-right: calc(var(--mantine-spacing-xl) * 4);
 
-  @media (max-width: $mantine-breakpoint-sm) {
+  @media (max-width: 768px) { /* Adjusted for consistency */
     padding-right: 0;
     margin-top: var(--mantine-spacing-xl);
   }
