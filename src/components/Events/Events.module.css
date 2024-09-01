@@ -1,0 +1,45 @@
+.cardsContainer {
+  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mantine-spacing-md);
+  padding: calc(var(--mantine-spacing-xl) * 2);
+}
+
+.card {
+  flex: 1 1 calc(33.3333% - var(--mantine-spacing-md));
+  background-color: var(--mantine-color-body);
+  
+}
+
+.rating {
+  position: absolute;
+  top: var(--mantine-spacing-xs);
+  right: rem(12px);
+  pointer-events: none;
+}
+
+.title {
+  display: block;
+  margin-top: var(--mantine-spacing-md);
+  margin-bottom: rem(5px);
+}
+
+.action {
+  background-color: var(--mantine-color-gray-0);
+}
+
+.action:hover {
+  background-color: var(--mantine-color-gray-1);
+}
+
+.footer {
+  margin-top: var(--mantine-spacing-md);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
