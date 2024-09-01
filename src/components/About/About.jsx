@@ -4,9 +4,9 @@ import classes from "./About.module.css";
 
 const About = () => {
   return (
-    <div className={classes.wrapper}>
+    <div id="about" className={classes.wrapper}>
       <div className={classes.body}>
-        <Title className={classes.title}>About US</Title>
+        <Title className={classes.title}>About Us</Title>
         <Text fz="md" c="dimmed">
           Welcome to ZeroDay Alliance, where SNU students passionate about
           cybersecurity and ethical hacking come together to learn about the

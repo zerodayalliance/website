@@ -6,7 +6,6 @@ import {
   Burger,
   Drawer,
   ScrollArea,
-  rem,
 } from "@mantine/core";
 import logo from "/src/assets/logo1.jpg";
 import { IconTerminal2 } from "@tabler/icons-react";
@@ -32,24 +31,21 @@ const Navbar = () => {
           </Group>
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            {/* <a href="/#home" className={classes.link}>
-              Home
-            </a> */}
-            <a href="/#about" className={classes.link}>
+            <Link to="/#about" className={classes.link}>
               About
-            </a>
-            <a href="/#events" className={classes.link}>
+            </Link>
+            <Link to="/#events" className={classes.link}>
               Events
-            </a>
-            <a href="/#teams" className={classes.link}>
+            </Link>
+            <Link to="/teams" className={classes.link}>
               Teams
-            </a>
-            <a href="/#faq" className={classes.link}>
+            </Link>
+            <Link to="/#faq" className={classes.link}>
               FAQs
-            </a>
-            <a href="/#contact" className={classes.link}>
+            </Link>
+            <Link to="/#contact" className={classes.link}>
               Contact
-            </a>
+            </Link>
           </Group>
 
           <Group visibleFrom="sm">
@@ -84,24 +80,21 @@ const Navbar = () => {
       >
         <ScrollArea>
           <Divider my="sm" />
-          <a href="/#home" className={classes.link}>
-            Home
-          </a>
-          <a href="/#about" className={classes.link}>
+          <Link to="/#about" className={classes.link}>
             About
-          </a>
-          <a href="/#events" className={classes.link}>
+          </Link>
+          <Link to="/#events" className={classes.link}>
             Events
-          </a>
-          <a href="/#teams" className={classes.link}>
+          </Link>
+          <Link to="/teams" className={classes.link}>
             Teams
-          </a>
-          <a href="/#faq" className={classes.link}>
+          </Link>
+          <Link to="/#faq" className={classes.link}>
             FAQs
-          </a>
-          <a href="/#contact" className={classes.link}>
+          </Link>
+          <Link to="/#contact" className={classes.link}>
             Contact
-          </a>
+          </Link>
 
           <Divider my="sm" />
 

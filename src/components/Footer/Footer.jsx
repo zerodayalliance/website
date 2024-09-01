@@ -1,13 +1,15 @@
-import { Anchor, Group, ActionIcon, rem } from '@mantine/core';
-import { IconBrandInstagram, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
-import classes from './Footer.module.css';
+import { Anchor, Group, ActionIcon, rem } from "@mantine/core";
+import {
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandGithub,
+} from "@tabler/icons-react";
+import classes from "./Footer.module.css";
 import logo from "/src/assets/logo1.jpg";
 const links = [
-  { link: '#', label: 'Code Of conduct' },
-  { link: '#', label: 'Gallery' },
-  { link: '#', label: 'Blog' },
-  // { link: 'https://zeroday-alliance.pages.dev/', label: 'Website' }, // Added website link
-  { link: '#', label: 'Careers' },
+  { link: "#", label: "Code Of Conduct" },
+  { link: "#", label: "Gallery" },
+  { link: "#", label: "Blog" },
 ];
 
 const Footer = () => {
@@ -38,32 +40,44 @@ const Footer = () => {
             variant="default"
             radius="xl"
             component="a"
-            href="https://github.com/ZeroDay-Alliance-SNU" 
+            target="_blank"
+            href="https://github.com/ZeroDay-Alliance-SNU"
           >
-            <IconBrandGithub style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            <IconBrandGithub
+              style={{ width: rem(18), height: rem(18) }}
+              stroke={1.5}
+            />
           </ActionIcon>
           <ActionIcon
             size="lg"
             variant="default"
             radius="xl"
             component="a"
+            target="_blank"
             href="https://www.linkedin.com/company/zeroday-alliance-snu/"
           >
-            <IconBrandLinkedin style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            <IconBrandLinkedin
+              style={{ width: rem(18), height: rem(18) }}
+              stroke={1.5}
+            />
           </ActionIcon>
           <ActionIcon
             size="lg"
             variant="default"
             radius="xl"
             component="a"
+            target="_blank"
             href="https://www.instagram.com/zerodayalliance"
           >
-            <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            <IconBrandInstagram
+              style={{ width: rem(18), height: rem(18) }}
+              stroke={1.5}
+            />
           </ActionIcon>
         </Group>
       </div>
     </div>
   );
-}
+};
 
 export default Footer;
