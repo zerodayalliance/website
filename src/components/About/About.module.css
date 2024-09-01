@@ -1,73 +1,60 @@
 .wrapper {
-  position: relative;
-  padding-top: rem(120px);
-  padding-bottom: rem(80px);
+  display: flex;
+  align-items: center;
+  padding: calc(var(--mantine-spacing-xl) * 2);
+
   background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
 
   @media (max-width: $mantine-breakpoint-sm) {
-    padding-top: rem(80px);
-    padding-bottom: rem(60px);
+    flex-direction: column-reverse;
+    padding: var(--mantine-spacing-xl);
   }
 }
 
-.inner {
-  position: relative;
-  z-index: 1;
+.image {
+  max-width: 40%;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    max-width: 100%;
+    margin-top: 100px;
+  }
+}
+
+.body {
+  padding-right: calc(var(--mantine-spacing-xl) * 4);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding-right: 0;
+    margin-top: var(--mantine-spacing-xl);
+  }
 }
 
 .title {
-  text-align: center;
-  font-weight: 800;
-  font-size: rem(40px);
-  letter-spacing: -1px;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  margin-bottom: var(--mantine-spacing-xs);
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    font-size: rem(28px);
-    text-align: left;
-  }
-}
-
-.highlight {
-  color: light-dark(var(--mantine-color-blue-6), var(--mantine-color-blue-4));
-}
-
-.description {
-  text-align: center;
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    text-align: left;
-    font-size: var(--mantine-font-size-md);
-  }
+  line-height: 1;
+  margin-bottom: var(--mantine-spacing-md);
 }
 
 .controls {
-  margin-top: var(--mantine-spacing-lg);
   display: flex;
-  justify-content: center;
+  margin-top: var(--mantine-spacing-xl);
+}
 
-  @media (max-width: $mantine-breakpoint-xs) {
-    flex-direction: column;
-  }
+.inputWrapper {
+  width: 100%;
+  flex: 1;
+}
+
+.input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
 }
 
 .control {
-  &:not(:first-of-type) {
-    margin-left: var(--mantine-spacing-md);
-    background-color: var(--mantine-color-indigo-6);
-  }
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    height: rem(42px);
-    font-size: var(--mantine-font-size-md);
-
-    &:not(:first-of-type) {
-      margin-top: var(--mantine-spacing-md);
-      margin-left: 0;
-    }
-  }
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }

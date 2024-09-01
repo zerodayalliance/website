@@ -1,40 +1,28 @@
-import { Title, Text, Button, Container } from "@mantine/core";
+import { Text, Title, TextInput, Button, Image } from "@mantine/core";
+import image from "/src/assets/aboutpic.jpeg";
 import classes from "./About.module.css";
 
 const About = () => {
   return (
-    <Container className={classes.wrapper} size={1400}>
-      <div className={classes.inner}>
-        <Title className={classes.title}>Know More About us </Title>
-
-        <Container p={0} size={600}>
-          <Text size="lg" c="dimmed" className={classes.description}>
-            Get to know more about our community from the community profiles
-          </Text>
-        </Container>
+    <div className={classes.wrapper}>
+      <div className={classes.body}>
+        <Title className={classes.title}>Know More About Us...</Title>
+        <Text fz="sm" c="dimmed">
+          Welcome to ZeroDay Alliance, where SNU students passionate about
+          cybersecurity and ethical hacking come together to learn about the
+          latest security trends and zero-day vulnerabilities, collaborate on
+          projects and challenges, share resources and tools, discuss news and
+          strategies, and network with future professionals in the field.
+        </Text>
 
         <div className={classes.controls}>
-          <Button
-            className={classes.control}
-            size="lg"
-            variant="default"
-            color="gray"
-            component="a"
-            href="https://www.linkedin.com/company/zeroday-alliance-snu/"
-          >
-            Linkedin
-          </Button>
-          <Button
-            className={classes.control}
-            size="lg"
-            component="a"
-            href="https://github.com/ZeroDay-Alliance-SNU"
-          >
-            Github
+          <Button className={classes.control1} size="lg">
+            Join The Community
           </Button>
         </div>
       </div>
-    </Container>
+      <Image src={image} className={classes.image} />
+    </div>
   );
 };
 
