@@ -46,6 +46,13 @@ const teams = [
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
       },
       {
+        name: "Hritom Bhattacharya",
+        role: "Cyber Security, Bug Bounty Hunter",
+        bio: "I am just inquisitive about loopholes in the technologies",
+        avatar:
+          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
+      },
+      {
         name: "Mohammed Zoheb",
         role: "Cyber Security",
         bio: "Cyber Security Enthusiast.",
