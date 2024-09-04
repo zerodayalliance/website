@@ -1,6 +1,10 @@
 name: Cloudflare Pages Deployment
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   cf:

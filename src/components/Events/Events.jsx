@@ -1,124 +1,81 @@
-import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
-import { Title } from "@mantine/core";
+import { IconBrandLinkedin, IconBrandInstagram } from "@tabler/icons-react";
 import {
+  Container,
+  Title,
+  SimpleGrid,
   Card,
+  AspectRatio,
   Image,
   Text,
-  ActionIcon,
   Group,
-  Center,
-  Avatar,
+  ActionIcon,
   rem,
-  Button,
 } from "@mantine/core";
 import classes from "./Events.module.css";
 
-const eventData = [
-  {
-    name: "upcoming",
-    time: "NA",
-    meetingLink: "#",
-    mode: "NA",
-    speakerName: "NA",
-  },
-  {
-    name: "To be announced",
-    time: "NA",
-    meetingLink: "NA",
-    mode: "Offline",
-    speakerName: "NA",
-  },
-  {
-    name: "To be announced",
-    time: "NA",
-    meetingLink: "NA",
-    mode: "Online",
-    speakerName: "NA",
-  },
-];
+import { upcomingEvents } from "../../config/events";
 
 const Events = () => {
-  const linkProps = {
-    href: "https://mantine.dev",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  };
-
   return (
-    <div id="events">
-      <Title ta="center" className={classes.title1}>
+    <Container id="events" py="xl" className={classes.container}>
+      <Title className={classes.heading} order={1}>
         Upcoming Events
       </Title>
-      <Group className={classes.cardsContainer}>
-        {eventData.map((event, index) => (
-          <Card key={index} withBorder radius="md" className={classes.card}>
-            <Card.Section>
-              <a {...linkProps}>
-                <Image
-                  src="https://media1.tenor.com/m/-4_cFnz_D3YAAAAC/btc-mechanics-ordinals.gif"
-                  height={200}
-                  fit="cover"
-                />
-              </a>
-            </Card.Section>
-
-            <Text
-              className={classes.title}
-              fw={500}
-              component="a"
-              {...linkProps}
-            >
-              {event.name}
-            </Text>
-
-            <Group justify="space-between" className={classes.footer}>
-              <Center>
-                <Avatar src="" size={34} radius="xl" mr="xs" />
-                <Text fz="sm" inline>
-                  {event.speakerName}
-                </Text>
-              </Center>
-
-              <Group gap={8} mr={0}>
+      <SimpleGrid cols={{ base: 1, sm: 2 }}>
+        {upcomingEvents.map((event, index) => {
+          return (
+            <Card key={index} p="md" radius="md" className={classes.card}>
+              <AspectRatio ratio="auto">
+                <Image width={100} src={event.banner} />
+              </AspectRatio>
+              <Text size="xl" fw={700} className={classes.title} mt={5}>
+                {event.name}
+              </Text>
+              <Text c="dimmed" fw={700}>
+                📅 {event.date}
+              </Text>
+              <Text c="dimmed" fw={700}>
+                ⏲ {event.time}
+              </Text>
+              <Text c="dimmed" size="sm" fw={700}>
+                📳 {event.mode}
+              </Text>
+              <Text c="dimmed" fw={700}>
+                📍 {event.location}
+              </Text>
+              <Group mt={10}>
                 <ActionIcon
-                  className={classes.action}
-                  style={{ backgroundColor: "black" }}
+                  size="lg"
+                  variant="default"
+                  radius="xl"
+                  component="a"
+                  target="_blank"
+                  href={event.linkedin}
                 >
                   <IconBrandLinkedin
-                    style={{ width: rem(16), height: rem(16), color: "white" }}
+                    style={{ width: rem(18), height: rem(18) }}
+                    stroke={1.5}
                   />
                 </ActionIcon>
                 <ActionIcon
-                  className={classes.action}
-                  style={{ backgroundColor: "black" }}
+                  size="lg"
+                  variant="default"
+                  radius="xl"
+                  component="a"
+                  target="_blank"
+                  href={event.instagram}
                 >
-                  <IconBrandGithub
-                    style={{ width: rem(16), height: rem(16), color: "white" }}
+                  <IconBrandInstagram
+                    style={{ width: rem(18), height: rem(18) }}
+                    stroke={1.5}
                   />
                 </ActionIcon>
               </Group>
-            </Group>
-
-            <Text fz="sm" c="dimmed" lineClamp={4}>
-              Date: {event.time}
-            </Text>
-            <Text fz="sm" c="dimmed" lineClamp={4}>
-              Mode: {event.mode}
-            </Text>
-            <Button
-              component="a"
-              href={event.meetingLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="outline"
-              style={{ width: "100%" }}
-            >
-              Join
-            </Button>
-          </Card>
-        ))}
-      </Group>
-    </div>
+            </Card>
+          );
+        })}
+      </SimpleGrid>
+    </Container>
   );
 };
 

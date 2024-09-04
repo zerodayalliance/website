@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   MantineProvider,
   Container,
@@ -15,12 +16,16 @@ import Footer from "../../components/Footer";
 import teams from "./data";
 
 const Teams = () => {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
+
   return (
     <MantineProvider defaultColorScheme="dark">
       <Navbar />
       <Container className={classes.container}>
         <Title className={classes.heading} order={1}>
-          Meet Our Core Teams
+          Our Core Teams
         </Title>
         <Stack align="stretch" justify="center" gap="xl">
           {teams.map((team, index) => {
@@ -68,7 +73,7 @@ const Teams = () => {
           })}
         </Stack>
       </Container>
-      <Footer/>
+      <Footer />
     </MantineProvider>
   );
 };

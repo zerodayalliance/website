@@ -24,9 +24,9 @@ const Navbar = () => {
           <Group>
             <img className={classes.logo} src={logo} alt="Logo" />
             <h3>
-              <a href="/" className={classes.appName}>
+              <Link to="/" className={classes.appName}>
                 ZERODAY ALLIANCE
-              </a>
+              </Link>
             </h3>
           </Group>
 

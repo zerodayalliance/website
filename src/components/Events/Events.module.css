@@ -1,54 +1,27 @@
-.cardsContainer {
+.container {
   background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--mantine-spacing-md);
-  padding: calc(var(--mantine-spacing-xl) * 2);
+  min-width: 100vw;
+  margin: 0;
+  padding: rem(15px) calc(var(--mantine-spacing-xl) * 3) rem(100px)
+    calc(var(--mantine-spacing-xl) * 3);
+}
+
+.heading {
+  text-align: center;
+  padding: var(--mantine-spacing-xl) 0;
 }
 
 .card {
-  flex: 1 1 calc(33.3333% - var(--mantine-spacing-md));
-  background-color: var(--mantine-color-body);
-  
-}
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
 
-.rating {
-  position: absolute;
-  top: var(--mantine-spacing-xs);
-  right: rem(12px);
-  pointer-events: none;
+  &:hover {
+    box-shadow: var(--mantine-shadow-md);
+  }
 }
 
 .title {
-  display: block;
-  margin-top: var(--mantine-spacing-md);
-  margin-bottom: rem(5px);
-}
-
-.action {
-  background-color: var(--mantine-color-gray-0);
-}
-
-.action:hover {
-  background-color: var(--mantine-color-gray-1);
-}
-
-.footer {
-  margin-top: var(--mantine-spacing-md);
-}
-
-/* Media queries for responsive design */
-@media (max-width: 768px) {
-  .card {
-    flex: 1 1 100%;
-  }
-}
-.title1 {
-  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
-  color: var(--mantine-color-white);
-  font-size: 52px;
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
-
+  font-family: "Greycliff CF", var(--mantine-font-family);
+  font-weight: bold;
 }

@@ -27,7 +27,7 @@ const Footer = () => {
   ));
 
   return (
-    <div className={classes.footer}>
+    <div id="contact" className={classes.footer}>
       <div className={classes.inner}>
         {/* <MantineLogo  size={28} /> */}
         <img className={classes.image11} src={logo} alt="Logo" />
