@@ -54,12 +54,17 @@ const Terminal = () => {
     });
   }, []);
 
+  const focus = () => {
+    const cmdIn = document.getElementById("cmd-input");
+    cmdIn.focus();
+  };
+
   return (
     <main>
       {history.map((item, index) => (
         <div key={index}>{item}</div>
       ))}
-      <div className="currentCmd">
+      <div onClick={focus} className="currentCmd">
         <span>{cmd}</span>
         <span id="cursor">█</span>
       </div>

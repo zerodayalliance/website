@@ -38,21 +38,18 @@ const Cat = (props) => {
     case "events":
       return (
         <ul className={classes.catList}>
-          <li>Event 1</li>
-          <li>Event 2</li>
+          <li>Cyber Security Technology</li>
+          <li>Coming Soon...</li>
         </ul>
       );
     case "teams":
       return (
         <ul className={classes.catList}>
-          <li>Team 1</li>
-          <li>Team 2</li>
-          <li>Team 3</li>
-          <li>Team 4</li>
+          <li>Coming Soon...</li>
         </ul>
       );
     case "faq":
-      return <div>FAQ</div>;
+      return <div>Coming Soon...</div>;
     case "contact":
       return (
         <ul className={classes.catList}>
