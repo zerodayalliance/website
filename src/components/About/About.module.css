@@ -12,6 +12,7 @@
 }
 
 .image {
+  border-radius: 10px;
   max-width: 40%;
 
   @media (max-width: $mantine-breakpoint-sm) {

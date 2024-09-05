@@ -2,12 +2,18 @@
   background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
   min-width: 100vw;
   margin: 0;
-  padding: rem(15px) calc(var(--mantine-spacing-xl) * 3) rem(100px)
-    calc(var(--mantine-spacing-xl) * 3);
+  padding: rem(15px) calc(var(--mantine-spacing-xl) * 4) rem(100px)
+    calc(var(--mantine-spacing-xl) * 4);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: rem(15px) calc(var(--mantine-spacing-lg) * 1) rem(100px)
+      calc(var(--mantine-spacing-lg) * 1);
+  }
 }
 
 .heading {
   text-align: center;
+  color: var(--mantine-color-white);
   padding: var(--mantine-spacing-xl) 0;
 }
 

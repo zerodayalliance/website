@@ -26,7 +26,7 @@ const Events = () => {
           return (
             <Card key={index} p="md" radius="md" className={classes.card}>
               <AspectRatio ratio="auto">
-                <Image width={100} src={event.banner} />
+                <Image width={100} radius={5} src={event.banner} />
               </AspectRatio>
               <Text size="xl" fw={700} className={classes.title} mt={5}>
                 {event.name}

@@ -19,7 +19,7 @@ const About = () => {
         </Text>
         <div className={classes.controls}>
           <Link to="/teams">
-            <Button className={classes.control1} size="md">
+            <Button variant="outline" className={classes.control1} size="md">
               Meet Our Teams
             </Button>
           </Link>
