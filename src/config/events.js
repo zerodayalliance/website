@@ -1,7 +1,7 @@
 const upcomingEvents = [
   {
     name: "Cyber Security Technology",
-    date: "4th September, 2024",
+    date: "5th September, 2024",
     time: "3:30 PM",
     mode: "Offline",
     location: "Seminar Hall, Sister Nivedita University",
