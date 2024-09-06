@@ -6,33 +6,30 @@ import {
 } from "@tabler/icons-react";
 import classes from "./Footer.module.css";
 import logo from "/src/assets/logo1.jpg";
-const links = [
-  { link: "#", label: "Code Of Conduct" },
-  { link: "#", label: "Gallery" },
-  { link: "#", label: "Blog" },
-];
 
 const Footer = () => {
-  const items = links.map((link) => (
-    <Anchor
-      c="dimmed"
-      key={link.label}
-      href={link.link}
-      lh={1}
-      onClick={(event) => event.preventDefault()}
-      size="sm"
-    >
-      {link.label}
-    </Anchor>
-  ));
-
   return (
     <div id="contact" className={classes.footer}>
       <div className={classes.inner}>
-        {/* <MantineLogo  size={28} /> */}
         <img className={classes.image11} src={logo} alt="Logo" />
 
-        <Group className={classes.links}>{items}</Group>
+        <Group className={classes.links}>
+          <Anchor href="#" c="dimmed" size="sm" lh={1}>
+            Blog
+          </Anchor>
+          <Anchor href="#" c="dimmed" size="sm" lh={1}>
+            Code of Conduct
+          </Anchor>
+          <Anchor
+            href="https://drive.google.com/drive/folders/17pwTqJqdBc6Fugv_H53eCNE8SzXkoKcw"
+            target="_blank"
+            c="dimmed"
+            size="sm"
+            lh={1}
+          >
+            Gallery
+          </Anchor>
+        </Group>
 
         <Group gap="xs" justify="flex-end" wrap="nowrap">
           <ActionIcon
