@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div id="about" className={classes.wrapper}>
       <div className={classes.body}>
-        <Title className={classes.title} order={1}>
+        <Title className={classes.title} order={2} size="h1">
           About Us
         </Title>
         <Text fz="lg">
@@ -25,7 +25,7 @@ const About = () => {
           </Link>
         </div>
       </div>
-      <Image src={image} className={classes.image} />
+      <Image src={image} className={classes.image} alt="group photo" />
     </div>
   );
 };

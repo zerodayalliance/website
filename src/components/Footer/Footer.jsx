@@ -4,35 +4,34 @@ import {
   IconBrandLinkedin,
   IconBrandGithub,
 } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 import classes from "./Footer.module.css";
 import logo from "/src/assets/logo1.jpg";
-const links = [
-  { link: "#", label: "Code Of Conduct" },
-  { link: "#", label: "Gallery" },
-  { link: "#", label: "Blog" },
-];
 
 const Footer = () => {
-  const items = links.map((link) => (
-    <Anchor
-      c="dimmed"
-      key={link.label}
-      href={link.link}
-      lh={1}
-      onClick={(event) => event.preventDefault()}
-      size="sm"
-    >
-      {link.label}
-    </Anchor>
-  ));
-
   return (
     <div id="contact" className={classes.footer}>
       <div className={classes.inner}>
-        {/* <MantineLogo  size={28} /> */}
         <img className={classes.image11} src={logo} alt="Logo" />
 
-        <Group className={classes.links}>{items}</Group>
+        <Group className={classes.links} gap="lg">
+          <Link to="/blog" size="sm" lh={1} className={classes.link}>
+            Blog
+          </Link>
+          <Link to="/code-of-conduct" size="sm" lh={1} className={classes.link}>
+            Code of Conduct
+          </Link>
+          <Link
+            to="https://drive.google.com/drive/folders/17pwTqJqdBc6Fugv_H53eCNE8SzXkoKcw"
+            target="_blank"
+            c="dimmed"
+            size="sm"
+            lh={1}
+            className={classes.link}
+          >
+            Gallery
+          </Link>
+        </Group>
 
         <Group gap="xs" justify="flex-end" wrap="nowrap">
           <ActionIcon
@@ -42,6 +41,7 @@ const Footer = () => {
             component="a"
             target="_blank"
             href="https://github.com/ZeroDay-Alliance-SNU"
+            aria-label="GitHub Link"
           >
             <IconBrandGithub
               style={{ width: rem(18), height: rem(18) }}
@@ -55,6 +55,7 @@ const Footer = () => {
             component="a"
             target="_blank"
             href="https://www.linkedin.com/company/zeroday-alliance-snu/"
+            aria-label="LinkedIn Link"
           >
             <IconBrandLinkedin
               style={{ width: rem(18), height: rem(18) }}
@@ -68,6 +69,7 @@ const Footer = () => {
             component="a"
             target="_blank"
             href="https://www.instagram.com/zerodayalliance"
+            aria-label="Instagram Link"
           >
             <IconBrandInstagram
               style={{ width: rem(18), height: rem(18) }}
