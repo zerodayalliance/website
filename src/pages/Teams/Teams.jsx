@@ -64,8 +64,9 @@ const Teams = () => {
                             size={100}
                             radius={100}
                             mx="auto"
+                            alt="pfp"
                           />
-                          <Text ta="center" fz="lg" fw={600} mt="sm">
+                          <Text ta="center" fz="lg" fw={500} mt="sm">
                             {member.name}
                           </Text>
                           <Text ta="center" fz="sm" c="dimmed">
@@ -83,6 +84,7 @@ const Teams = () => {
                                 component="a"
                                 target="_blank"
                                 href={member.linkedin}
+                                aria-label="LinkedIn Link"
                               >
                                 <IconBrandLinkedin
                                   style={{ width: rem(18), height: rem(18) }}
@@ -98,6 +100,7 @@ const Teams = () => {
                                 component="a"
                                 target="_blank"
                                 href={member.github}
+                                aria-label="GitHub Link"
                               >
                                 <IconBrandGithub
                                   style={{ width: rem(18), height: rem(18) }}
@@ -113,6 +116,7 @@ const Teams = () => {
                                 component="a"
                                 target="_blank"
                                 href={member.x}
+                                aria-label="X Link"
                               >
                                 <IconBrandX
                                   style={{ width: rem(18), height: rem(18) }}
