@@ -26,23 +26,20 @@ const Events = () => {
           return (
             <Card key={index} p="md" radius="md" className={classes.card}>
               <AspectRatio ratio="auto">
-                <Image width={100} radius={5} src={event.banner} />
+                <Image
+                  width={100}
+                  radius={5}
+                  src={event.banner}
+                  alt="Event Poster"
+                />
               </AspectRatio>
-              <Text size="xl" fw={700} className={classes.title} mt={5}>
+              <Text size="xl" fw={600} className={classes.title} mt={5}>
                 {event.name}
               </Text>
-              <Text c="dimmed" fw={700}>
-                📅 {event.date}
-              </Text>
-              <Text c="dimmed" fw={700}>
-                ⏲ {event.time}
-              </Text>
-              <Text c="dimmed" size="sm" fw={700}>
-                📳 {event.mode}
-              </Text>
-              <Text c="dimmed" fw={700}>
-                📍 {event.location}
-              </Text>
+              <Text>📅 {event.date}</Text>
+              <Text>⏲ {event.time}</Text>
+              <Text>📳 {event.mode}</Text>
+              <Text>📍 {event.location}</Text>
               {/* <Group mt={10}>
                 <ActionIcon
                   size="lg"

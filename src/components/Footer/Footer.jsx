@@ -41,6 +41,7 @@ const Footer = () => {
             component="a"
             target="_blank"
             href="https://github.com/ZeroDay-Alliance-SNU"
+            aria-label="GitHub Link"
           >
             <IconBrandGithub
               style={{ width: rem(18), height: rem(18) }}
@@ -54,6 +55,7 @@ const Footer = () => {
             component="a"
             target="_blank"
             href="https://www.linkedin.com/company/zeroday-alliance-snu/"
+            aria-label="LinkedIn Link"
           >
             <IconBrandLinkedin
               style={{ width: rem(18), height: rem(18) }}
@@ -67,6 +69,7 @@ const Footer = () => {
             component="a"
             target="_blank"
             href="https://www.instagram.com/zerodayalliance"
+            aria-label="Instagram Link"
           >
             <IconBrandInstagram
               style={{ width: rem(18), height: rem(18) }}
