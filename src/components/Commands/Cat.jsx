@@ -45,7 +45,12 @@ const Cat = (props) => {
     case "teams":
       return (
         <ul className={classes.catList}>
-          <li>Coming Soon...</li>
+          <li>Tech Team (Cyber Security)</li>
+          <li>Tech Team (Web Development)</li>
+          <li>Graphics Team</li>
+          <li>Event Management Team</li>
+          <li>PR & Social Media Team</li>
+          <li>Outreach Team</li>
         </ul>
       );
     case "faq":

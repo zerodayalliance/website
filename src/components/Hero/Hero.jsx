@@ -1,5 +1,4 @@
-import { Text, Title, Button, Image, Box } from "@mantine/core";
-// import image from './image.svg';
+import { Title, Button, Image } from "@mantine/core";
 import logo from "/src/assets/back.png";
 import classes from "./Hero.module.css";
 import { Link } from "react-router-dom";
@@ -16,11 +15,11 @@ const Hero = () => {
         </Title>
         <div className={classes.controls}>
           <Link to="/#about">
-            <Button size="lg">Learn More</Button>
+            <Button size="md">Learn More</Button>
           </Link>
         </div>
       </div>
-      <Image src={logo} className={classes.image} />
+      <Image src={logo} className={classes.image} alt="hero-image" />
     </div>
   );
 };

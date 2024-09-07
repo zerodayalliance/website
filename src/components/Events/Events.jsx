@@ -19,7 +19,7 @@ const Events = () => {
   return (
     <Container id="events" py="xl" className={classes.container}>
       <Title className={classes.heading} order={1}>
-        Upcoming Events
+        Events
       </Title>
       <SimpleGrid cols={{ base: 1, sm: 2 }}>
         {upcomingEvents.map((event, index) => {
@@ -43,7 +43,7 @@ const Events = () => {
               <Text c="dimmed" fw={700}>
                 📍 {event.location}
               </Text>
-              <Group mt={10}>
+              {/* <Group mt={10}>
                 <ActionIcon
                   size="lg"
                   variant="default"
@@ -70,7 +70,7 @@ const Events = () => {
                     stroke={1.5}
                   />
                 </ActionIcon>
-              </Group>
+              </Group> */}
             </Card>
           );
         })}

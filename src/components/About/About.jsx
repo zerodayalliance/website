@@ -25,7 +25,7 @@ const About = () => {
           </Link>
         </div>
       </div>
-      <Image src={image} className={classes.image} />
+      <Image src={image} className={classes.image} alt="group photo" />
     </div>
   );
 };

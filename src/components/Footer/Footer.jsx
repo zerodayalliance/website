@@ -4,6 +4,7 @@ import {
   IconBrandLinkedin,
   IconBrandGithub,
 } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 import classes from "./Footer.module.css";
 import logo from "/src/assets/logo1.jpg";
 
@@ -13,22 +14,23 @@ const Footer = () => {
       <div className={classes.inner}>
         <img className={classes.image11} src={logo} alt="Logo" />
 
-        <Group className={classes.links}>
-          <Anchor href="#" c="dimmed" size="sm" lh={1}>
+        <Group className={classes.links} gap="lg">
+          <Link to="/blog" size="sm" lh={1} className={classes.link}>
             Blog
-          </Anchor>
-          <Anchor href="#" c="dimmed" size="sm" lh={1}>
+          </Link>
+          <Link to="/code-of-conduct" size="sm" lh={1} className={classes.link}>
             Code of Conduct
-          </Anchor>
-          <Anchor
-            href="https://drive.google.com/drive/folders/17pwTqJqdBc6Fugv_H53eCNE8SzXkoKcw"
+          </Link>
+          <Link
+            to="https://drive.google.com/drive/folders/17pwTqJqdBc6Fugv_H53eCNE8SzXkoKcw"
             target="_blank"
             c="dimmed"
             size="sm"
             lh={1}
+            className={classes.link}
           >
             Gallery
-          </Anchor>
+          </Link>
         </Group>
 
         <Group gap="xs" justify="flex-end" wrap="nowrap">
