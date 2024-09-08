@@ -1,5 +1,5 @@
 import { Text, Title, Button, Image } from "@mantine/core";
-import image from "/src/assets/aboutpic.jpeg";
+import image from "/src/assets/team.jpg";
 import classes from "./About.module.css";
 import { Link } from "react-router-dom";
 
