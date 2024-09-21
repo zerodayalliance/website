@@ -21,13 +21,12 @@ const Events = () => {
       <Title className={classes.heading} order={1}>
         Events
       </Title>
-      <SimpleGrid cols={{ base: 1, sm: 2 }}>
+      <SimpleGrid cols={{ base: 1, sm: 2 }} style={{maxWidth:`${27*2}rem` , margin: '0 auto'}}>
         {upcomingEvents.map((event, index) => {
           return (
             <Card key={index} p="md" radius="md" className={classes.card}>
               <AspectRatio ratio="auto">
                 <Image
-                  width={100}
                   radius={5}
                   src={event.banner}
                   alt="Event Poster"

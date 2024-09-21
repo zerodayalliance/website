@@ -18,12 +18,18 @@
 }
 
 .card {
+  max-width: 25rem;
+  margin: auto;
   transition:
     transform 150ms ease,
     box-shadow 150ms ease;
 
   &:hover {
     box-shadow: var(--mantine-shadow-md);
+  }
+  @media (max-width: $mantine-breakpoint-sm){ 
+    max-width: 30rem;
+    margin: auto;
   }
 }
 
