@@ -275,12 +275,12 @@ const teams = [
         instagram: "",
       },
       {
-        name: "Sachin",
+        name: "Sachin Gupta",
         role: ".",
         bio: "",
         avatar:
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/sachin0811/",
         github: "",
         x: "",
         instagram: "",
