@@ -24,8 +24,12 @@
 
 .memberCard {
   height: rem(265px);
-  width: rem(250px);
+  width: rem(290px);
   padding: var(--mantine-spacing-md);
   border-radius: var(--mantine-radius-md);
   background-color: rgba(40, 40, 40, 1);
+}
+
+.memberLinks {
+  margin-top: rem(25px);
 }

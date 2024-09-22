@@ -16,6 +16,7 @@ import {
   IconBrandLinkedin,
   IconBrandGithub,
   IconBrandX,
+  IconBrandInstagram,
 } from "@tabler/icons-react";
 import "@mantine/core/styles.css";
 import classes from "./Teams.module.css";
@@ -75,7 +76,10 @@ const Teams = () => {
                           {/* <Text ta="center" fz="md" fw={400} mt="xs">
                             {member.bio}
                           </Text> */}
-                          <Group justify="center" mt={25}>
+                          <Group
+                            justify="center"
+                            className={classes.memberLinks}
+                          >
                             {member.linkedin && (
                               <ActionIcon
                                 size="lg"
@@ -119,6 +123,22 @@ const Teams = () => {
                                 aria-label="X Link"
                               >
                                 <IconBrandX
+                                  style={{ width: rem(18), height: rem(18) }}
+                                  stroke={1.5}
+                                />
+                              </ActionIcon>
+                            )}
+                            {member.instagram && (
+                              <ActionIcon
+                                size="lg"
+                                variant="default"
+                                radius="xl"
+                                component="a"
+                                target="_blank"
+                                href={member.instagram}
+                                aria-label="Instagram Link"
+                              >
+                                <IconBrandInstagram
                                   style={{ width: rem(18), height: rem(18) }}
                                   stroke={1.5}
                                 />

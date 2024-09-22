@@ -25,7 +25,7 @@ const Navbar = () => {
             <img className={classes.logo} src={logo} alt="Logo" />
             <h3>
               <Link to="/" className={classes.appName}>
-                ZERODAY ALLIANCE
+                ZeroDay Alliance SNU
               </Link>
             </h3>
           </Group>
