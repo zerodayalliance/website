@@ -252,7 +252,7 @@ const teams = [
         linkedin: "https://www.linkedin.com/in/annesha-das-86639428a",
         github: "",
         x: "",
-        instagram: "",
+        instagram: "https://www.instagram.com/annesha_das_41",
       },
       {
         name: "Arpita Paul",
