@@ -12,7 +12,7 @@ import classes from "./FourZeroFour.module.css";
 
 const FourZeroFour = () => {
   return (
-    <MantineProvider>
+    <MantineProvider defaultColorScheme="dark">
       <Container className={classes.root}>
         <div className={classes.inner}>
           <Illustration className={classes.image} />

@@ -68,7 +68,7 @@ const Footer = () => {
             radius="xl"
             component="a"
             target="_blank"
-            href="https://www.instagram.com/zerodayalliance"
+            href="https://www.instagram.com/zerodayalliancesnu"
             aria-label="Instagram Link"
           >
             <IconBrandInstagram

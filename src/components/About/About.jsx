@@ -20,7 +20,7 @@ const About = () => {
         <div className={classes.controls}>
           <Link to="/teams">
             <Button variant="outline" className={classes.control1} size="md">
-              Meet Our Teams
+              Meet Our Team
             </Button>
           </Link>
         </div>
