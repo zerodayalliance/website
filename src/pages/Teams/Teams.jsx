@@ -13,10 +13,12 @@ import {
   rem,
 } from "@mantine/core";
 import {
+  IconMail,
   IconBrandLinkedin,
   IconBrandGithub,
   IconBrandX,
   IconBrandInstagram,
+  IconBrandFacebook,
 } from "@tabler/icons-react";
 import "@mantine/core/styles.css";
 import classes from "./Teams.module.css";
@@ -80,6 +82,22 @@ const Teams = () => {
                             justify="center"
                             className={classes.memberLinks}
                           >
+                            {member.email && (
+                              <ActionIcon
+                                size="lg"
+                                variant="default"
+                                radius="xl"
+                                component="a"
+                                target="_blank"
+                                href={member.email}
+                                aria-label="Email"
+                              >
+                                <IconMail
+                                  style={{ width: rem(18), height: rem(18) }}
+                                  stroke={1.5}
+                                />
+                              </ActionIcon>
+                            )}
                             {member.linkedin && (
                               <ActionIcon
                                 size="lg"
@@ -139,6 +157,22 @@ const Teams = () => {
                                 aria-label="Instagram Link"
                               >
                                 <IconBrandInstagram
+                                  style={{ width: rem(18), height: rem(18) }}
+                                  stroke={1.5}
+                                />
+                              </ActionIcon>
+                            )}
+                            {member.facebook && (
+                              <ActionIcon
+                                size="lg"
+                                variant="default"
+                                radius="xl"
+                                component="a"
+                                target="_blank"
+                                href={member.facebook}
+                                aria-label="Facebook Link"
+                              >
+                                <IconBrandFacebook
                                   style={{ width: rem(18), height: rem(18) }}
                                   stroke={1.5}
                                 />
