@@ -61,10 +61,11 @@ const teams = [
         bio: "",
         avatar:
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
+        email: "mailto:official.aviksamanta@gmail.com",
         linkedin: "https://www.linkedin.com/in/avik-samanta-00b98228a/",
         github: "https://github.com/avik-root",
-        x: "",
-        instagram: "",
+        x: "https://x.com/ErrorXOX_404",
+        instagram: "https://www.instagram.com/avik__samanta/",
       },
       {
         name: "Debangshu Roy",
@@ -202,6 +203,7 @@ const teams = [
         github: "https://github.com/itskdhere",
         x: "https://x.com/itskdhere",
         instagram: "https://www.instagram.com/itskdhere",
+        facebook: "https://www.facebook.com/itskdhere",
       },
       {
         name: "Manobendra Mandal",
