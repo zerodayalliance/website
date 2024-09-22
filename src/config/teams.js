@@ -374,7 +374,7 @@ const teams = [
         avatar:
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png",
         linkedin: "https://www.linkedin.com/in/anusha-gupta-735826284",
-        github: "",
+        github: "https://github.com/anushagupta11",
         x: "",
         instagram: "",
       },
@@ -506,8 +506,10 @@ const teams = [
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
         linkedin: "https://www.linkedin.com/in/ankita-bera-3922a227a",
         github: "",
-        x: "",
-        instagram: "",
+        x: "https://x.com/AnkitaBera2005",
+        instagram: "https://www.instagram.com/ankita_bera.21",
+        facebook:
+          "https://www.facebook.com/share/3rPwn6VkzRsLYG79/?mibextid=qi2Omg",
       },
       {
         name: "Bidish Chakraborty",
