@@ -22,7 +22,7 @@ const Footer = () => {
             Code of Conduct
           </Link>
           <Link
-            to="https://drive.google.com/drive/folders/17pwTqJqdBc6Fugv_H53eCNE8SzXkoKcw"
+            to="/gallery"
             target="_blank"
             c="dimmed"
             size="sm"
