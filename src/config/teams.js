@@ -419,7 +419,7 @@ const teams = [
         bio: "",
         avatar:
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png",
-        linkedin: "http://www.linkedin.com/in/sneha-kundu-429488284",
+        linkedin: "https://www.linkedin.com/in/sneha-kundu-429488284",
         github: "",
         x: "",
         instagram: "https://www.instagram.com/serene_symphony07/",
@@ -435,7 +435,7 @@ const teams = [
         bio: "",
         avatar:
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png",
-        linkedin: "www.linkedin.com/in/rima-bachar",
+        linkedin: "https://www.linkedin.com/in/rima-bachar",
         github: "",
         x: "",
         instagram: "",
