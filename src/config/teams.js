@@ -348,17 +348,6 @@ const teams = [
     name: "Graphics Team",
     members: [
       {
-        name: "Amish Kumar Tripathi",
-        role: ".",
-        bio: "",
-        avatar:
-          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png",
-        linkedin: "https://www.linkedin.com/in/amish-tripathi-97b1ab2a6",
-        github: "",
-        x: "",
-        instagram: "https://www.instagram.com/hiraeth_am1sh",
-      },
-      {
         name: "Anindya Saha",
         role: ".",
         bio: "",
@@ -390,17 +379,6 @@ const teams = [
         github: "",
         x: "",
         instagram: "https://www.instagram.com/mi_a_cara",
-      },
-      {
-        name: "Sharmistha Mondal",
-        role: ".",
-        bio: "",
-        avatar:
-          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
-        linkedin: "",
-        github: "",
-        x: "",
-        instagram: "https://www.instagram.com/__.sharmiiii.__",
       },
       {
         name: "Shuvajit Chakraborty",
