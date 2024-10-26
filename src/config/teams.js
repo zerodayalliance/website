@@ -327,17 +327,7 @@ const teams = [
   {
     name: "Graphics Team",
     members: [
-      {
-        name: "Debankan Mullick",
-        role: "Graphics Lead",
-        bio: "",
-        avatar:
-          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
-        linkedin: "https://www.linkedin.com/in/debankan-mullick-1a1701245",
-        github: "https://github.com/WakataZapaga",
-        x: "",
-        instagram: "https://www.instagram.com/senor_debankan/",
-      },
+      
 
       {
         name: "Anindya Saha",
@@ -372,6 +362,18 @@ const teams = [
         x: "",
         instagram: "https://www.instagram.com/mi_a_cara",
       },
+      {
+        name: "Debankan Mullick",
+        role: "Graphics Lead",
+        bio: "",
+        avatar:
+          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
+        linkedin: "https://www.linkedin.com/in/debankan-mullick-1a1701245",
+        github: "https://github.com/WakataZapaga",
+        x: "",
+        instagram: "https://www.instagram.com/senor_debankan/",
+      },
+
       {
         name: "Shuvajit Chakraborty",
         role: ".",
@@ -450,7 +452,7 @@ const teams = [
     members: [
       {
         name: "Adrija Ghosal",
-        role: "PR & Social Media Team",
+        role: "PR & Social Media Lead",
         bio: "",
         avatar:
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png",
