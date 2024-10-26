@@ -78,17 +78,7 @@ const teams = [
         x: "",
         instagram: "",
       },
-      {
-        name: "Debankan Mullick",
-        role: "Cyber Security, Shell",
-        bio: "",
-        avatar:
-          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
-        linkedin: "https://www.linkedin.com/in/debankan-mullick-1a1701245",
-        github: "https://github.com/WakataZapaga",
-        x: "",
-        instagram: "https://www.instagram.com/senor_debankan/",
-      },
+   
       {
         name: "Gourav Kundu",
         role: ".",
@@ -111,17 +101,7 @@ const teams = [
         x: "",
         instagram: "",
       },
-      {
-        name: "Mohammed Zoheb",
-        role: "Cyber Security",
-        bio: "Cyber Security Enthusiast.",
-        avatar:
-          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png",
-        linkedin: "https://www.linkedin.com/in/mohammed-zoheb42308",
-        github: "https://github.com/mzoheb00",
-        x: "",
-        instagram: "",
-      },
+      
       {
         name: "Praveen Joshi",
         role: "Cyber Security, Network",
@@ -348,6 +328,18 @@ const teams = [
     name: "Graphics Team",
     members: [
       {
+        name: "Debankan Mullick",
+        role: "Graphics Lead",
+        bio: "",
+        avatar:
+          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
+        linkedin: "https://www.linkedin.com/in/debankan-mullick-1a1701245",
+        github: "https://github.com/WakataZapaga",
+        x: "",
+        instagram: "https://www.instagram.com/senor_debankan/",
+      },
+
+      {
         name: "Anindya Saha",
         role: ".",
         bio: "",
@@ -458,7 +450,7 @@ const teams = [
     members: [
       {
         name: "Adrija Ghosal",
-        role: ".",
+        role: "PR & Social Media Team",
         bio: "",
         avatar:
           "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png",
@@ -502,17 +494,7 @@ const teams = [
         x: "",
         instagram: "",
       },
-      {
-        name: "Swarnali Sarkar",
-        role: "PR & Social Media Lead",
-        bio: "",
-        avatar:
-          "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-7.png",
-        linkedin: "https://www.linkedin.com/in/swarnali-sarkar-17957b28b/",
-        github: "",
-        x: "",
-        instagram: "",
-      },
+     
       {
         name: "Yashvi Dubey",
         role: ".",
