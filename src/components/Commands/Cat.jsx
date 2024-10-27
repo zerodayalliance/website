@@ -38,8 +38,10 @@ const Cat = (props) => {
     case "events":
       return (
         <ul className={classes.catList}>
+          <li>Team: Blue</li>
           <li>Cyber Security Technology</li>
-          <li>Coming Soon...</li>
+          <li>Cyber Security & Cloud</li>
+          <li>Cyber Security & Cloud</li>
         </ul>
       );
     case "teams":
@@ -98,11 +100,23 @@ const Cat = (props) => {
             <span>Instagram: </span>
             <span>
               <a
-                href="https://www.instagram.com/zerodayalliance/"
+                href="https://www.instagram.com/zerodayalliancesnu/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @zerodayalliance
+                @zerodayalliancesnu
+              </a>
+            </span>
+          </li>
+          <li>
+            <span>X: </span>
+            <span>
+              <a
+                href="https://x.com/zerodaysnu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @zerodaysnu
               </a>
             </span>
           </li>
