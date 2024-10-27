@@ -78,7 +78,6 @@ const teams = [
         x: "",
         instagram: "",
       },
-   
       {
         name: "Gourav Kundu",
         role: ".",
@@ -101,7 +100,6 @@ const teams = [
         x: "",
         instagram: "",
       },
-      
       {
         name: "Praveen Joshi",
         role: "Cyber Security, Network",
@@ -327,8 +325,6 @@ const teams = [
   {
     name: "Graphics Team",
     members: [
-      
-
       {
         name: "Anindya Saha",
         role: ".",
@@ -496,7 +492,6 @@ const teams = [
         x: "",
         instagram: "",
       },
-     
       {
         name: "Yashvi Dubey",
         role: ".",

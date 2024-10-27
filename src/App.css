@@ -5,9 +5,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
   display: none;
-}
+}*/
 
 * {
   margin: 0;
