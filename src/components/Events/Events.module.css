@@ -1,6 +1,5 @@
 .container {
   background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
-  min-width: 100vw;
   margin: 0;
   padding: rem(15px) calc(var(--mantine-spacing-xl) * 4) rem(100px)
     calc(var(--mantine-spacing-xl) * 4);
@@ -27,7 +26,7 @@
   &:hover {
     box-shadow: var(--mantine-shadow-md);
   }
-  @media (max-width: $mantine-breakpoint-sm){ 
+  @media (max-width: $mantine-breakpoint-sm) {
     max-width: 30rem;
     margin: auto;
   }
