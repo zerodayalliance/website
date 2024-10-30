@@ -9,7 +9,7 @@
   background-position: top left;
   position: relative;
   color: var(--mantine-color-black);
-  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  background: var(--bg);
 }
 
 .title {

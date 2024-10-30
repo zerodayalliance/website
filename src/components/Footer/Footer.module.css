@@ -1,6 +1,6 @@
 .footer {
   border-top: rem(1px) solid var(--mantine-color-dark-2);
-  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  background: var(--bg);
   padding: rem(5px) 0;
 }
 

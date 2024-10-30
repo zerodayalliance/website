@@ -1,5 +1,5 @@
 .container {
-  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  background: var(--bg);
   min-width: 100%;
   margin: 0;
   padding: rem(15px) calc(var(--mantine-spacing-lg) * 1) rem(100px)

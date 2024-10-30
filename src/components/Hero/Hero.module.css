@@ -1,5 +1,5 @@
 .wrapper {
-  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  background: var(--bg);
   color: white;
   display: flex;
   align-items: center; /* Vertically center the content */

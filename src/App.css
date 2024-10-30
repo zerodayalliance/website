@@ -1,5 +1,6 @@
 :root {
   --side-gap: 0.5rem;
+  --bg: linear-gradient(-90deg, #272626 22%, #25424a 68%, #37616c 84%);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

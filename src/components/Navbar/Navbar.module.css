@@ -4,7 +4,7 @@
   padding-right: var(--mantine-spacing-md);
   border-bottom: rem(1px) solid rgba(190, 190, 190, 0.3);
   box-shadow: 0px 1px 1px rgba(195, 195, 195, 0.3);
-  background: linear-gradient(90deg, #272626 22%, #25424a 68%, #37616c 84%);
+  background: var(--bg);
   position: fixed;
   top: 0;
   left: 0;
