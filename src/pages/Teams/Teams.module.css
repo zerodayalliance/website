@@ -26,7 +26,7 @@
   width: rem(300px);
   padding: var(--mantine-spacing-md);
   border-radius: var(--mantine-radius-md);
-  background-color: rgba(40, 40, 40, 1);
+  background-color: rgba(40, 40, 40, 0.5);
 }
 
 .memberLinks {
