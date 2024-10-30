@@ -7,7 +7,7 @@ import {
   Drawer,
   ScrollArea,
 } from "@mantine/core";
-import logo from "/src/assets/logo1.jpg";
+import logo from "/src/assets/logo.svg";
 import { IconTerminal2 } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Navbar.module.css";

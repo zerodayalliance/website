@@ -1,4 +1,4 @@
-import { Anchor, Group, ActionIcon, rem } from "@mantine/core";
+import { Group, ActionIcon, rem } from "@mantine/core";
 import {
   IconBrandInstagram,
   IconBrandLinkedin,
@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import classes from "./Footer.module.css";
-import logo from "/src/assets/logo1.jpg";
+import logo from "/src/assets/logo.svg";
 
 const Footer = () => {
   return (
