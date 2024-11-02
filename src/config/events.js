@@ -1,5 +1,13 @@
 const upcomingEvents = [
   {
+    name: "403: Permission Denied",
+    date: "9th November, 2024",
+    time: "1:00 PM IST",
+    mode: "Offline",
+    location: "Lab A-205, Sister Nivedita University",
+    banner: "events/e5.png",
+  },
+  {
     name: "Team: Blue",
     date: "23rd October, 2024",
     time: "7:00 PM IST",
