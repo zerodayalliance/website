@@ -3,6 +3,7 @@ import {
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandGithub,
+  IconBrandX,
 } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import classes from "./Footer.module.css";
@@ -12,8 +13,9 @@ const Footer = () => {
   return (
     <div id="contact" className={classes.footer}>
       <div className={classes.inner}>
-        <img className={classes.image11} src={logo} alt="Logo" />
-
+        <Link to="/#home">
+          <img className={classes.image11} src={logo} alt="Logo" />
+        </Link>
         <Group className={classes.links} gap="lg">
           <Link to="/blog" size="sm" lh={1} className={classes.link}>
             Blog
@@ -72,6 +74,20 @@ const Footer = () => {
             aria-label="Instagram Link"
           >
             <IconBrandInstagram
+              style={{ width: rem(18), height: rem(18) }}
+              stroke={1.5}
+            />
+          </ActionIcon>
+          <ActionIcon
+            size="lg"
+            variant="default"
+            radius="xl"
+            component="a"
+            target="_blank"
+            href="https://www.x.com/zerodaysnu"
+            aria-label="X Link"
+          >
+            <IconBrandX
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />
