@@ -35,13 +35,19 @@ const Teams = () => {
     <MantineProvider defaultColorScheme="dark">
       <Navbar />
       <Container className={classes.container}>
-        <Title className={classes.heading} order={1}>
+        <Title id="#" className={classes.heading} order={1}>
           Our Core Teams
         </Title>
         <Stack align="stretch" justify="center" gap="xl">
           {teams.map((team, index) => {
             return (
-              <Stack align="stretch" justify="center" gap="xs" key={index}>
+              <Stack
+                align="stretch"
+                justify="center"
+                gap="xs"
+                key={index}
+                id={`${team.hash}`}
+              >
                 <Title className={classes.teamName} order={2}>
                   {team.name}
                 </Title>
@@ -61,6 +67,7 @@ const Teams = () => {
                           className={classes.memberCard}
                           withBorder
                           key={index}
+                          id={`${member.hash}`}
                         >
                           <Avatar
                             src={member.avatar}

@@ -5,8 +5,11 @@
 const teams = [
   {
     name: "Community Leads",
+    hash: "community-leads",
     members: [
       {
+        uid: "2024000000",
+        hash: "e2fe35a8dc293e4665849c2b6238f65c",
         name: "Dibyataru Chakraborty",
         role: "President",
         bio: "",
@@ -18,6 +21,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000002",
+        hash: "b492d3ec56d0164fb5880c82f7b532ff",
         name: "Salini Dutta",
         role: "Vice President | Event Management Lead",
         bio: "",
@@ -29,6 +34,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000001",
+        hash: "3539d7522493d878b978cb936ad767ac",
         name: "Soumyadeep Dutta",
         role: "Vice President | Cyber Security Lead",
         bio: "",
@@ -43,8 +50,11 @@ const teams = [
   },
   {
     name: "Tech Team (Cyber Security)",
+    hash: "cyber-security",
     members: [
       {
+        uid: "2024000033",
+        hash: "ff40643541a1259194fb2b2ff1acfd20",
         name: "Arghyadeep Naskar",
         role: ".",
         bio: "",
@@ -56,6 +66,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000028",
+        hash: "c2e7f9af884fe492441fb40c7a2c68b2",
         name: "Avik Samanta",
         role: "Cyber Security, Shell",
         bio: "",
@@ -68,6 +80,8 @@ const teams = [
         instagram: "https://www.instagram.com/avik__samanta/",
       },
       {
+        uid: "2024000038",
+        hash: "ab17550238cba2da365a3b10e7ff908d",
         name: "Debangshu Roy",
         role: "Cyber Security, Network",
         bio: "I'm passionate about Ethical Hacking and Red Teaming.",
@@ -79,6 +93,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000032",
+        hash: "d5d59cb5642195cd22dcb4bd239776b3",
         name: "Gourav Kundu",
         role: ".",
         bio: "",
@@ -90,6 +106,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000041",
+        hash: "08de5e2e6d11bd71bce504ecbcc8cbf9",
         name: "Hritom Bhattacharya",
         role: "Cyber Security, Bug Bounty Hunter",
         bio: "I am just inquisitive about loopholes in the technologies",
@@ -101,6 +119,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000030",
+        hash: "30a010531521d0a5b0163a6381ef0f09",
         name: "Praveen Joshi",
         role: "Cyber Security, Network",
         bio: "",
@@ -112,6 +132,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000031",
+        hash: "12c7de641a146e989cda04029ea46deb",
         name: "Rajdeep Saha",
         role: "Cyber Security, Crypto",
         bio: "",
@@ -123,6 +145,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000027",
+        hash: "fe3cf15e5ecb70b5c9bb7c88282c756f",
         name: "Soumi Biswas",
         role: "Cyber Security, Crypto",
         bio: "",
@@ -137,8 +161,11 @@ const teams = [
   },
   {
     name: "Tech Team (Web Development)",
+    hash: "web-dev",
     members: [
       {
+        uid: "2024000036",
+        hash: "2b03fced9fa87b32224f5661a5e098f2",
         name: "Aman Kumar Rai",
         role: "Web Dev, Frontend",
         bio: "",
@@ -150,6 +177,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000039",
+        hash: "5e2f3320c98771b70975443236677d65",
         name: "Debanjan Mondal",
         role: "DevOps, Full-Stack Dev",
         bio: "Full Stack Dev",
@@ -161,6 +190,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000035",
+        hash: "57a5199f509337f1806c9f90dd7a6bf9",
         name: "Jyotipriya Biswas",
         role: ".",
         bio: "",
@@ -172,6 +203,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000034",
+        hash: "d0e51966575d9a50cd38b3bf0213dea4",
         name: "Krishnendu Das",
         role: "Web Dev Lead",
         bio: "Developer etc.",
@@ -184,6 +217,8 @@ const teams = [
         facebook: "https://www.facebook.com/itskdhere",
       },
       {
+        uid: "2024000040",
+        hash: "8557e7f2efe2bacd6e3a56e00819d93c",
         name: "Manobendra Mandal",
         role: ".",
         bio: "",
@@ -195,6 +230,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000037",
+        hash: "698b20aa9c857a7cad4e90b4bebc76cd",
         name: "Monami Nandy",
         role: "Web Dev, Frontend",
         bio: "",
@@ -206,6 +243,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000029",
+        hash: "508547454b1dbf5b0e24995d401aad19",
         name: "Raj Sekhar Paul",
         role: ".",
         bio: "",
@@ -220,8 +259,11 @@ const teams = [
   },
   {
     name: "Event Management Team",
+    hash: "event-management",
     members: [
       {
+        uid: "2024000004",
+        hash: "a2b9cf463642bc304672714af780e477",
         name: "Annesha Das",
         role: ".",
         bio: "",
@@ -233,6 +275,8 @@ const teams = [
         instagram: "https://www.instagram.com/annesha_das_41",
       },
       {
+        uid: "2024000003",
+        hash: "4b0b423663965afdab92a5efb7a7cff9",
         name: "Arpita Paul",
         role: ".",
         bio: "",
@@ -244,6 +288,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000009",
+        hash: "768e7884f43a70f8f7022a74c5296848",
         name: "Prachi Jha",
         role: ".",
         bio: "",
@@ -255,6 +301,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000006",
+        hash: "8fa96e673ee04b1ca47f2c00d13d16fd",
         name: "Sachin Gupta",
         role: ".",
         bio: "",
@@ -266,6 +314,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000007",
+        hash: "fd8f9822f45df667fc9aed32d2495269",
         name: "Samim Biswas",
         role: ".",
         bio: "",
@@ -277,6 +327,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000011",
+        hash: "c13b15810c738de909e43798e8bf5663",
         name: "Sayan Paul",
         role: ".",
         bio: "",
@@ -288,6 +340,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000010",
+        hash: "57c65f0abfcf6aef1d0e6a00f8ed760b",
         name: "Shekhar Shubham Thakur",
         role: ".",
         bio: "",
@@ -299,6 +353,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000008",
+        hash: "59da632e1037c3c9f8d108b6794bdcfb",
         name: "Sneha Karmakar",
         role: ".",
         bio: "",
@@ -310,6 +366,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000005",
+        hash: "59df927e83afdcbf2997d2d956d6d459",
         name: "Soumili Saha",
         role: ".",
         bio: "",
@@ -324,8 +382,11 @@ const teams = [
   },
   {
     name: "Graphics Team",
+    hash: "graphics",
     members: [
       {
+        uid: "2024000012",
+        hash: "5e933d817e1bd0313821862c39e8c360",
         name: "Anindya Saha",
         role: ".",
         bio: "",
@@ -337,6 +398,8 @@ const teams = [
         instagram: "https://www.instagram.com/_ninja_x_naruto_",
       },
       {
+        uid: "2024000016",
+        hash: "522f54a8ca9159a8b746bd96b295b5e2",
         name: "Anusha Gupta",
         role: ".",
         bio: "",
@@ -348,6 +411,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000018",
+        hash: "2a2fbfb6e67752b5f29974327d5cc5ce",
         name: "Bindiya Mishra",
         role: ".",
         bio: "",
@@ -359,6 +424,8 @@ const teams = [
         instagram: "https://www.instagram.com/mi_a_cara",
       },
       {
+        uid: "2024000015",
+        hash: "a0e379362044c9922068cf3979c36106",
         name: "Debankan Mullick",
         role: "Graphics Lead",
         bio: "",
@@ -369,8 +436,9 @@ const teams = [
         x: "",
         instagram: "https://www.instagram.com/senor_debankan/",
       },
-
       {
+        uid: "2024000017",
+        hash: "2a0f9537b8f8ff91052370589655fb2d",
         name: "Shuvajit Chakraborty",
         role: ".",
         bio: "",
@@ -382,6 +450,8 @@ const teams = [
         instagram: "https://www.instagram.com/s__chakraborty2005",
       },
       {
+        uid: "2024000013",
+        hash: "323712f23f8392f822a5bb58b235cb64",
         name: "Sinjini Ghosh",
         role: ".",
         bio: "",
@@ -393,6 +463,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000014",
+        hash: "30bfb2799a4d822f3f9aed83e41ba56b",
         name: "Sneha Das",
         role: ".",
         bio: "",
@@ -404,6 +476,8 @@ const teams = [
         instagram: "https://www.instagram.com/this_is.sky",
       },
       {
+        uid: "2024000019",
+        hash: "14f9ac14726e02abbe114873d623a60e",
         name: "Sneha Kundu",
         role: ".",
         bio: "",
@@ -418,8 +492,11 @@ const teams = [
   },
   {
     name: "Outreach Team",
+    hash: "outreach",
     members: [
       {
+        uid: "2024000021",
+        hash: "815d8920c5085ac07ffdf20745909a58",
         name: "Rima Bachar",
         role: "Outreach Lead",
         bio: "",
@@ -431,6 +508,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000020",
+        hash: "f94fab0d09b37c6f382917e175b80c68",
         name: "Tamoghni Mukherjee",
         role: ".",
         bio: "",
@@ -445,8 +524,11 @@ const teams = [
   },
   {
     name: "PR & Social Media Team",
+    hash: "pr",
     members: [
       {
+        uid: "2024000022",
+        hash: "79e44076d308c0b3ab0c6ce89a186b6e",
         name: "Adrija Ghosal",
         role: "PR & Social Media Lead",
         bio: "",
@@ -458,6 +540,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000023",
+        hash: "b3fc3af7715d8eb6a3c4d4448b41d670",
         name: "Adrija Karmakar",
         role: ".",
         bio: "",
@@ -469,6 +553,8 @@ const teams = [
         instagram: "https://www.instagram.com/authentic_ahel",
       },
       {
+        uid: "2024000026",
+        hash: "53baa5b252383aecbe966b18399d57eb",
         name: "Ankita Bera",
         role: ".",
         bio: "",
@@ -482,6 +568,8 @@ const teams = [
           "https://www.facebook.com/share/3rPwn6VkzRsLYG79/?mibextid=qi2Omg",
       },
       {
+        uid: "2024000024",
+        hash: "027633a87ebd7b3b62179764bc6cea03",
         name: "Bidish Chakraborty",
         role: ".",
         bio: "",
@@ -493,6 +581,8 @@ const teams = [
         instagram: "",
       },
       {
+        uid: "2024000025",
+        hash: "326af9c7386c1281f5e9271f418148e2",
         name: "Yashvi Dubey",
         role: ".",
         bio: "",
