@@ -23,7 +23,13 @@ const Events = () => {
       >
         {upcomingEvents.map((event, index) => {
           return (
-            <Card key={index} p="md" radius="md" className={classes.card}>
+            <Card
+              p="md"
+              radius="md"
+              className={classes.card}
+              id={`${event.hash}`}
+              key={index}
+            >
               <AspectRatio ratio="1">
                 <Image radius={5} src={event.banner} alt="Event Poster" />
               </AspectRatio>

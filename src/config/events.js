@@ -1,6 +1,7 @@
 const upcomingEvents = [
   {
     name: "403: Permission Denied",
+    hash: "event-403-permission-denied",
     date: "9th November, 2024",
     time: "1:00 PM IST",
     mode: "Offline",
@@ -9,6 +10,7 @@ const upcomingEvents = [
   },
   {
     name: "Team: Blue",
+    hash: "event-team-blue",
     date: "23rd October, 2024",
     time: "7:00 PM IST",
     mode: "Online",
@@ -17,6 +19,7 @@ const upcomingEvents = [
   },
   {
     name: "Cyber Security Technology",
+    hash: "event-cyber-security-technology",
     date: "5th September, 2024",
     time: "3:30 PM IST",
     mode: "Offline",
@@ -25,6 +28,7 @@ const upcomingEvents = [
   },
   {
     name: "Cyber Security & Cloud",
+    hash: "event-cyber-security-and-cloud-2",
     date: "22nd August, 2024",
     time: "8:00 PM IST",
     mode: "Online",
@@ -33,6 +37,7 @@ const upcomingEvents = [
   },
   {
     name: "Cyber Security & Cloud",
+    hash: "event-cyber-security-and-cloud-1",
     date: "14th August, 2024",
     time: "7:00 PM IST",
     mode: "Online",
