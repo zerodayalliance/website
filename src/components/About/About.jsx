@@ -18,7 +18,7 @@ const About = () => {
           strategies, and network with future professionals in the field.
         </Text>
         <div className={classes.controls}>
-          <Link to="/teams">
+          <Link to="/teams/#core">
             <Button variant="outline" className={classes.control1} size="md">
               Meet Our Team
             </Button>

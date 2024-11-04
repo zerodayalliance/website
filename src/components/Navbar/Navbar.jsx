@@ -13,18 +13,20 @@ import { useDisclosure } from "@mantine/hooks";
 import classes from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { navOverride } = props;
+
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
   return (
-    <Box pb={60}>
-      <header className={classes.header}>
+    <Box>
+      <header className={`${classes.header} ${navOverride}`}>
         <Group className={classes.container} justify="space-around" h="100%">
           <Group>
             <img className={classes.logo} src={logo} alt="Logo" />
             <h3>
-              <Link to="/" className={classes.appName}>
+              <Link to="/#home" className={classes.appName}>
                 ZeroDay Alliance SNU
               </Link>
             </h3>
@@ -37,7 +39,7 @@ const Navbar = () => {
             <Link to="/#events" className={classes.link}>
               Events
             </Link>
-            <Link to="/teams" className={classes.link}>
+            <Link to="/teams/#core" className={classes.link}>
               Teams
             </Link>
             <Link to="/#faq" className={classes.link}>
@@ -86,7 +88,7 @@ const Navbar = () => {
           <Link to="/#events" className={classes.link}>
             Events
           </Link>
-          <Link to="/teams" className={classes.link}>
+          <Link to="/teams/#core" className={classes.link}>
             Teams
           </Link>
           <Link to="/#faq" className={classes.link}>

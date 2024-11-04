@@ -1,8 +1,12 @@
+.teamsNav {
+  margin: 0;
+}
+
 .container {
   background: var(--bg);
   min-width: 100%;
   margin: 0;
-  padding: rem(15px) calc(var(--mantine-spacing-lg) * 1) rem(100px)
+  padding: rem(10px) calc(var(--mantine-spacing-lg) * 1) rem(100px)
     calc(var(--mantine-spacing-lg) * 1);
 }
 

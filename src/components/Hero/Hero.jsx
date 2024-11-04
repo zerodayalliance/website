@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className={classes.wrapper}>
+    <div id="home" className={classes.wrapper}>
       <div className={classes.body}>
         <Title className={classes.title} order={1}>
           Securing Tomorrow, <br /> One Vulnerability at a Time.
@@ -23,4 +23,5 @@ const Hero = () => {
     </div>
   );
 };
+
 export default Hero;

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   MantineProvider,
   Container,
@@ -25,17 +24,15 @@ import classes from "./Teams.module.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import teams from "../../config/teams";
+import ScrollToHashElement from "../../utils/ScrollToHashElement";
 
 const Teams = () => {
-  useEffect(() => {
-    scrollTo(0, 0);
-  }, []);
-
   return (
     <MantineProvider defaultColorScheme="dark">
-      <Navbar />
-      <Container className={classes.container}>
-        <Title id="#" className={classes.heading} order={1}>
+      <ScrollToHashElement />
+      <Navbar navOverride={classes.teamsNav} />
+      <Container id="core" className={classes.container}>
+        <Title className={classes.heading} order={1}>
           Our Core Teams
         </Title>
         <Stack align="stretch" justify="center" gap="xl">
@@ -44,7 +41,7 @@ const Teams = () => {
               <Stack
                 align="stretch"
                 justify="center"
-                gap="xs"
+                gap="md"
                 key={index}
                 id={`${team.hash}`}
               >

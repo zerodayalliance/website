@@ -5,7 +5,7 @@
 const teams = [
   {
     name: "Community Leads",
-    hash: "community-leads",
+    hash: "leads",
     members: [
       {
         uid: "2024000000",
