@@ -42,6 +42,9 @@ const Navbar = (props) => {
             <Link to="/teams/#core" className={classes.link}>
               Teams
             </Link>
+            <Link to="/quiz" className={classes.link}>
+              Quiz
+            </Link>
             <Link to="/#faq" className={classes.link}>
               FAQs
             </Link>
@@ -90,6 +93,9 @@ const Navbar = (props) => {
           </Link>
           <Link to="/teams/#core" className={classes.link}>
             Teams
+          </Link>
+          <Link to="/quiz" className={classes.link}>
+            Quiz
           </Link>
           <Link to="/#faq" className={classes.link}>
             FAQs
