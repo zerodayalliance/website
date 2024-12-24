@@ -1,6 +1,5 @@
 "use client";
 
-import { JSX } from "react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import {
   IconHome,
@@ -9,12 +8,9 @@ import {
   IconMail,
   IconTerminal2,
 } from "@tabler/icons-react";
+import { TnavItem } from "@/types";
 
-const navItems: {
-  name: string;
-  link: string;
-  icon?: JSX.Element;
-}[] = [
+const navItems: TnavItem[] = [
   {
     name: "Home",
     link: "/",
