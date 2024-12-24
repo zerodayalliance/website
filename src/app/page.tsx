@@ -1,7 +1,12 @@
+import NavBar from "@/components/NavBar";
+
 export default function Home() {
   return (
-    <h1 className="text-center font-iceberg text-tertiary text-4xl mt-7">
-      Coming Soon...
-    </h1>
+    <>
+      <NavBar />
+      <h1 className="font-iceberg text-4xl text-center mt-52 text-tertiary">
+        Coming Soon...
+      </h1>
+    </>
   );
 }
