@@ -1,12 +1,25 @@
 import NavBar from "@/components/NavBar";
-
+import Sidevector from "@/components/Sidevector";
+import Hero from "@/components/Hero"; 
+import Biglogo from "@/components/Biglogo";
+import About from "@/components/About";
+import Endvector from "@/components/Endvector";
 export default function Home() {
   return (
     <>
+      <Sidevector />
       <NavBar />
-      <h1 className="font-iceberg text-4xl text-center mt-52 text-tertiary">
-        Coming Soon...
-      </h1>
+      <Hero  /> 
+      <div  className="flex w-50% -mt-80  mr-15 float-right">
+        <Biglogo />
+      </div>
+      
+      <About />
+      
+      <div className="flex justify-end">
+      <Endvector />
+      </div>
+      
     </>
   );
 }
