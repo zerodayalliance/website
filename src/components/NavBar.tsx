@@ -39,5 +39,9 @@ const navItems: TnavItem[] = [
 ];
 
 export default function NavBar() {
-  return <FloatingNav navItems={navItems} />;
+  return (
+    <nav>
+      <FloatingNav navItems={navItems} />
+    </nav>
+  );
 }
