@@ -1,11 +1,10 @@
 import * as React from "react"
-const Sidevector = (props) => (
+const Sidevector = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={1026}
     height={375}
     fill="none"
-    {...props}
   >
     <path
       fill="url(#a)"

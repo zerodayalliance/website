@@ -23,7 +23,7 @@ const navItems: TnavItem[] = [
   },
   {
     name: "Contact",
-    link: "#contact",
+    link: "/contact",
     icon: <IconMail />,
   },
   {

@@ -2,8 +2,8 @@ import * as React from "react"
 const Biglogo = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={450}
-    height={393}
+    width={500}
+    height={443}
     fill="none"
     viewBox="0 0 650 593"
     {...props}
