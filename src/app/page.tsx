@@ -11,7 +11,7 @@ export default function Home() {
       <NavBar />
       <Hero  /> 
       <div  className="flex w-50% -mt-80  mr-15 float-right">
-        <Biglogo />
+        <Biglogo className="-mt-80" />
       </div>
       
       <About />

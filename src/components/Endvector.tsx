@@ -1,11 +1,10 @@
 import * as React from "react"
-const Endvector = (props) => (
+const Endvector = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={268}
     height={509}
     fill="none"
-    {...props}
   >
     <path
       fill="url(#a)"
