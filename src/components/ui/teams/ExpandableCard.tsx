@@ -1,11 +1,25 @@
 "use client";
-import { IconBrandInstagram,IconBrandLinkedin,IconBrandGithub,IconBrandFacebook,IconBrandX,IconMail } from '@tabler/icons-react';
 import Image from "next/image";
-import React, { useEffect, useId, useRef, useState } from "react";
+import React, { JSX, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
-export default function LeadsCG() {
+interface SocialLink {
+    href: string;
+    icon: JSX.Element;
+}
+interface Card {
+    title: string;
+    description: string;
+    src: string;
+    socialLinks: SocialLink[];
+    content: JSX.Element;
+}
+interface ExpandableCardProps {
+    cards: Card[];
+}
+
+export default function LeadsCG({ cards }: ExpandableCardProps) {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
   );
@@ -33,7 +47,6 @@ export default function LeadsCG() {
 
   return (
     <>
-    <h1 className="font-gidugu text-6xl text-hero text-center mt-4">Community Leads</h1>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -124,9 +137,7 @@ export default function LeadsCG() {
                     exit={{ opacity: 0 }}
                     className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
+                    {active && typeof active === "object" && active.content}
                   </motion.div>
                 </div>
               </div>
@@ -206,56 +217,3 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
-const cards = [
-  {
-    title: "Dibyataru Chakraborty",
-    description: "President",
-    src: "https://res.cloudinary.com/dzajsi427/image/upload/v1729787612/wanderlust_DEV/mbj0tckirk2ov2vqvvrm.png",
-    socialLinks: [
-      { href: "https://www.linkedin.com/in/dibyataru-chakraborty", icon: <IconBrandLinkedin stroke={2} /> },
-      { href: "https://github.com/Dibyataru-Chakraborty", icon: <IconBrandGithub stroke={2} /> },
-    ],
-    content: () => {
-      return (
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore at necessitatibus nulla autem illo sapiente optio eligendi? Vero repudiandae excepturi obcaecati placeat consectetur incidunt corporis adipisci veniam omnis accusantium.
-          Ipsam, accusamus sit! Aperiam ducimus quos ex repellendus deserunt error consectetur a iste sequi facilis provident hic corrupti pariatur, accusantium omnis dolorum, dolores quis iusto maxime assumenda, sed quas! Ipsam.
-        </p>
-      );
-    },
-  },
-  {
-    title: "Salini Dutta",
-    description: "VP | Events Lead",
-    src: "https://res.cloudinary.com/dzajsi427/image/upload/v1729787612/wanderlust_DEV/mbj0tckirk2ov2vqvvrm.png",
-    socialLinks: [
-      { href: "https://www.linkedin.com/in/salini-dutta-87865a2aa/", icon: <IconBrandLinkedin stroke={2} /> },
-    ],
-    content: () => {
-      return (
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore at necessitatibus nulla autem illo sapiente optio eligendi? Vero repudiandae excepturi obcaecati placeat consectetur incidunt corporis adipisci veniam omnis accusantium.
-          Ipsam, accusamus sit! Aperiam ducimus quos ex repellendus deserunt error consectetur a iste sequi facilis provident hic corrupti pariatur, accusantium omnis dolorum, dolores quis iusto maxime assumenda, sed quas! Ipsam.
-        </p>
-      );
-    },
-  },
-  {
-    title: "Soumyadeep Dutta",
-    description: "VP | Cyber Security Lead",
-    src: "https://res.cloudinary.com/dzajsi427/image/upload/v1729787612/wanderlust_DEV/mbj0tckirk2ov2vqvvrm.png",
-    socialLinks: [
-      { href: "https://www.linkedin.com/in/elli0t43/", icon: <IconBrandLinkedin stroke={2} /> },
-      { href: "https://github.com/elli0t43", icon: <IconBrandGithub stroke={2} /> },
-    ],
-    content: () => {
-      return (
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore at necessitatibus nulla autem illo sapiente optio eligendi? Vero repudiandae excepturi obcaecati placeat consectetur incidunt corporis adipisci veniam omnis accusantium.
-          Ipsam, accusamus sit! Aperiam ducimus quos ex repellendus deserunt error consectetur a iste sequi facilis provident hic corrupti pariatur, accusantium omnis dolorum, dolores quis iusto maxime assumenda, sed quas! Ipsam.
-        </p>
-      );
-    },
-  },
-];
