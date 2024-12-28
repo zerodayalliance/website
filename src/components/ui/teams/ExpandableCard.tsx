@@ -43,7 +43,7 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
 
-  // @ts-ignore
+  // @ts-expect-error
   useOutsideClick(ref, () => setActive(null));
 
   return (
