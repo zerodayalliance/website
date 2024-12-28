@@ -1,11 +1,12 @@
-import * as React from "react"
-const StartHelix = (props) => (
+import * as React from "react";
+const StartHelix = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={473}
     height={327}
+    viewBox="0 0 473 327"
     fill="none"
-    {...props}
+    className={className}
   >
     <g filter="url(#a)" opacity={0.2}>
       <circle
@@ -39,5 +40,5 @@ const StartHelix = (props) => (
       </filter>
     </defs>
   </svg>
-)
-export default StartHelix
+);
+export default StartHelix;
