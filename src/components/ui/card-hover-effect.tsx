@@ -14,7 +14,7 @@ export const HoverEffect = ({
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
@@ -71,7 +71,6 @@ export const Card = ({
         "rounded-2xl h-full w-full dark:bg-[linear-gradient(96.79deg,#171717_0%,#323335_0%,rgba(90,90,90,0%)_49%,#171717_100%)] bg-[linear-gradient(110.775deg,rgba(23,23,23,82%)_0%,#323335_40%,rgba(75,74,74,80%)_62%,#171717_71%)] p-4 overflow-hidden opacity-[0.8] border border-transparent dark:border-white/[0.2] mt-10 group-hover:border-slate-700 relative z-20",
         className
       )}
-      
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
@@ -87,7 +86,12 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-tertiary text-2xl font-iceberg text-center font-bold tracking-wide mt-2", className)}>
+    <h4
+      className={cn(
+        "text-tertiary text-2xl font-iceberg text-center font-bold tracking-wide mt-2",
+        className
+      )}
+    >
       {children}
     </h4>
   );
