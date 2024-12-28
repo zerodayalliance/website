@@ -8,10 +8,10 @@ import {Leads,TechCS,TechWD,EM,GT,OT,PR} from "@/components/teams/teams";
 export default function Home() {
   return (
     <>
-      <div className="absolute top-0 right-0 z-0">
+      <div className="absolute top-0 right-0 z-0 full-width">
         <StartHelix />
       </div>
-      <div className="relative z-10">
+      <div className="relative z-10 full-width">
         <NavBar />
         <div className="mt-10">
           <Info />
@@ -31,7 +31,7 @@ export default function Home() {
         <h1 className="font-gidugu text-6xl text-hero text-center mt-4">PR & Social Media Team</h1>
         <ExpandableCard cards={PR}/>
       </div>
-      <EndHelix />
+      <EndHelix className="full-width"/>
     </>
   );
 }
