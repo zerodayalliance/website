@@ -28,3 +28,12 @@ body {
   /* color: var(--foreground); */
   background: var(--background);
 }
+@media (max-width: 480px) {
+  .full-width {
+    width: 100%;
+  }
+}
+
+.card-shadow{
+  box-shadow: 0px 2.5px 25px var(--primary);
+}
