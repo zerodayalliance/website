@@ -1,10 +1,11 @@
-import * as React from "react"
-const Sidevector = () => (
+const TopLines = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={1026}
     height={375}
     fill="none"
+    viewBox="0 0 1026 375"
+    className={className}
   >
     <path
       fill="url(#a)"
@@ -24,5 +25,6 @@ const Sidevector = () => (
       </linearGradient>
     </defs>
   </svg>
-)
-export default Sidevector
+);
+
+export default TopLines;

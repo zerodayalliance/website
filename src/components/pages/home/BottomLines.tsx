@@ -1,10 +1,11 @@
-import * as React from "react"
-const Endvector = () => (
+const BottomLines = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={268}
     height={509}
     fill="none"
+    viewBox="0 0 268 509"
+    className={className}
   >
     <path
       fill="url(#a)"
@@ -24,5 +25,6 @@ const Endvector = () => (
       </linearGradient>
     </defs>
   </svg>
-)
-export default Endvector
+);
+
+export default BottomLines;
