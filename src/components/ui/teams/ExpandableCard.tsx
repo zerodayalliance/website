@@ -75,7 +75,7 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 md:hidden items-center justify-center bg-white rounded-full h-6 w-6 z-20"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -83,35 +83,35 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden card-shadow"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
-                <Image
-                  priority
-                  width={200}
-                  height={200}
-                  src={active.src}
-                  alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top [mask:linear-gradient(to_top,white,white,transparent)]"
-                />
-              </motion.div>
+            <motion.div layoutId={`image-${active.title}-${id}`} className="relative">
+              <Image
+                priority
+                width={200}
+                height={200}
+                src={active.src}
+                alt={active.title}
+                className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top [mask:linear-gradient(to_bottom,white,white,transparent)]"
+              />
+              <div className="absolute bottom-0 left-0 pl-4">
+                <motion.h3
+                  layoutId={`title-${active.title}-${id}`}
+                  className="font-medium text-quaternary text-4xl font-iceberg"
+                >
+                  {active.title}
+                </motion.h3>
+              </div>
+            </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
-                    >
-                      {active.title}
-                    </motion.h3>
+                <div className="flex justify-between items-start px-4 py-2">
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400 text-base"
+                      className="text-hero font-gidugu text-3xl"
                     >
                       {active.description}
                     </motion.p>
-                  </div>
                   <div className="flex">
                   {active.socialLinks?.map((link, index) => (
                     <motion.a
@@ -122,20 +122,20 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
                       exit={{ opacity: 0 }}
                       href={link.href}
                       target="_blank"
-                      className="px-3 py-3 text-sm rounded-full font-bold bg-green-500 text-white ml-4"
+                      className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
                     >
                       {link.icon}
                     </motion.a>
                   ))}
                 </div>
                 </div>
-                <div className="pt-4 relative px-4">
+                <div className="pt-2 relative px-4">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-8 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {active && typeof active === "object" && active.content}
                   </motion.div>
