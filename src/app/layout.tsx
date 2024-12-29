@@ -5,7 +5,7 @@ import {
   Gidugu,
   Iceberg,
 } from "next/font/google";
-
+import NavBar from "@/components/NavBar";
 import "./styles/globals.css";
 
 const encodeSans = Encode_Sans({
@@ -47,6 +47,7 @@ export default function RootLayout({
       <body
         className={`${encodeSans.variable} ${encodeSansCondensed.variable} ${gidugu.variable} ${iceberg.variable} antialiased`}
       >
+        <NavBar />
         {children}
       </body>
     </html>

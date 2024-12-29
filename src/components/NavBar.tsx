@@ -18,7 +18,7 @@ const navItems: TnavItem[] = [
   },
   {
     name: "Events",
-    link: "#events",
+    link: "/events",
     icon: <IconCalendarEvent />,
   },
   {

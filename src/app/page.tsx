@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import Image from "next/image";
 
-import NavBar from "@/components/NavBar";
 import Hero from "@/components/pages/home/Hero";
 import About from "@/components/pages/home/About";
 
@@ -14,7 +13,6 @@ import groupPhoto from "@/assets/img/group.jpg";
 export default function Home() {
   return (
     <>
-      <NavBar />
       <TopLines className="absolute top-0 left-0 -ml-16 -mt-16 -z-50 opacity-80" />
       <header className="flex justify-between items-center flex-row pt-40 pb-24 sm:pb-32 md:pb-40 mx-10 sm:mx-16 md:mx-20">
         <Hero />
@@ -29,7 +27,7 @@ export default function Home() {
             }
           >
             <Image
-              className="rounded-3xl w-64 md:w-96"
+              className="rounded-3xl w-96"
               src={groupPhoto}
               alt="Group Photo"
             />
