@@ -6,7 +6,7 @@ import {
   Iceberg,
 } from "next/font/google";
 import NavBar from "@/components/NavBar";
-import "./styles/globals.css";
+import "@/styles/globals.css";
 
 const encodeSans = Encode_Sans({
   variable: "--font-encode-sans",
