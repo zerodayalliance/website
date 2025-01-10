@@ -49,6 +49,11 @@ export default function RootLayout({
       >
         <NavBar />
         {children}
+        <script
+          src="https://embed.lu.ma/checkout-button.js"
+          id="luma-checkout"
+          async
+        />
       </body>
     </html>
   );
