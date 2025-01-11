@@ -7,11 +7,11 @@ export default function PastEvents(props: { data: IEvent[] }) {
 
   return (
     <>
-      <h2 className="font-iceberg text-5xl text-center mt-3">
-        <span className="text-gray-200">Past</span>{" "}
+      <h2 className="font-iceberg text-5xl text-center mt-10">
+        <span className="text-gray-900 dark:text-gray-200">Past</span>{" "}
         <span className="text-hero">Events</span>
       </h2>
-      <p className="font-encode-sans text-center my-4 text-gray-200">
+      <p className="font-encode-sans text-center my-4 text-gray-900 dark:text-gray-200">
         Our Past Events
       </p>
       <Carousel
