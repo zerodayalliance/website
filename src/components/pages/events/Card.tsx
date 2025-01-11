@@ -61,7 +61,9 @@ export default function Card({
       </div>
       {(rsvpLink || lumaEventId) && (
         <a
-          className="mt-4 shadow-[inset_0_0_0_2px_#616467] text-black px-6 py-2 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200"
+          // className="mt-4 shadow-[inset_0_0_0_2px_#616467] text-black px-6 py-2 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200"
+          // className="mt-4 px-6 py-2 inline-flex animate-shimmer items-center justify-center rounded-full border border-zinc-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium text-zinc-400 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50"
+          className="mt-4 relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50"
           data-luma-action="checkout"
           data-luma-event-id={lumaEventId}
           href={
@@ -69,7 +71,10 @@ export default function Card({
           }
           target="_blank"
         >
-          RSVP
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--quaternary)_0%,var(--onhold)_50%,var(--quaternary)_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-zinc-950 px-6 py-1.5 text-lg font-normal text-white backdrop-blur-3xl">
+            RSVP
+          </span>
         </a>
       )}
     </div>
