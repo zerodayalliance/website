@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 import { graphqlClient } from "@/lib/graphql/client";
 import PastEvents from "@/components/pages/events/PastEvents";
 import UpcomingEvents from "@/components/pages/events/UpcomingEvents";
-import { IEvent } from "@/types";
+import { IEvent, IGetEventsQuery } from "@/types";
 
 const GetEvents = gql`
   query EventsCollection {
@@ -33,17 +33,17 @@ const GetEvents = gql`
 `;
 
 export default async function Events() {
-  const res: any = await graphqlClient.request(GetEvents);
-  const eventsData: [] = res.eventsCollection.items;
+  const res: IGetEventsQuery = await graphqlClient.request(GetEvents);
+  const eventsData = res.eventsCollection.items;
 
   const upcomingEventsData: IEvent[] = [];
   const pastEventsData: IEvent[] = [];
 
-  await eventsData.sort((a: any, b: any) => {
+  await eventsData.sort((a, b) => {
     return new Date(b.dateTime).getTime() - new Date(a.dateTime).getTime();
   });
 
-  await eventsData.map((event: any) => {
+  await eventsData.map((event) => {
     const dateTime = new Date(event.dateTime);
     const eventData = {
       title: event.title,

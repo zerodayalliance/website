@@ -19,3 +19,29 @@ export interface IEvent {
   posterHeight: number;
   posterWidth: number;
 }
+
+export interface IGetEventsQuery {
+  eventsCollection: {
+    total: number;
+    skip: number;
+    limit: number;
+    items: {
+      _id: string;
+      title: string;
+      dateTime: string;
+      mode: string;
+      location: string;
+      rsvpLink: string;
+      lumaEventId: string;
+      poster: {
+        title: string;
+        description: string;
+        contentType: string;
+        size: number;
+        url: string;
+        width: number;
+        height: number;
+      };
+    }[];
+  };
+}
