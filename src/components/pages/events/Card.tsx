@@ -1,13 +1,13 @@
-"use client";
 import Image from "next/image";
-import { useEffect, Suspense } from "react";
-import { IEvent } from "@/types";
+import { Suspense } from "react";
 import {
   IconCalendarWeek,
   IconClock,
   IconMapPin,
   IconWorld,
 } from "@tabler/icons-react";
+import RsvpBtn from "./RsvpBtn";
+import { IEvent } from "@/types";
 
 export default function Card({
   title,
@@ -22,10 +22,6 @@ export default function Card({
   posterHeight,
   posterWidth,
 }: IEvent) {
-  useEffect(() => {
-    window?.luma?.initCheckout();
-  }, []);
-
   return (
     <div className="flex justify-center items-center flex-col overflow-visible w-80 mx-auto p-5 rounded-xl shadow-xl dark:shadow-md dark:shadow-zinc-700 dark:bg-zinc-900 bg-zinc-100 text-gray-800 dark:text-gray-200 z-10">
       <Suspense fallback={<p>Loading...</p>}>
@@ -65,20 +61,7 @@ export default function Card({
         </p>
       </div>
       {(rsvpLink || lumaEventId) && (
-        <a
-          className="mt-5 select-none relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50"
-          data-luma-action="checkout"
-          data-luma-event-id={lumaEventId}
-          href={
-            lumaEventId ? `https://lu.ma/event/${lumaEventId}` : rsvpLink || "/"
-          }
-          target="_blank"
-        >
-          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--quaternary)_0%,var(--onhold)_50%,var(--quaternary)_100%)]" />
-          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-6 py-1.5 text-lg font-normal dark:bg-zinc-800 bg-zinc-200 dark:text-zinc-50 text-zinc-950 backdrop-blur-3xl">
-            RSVP
-          </span>
-        </a>
+        <RsvpBtn rsvpLink={rsvpLink} lumaEventId={lumaEventId} />
       )}
     </div>
   );
