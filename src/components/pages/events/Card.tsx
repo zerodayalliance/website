@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import { Suspense } from "react";
+import { useEffect, Suspense } from "react";
 import { IEvent } from "@/types";
 import {
   IconCalendarWeek,
@@ -21,6 +22,15 @@ export default function Card({
   posterHeight,
   posterWidth,
 }: IEvent) {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://embed.lu.ma/checkout-button.js";
+    script.id = "luma-checkout";
+    script.defer = true;
+    document.body.appendChild(script);
+    window?.luma?.initCheckout();
+  }, []);
+
   return (
     <div className="flex justify-center items-center flex-col overflow-visible w-80 mx-auto p-5 rounded-xl shadow-xl dark:shadow-md dark:shadow-zinc-700 dark:bg-zinc-900 bg-zinc-100 text-gray-800 dark:text-gray-200 z-10">
       <Suspense fallback={<p>Loading...</p>}>
