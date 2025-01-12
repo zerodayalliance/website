@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import { FlipWords } from "@/components/ui/flip-words";
 
 const words = [
@@ -10,15 +9,15 @@ const words = [
   "safer",
 ];
 
-const Hero = ({ className }: { className?: string }) => {
+const Hero = () => {
   return (
-    <div className={cn(``, className)}>
+    <div className="">
       <h1 className="font-iceberg text-5xl sm:text-6xl md:text-7xl mb-4 dark:text-quaternary text-hero">
         ZeroDay Alliance
       </h1>
       <h2 className="font-encode-sans max-w-fit text-2xl sm:text-3xl md:text-4xl dark:text-gray-300 text-gray-500">
         <span>
-          Let us come together and make <br className="hidden lg:block " /> our
+          Let us come together and make <br className="hidden lg:block" /> our
           society
         </span>{" "}
         <br className="block sm:hidden" />
