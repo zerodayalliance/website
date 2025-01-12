@@ -24,6 +24,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    window?.luma.initCheckout();
     if (carouselRef.current) {
       carouselRef.current.scrollLeft = initialScroll;
       checkScrollability();

@@ -1,7 +1,7 @@
 import { gql } from "graphql-request";
 import { graphqlClient } from "@/lib/graphql/client";
-import PastEvents from "@/components/pages/events/PastEvents";
 import UpcomingEvents from "@/components/pages/events/UpcomingEvents";
+import PastEvents from "@/components/pages/events/PastEvents";
 import { IEvent, IGetEventsQuery } from "@/types";
 
 const GetEvents = gql`
@@ -31,6 +31,17 @@ const GetEvents = gql`
     }
   }
 `;
+
+declare global {
+  interface Window {
+    luma: {
+      initCheckout: () => void;
+    };
+  }
+}
+
+export const runtime = "edge";
+export const revalidate = 60;
 
 export default async function Events() {
   const res: IGetEventsQuery = await graphqlClient.request(GetEvents);
