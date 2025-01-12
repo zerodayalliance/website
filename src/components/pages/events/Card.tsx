@@ -23,11 +23,6 @@ export default function Card({
   posterWidth,
 }: IEvent) {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://embed.lu.ma/checkout-button.js";
-    script.id = "luma-checkout";
-    script.defer = true;
-    document.body.appendChild(script);
     window?.luma?.initCheckout();
   }, []);
 
@@ -71,8 +66,6 @@ export default function Card({
       </div>
       {(rsvpLink || lumaEventId) && (
         <a
-          // className="mt-4 shadow-[inset_0_0_0_2px_#616467] text-black px-6 py-2 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200"
-          // className="mt-4 px-6 py-2 inline-flex animate-shimmer items-center justify-center rounded-full border border-zinc-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium text-zinc-400 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50"
           className="mt-5 select-none relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-50"
           data-luma-action="checkout"
           data-luma-event-id={lumaEventId}
