@@ -45,3 +45,34 @@ export interface IGetEventsQuery {
     }[];
   };
 }
+
+export interface IGetTeamsQuery {
+  teamsCollection: {
+    total: number;
+    skip: number;
+    limit: number;
+    items: {
+      _id: string;
+      id: string;
+      name: string;
+      membersCollection: {
+        total: number;
+        skip: number;
+        limit: number;
+        items: {
+          _id: string;
+          uid: string;
+          name: string;
+          role: string;
+          bio: string;
+          linkedin: string;
+          github: string;
+          twitter: string;
+          instagram: string;
+          facebook: string;
+          email: string;
+        }[];
+      };
+    }[];
+  };
+}
