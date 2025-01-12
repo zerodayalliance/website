@@ -1,3 +1,5 @@
+// import { gql } from "graphql-request";
+// import { graphqlClient } from "@/lib/graphql/client";
 import StartHelix from "@/components/teams/StartHelix";
 import Info from "@/components/teams/Info";
 import EndHelix from "@/components/teams/EndHelix";
@@ -11,8 +13,49 @@ import {
   OT,
   PR,
 } from "@/components/teams/teams";
+// import { IGetTeamsQuery } from "@/types";
 
-export default function Home() {
+// const GetTeams = gql`
+//   query TeamsCollection {
+//     teamsCollection {
+//       total
+//       skip
+//       limit
+//       items {
+//         _id
+//         id
+//         name
+//         membersCollection {
+//           total
+//           skip
+//           limit
+//           items {
+//             _id
+//             uid
+//             name
+//             role
+//             bio
+//             linkedin
+//             github
+//             twitter
+//             instagram
+//             facebook
+//             email
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
+
+export const runtime = "edge";
+export const revalidate = 60;
+
+export default async function Teams() {
+  // const data: IGetTeamsQuery = await graphqlClient.request(GetTeams);
+  // const teamsData = data.teamsCollection.items;
+  // console.log(teamsData);
+
   return (
     <>
       <div className="absolute top-0 right-0 z-0 full-width">
