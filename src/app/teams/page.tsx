@@ -1,8 +1,8 @@
 // import { gql } from "graphql-request";
 // import { graphqlClient } from "@/lib/graphql/client";
-import StartHelix from "@/components/teams/StartHelix";
-import Info from "@/components/teams/Info";
-import EndHelix from "@/components/teams/EndHelix";
+import StartHelix from "@/components/pages/teams/StartHelix";
+import Info from "@/components/pages/teams/Info";
+import EndHelix from "@/components/pages/teams/EndHelix";
 import ExpandableCard from "@/components/ui/teams/ExpandableCard";
 import {
   Leads,
@@ -12,7 +12,7 @@ import {
   GT,
   OT,
   PR,
-} from "@/components/teams/teams";
+} from "@/components/pages/teams/teams";
 // import { IGetTeamsQuery } from "@/types";
 
 // const GetTeams = gql`

@@ -3,6 +3,9 @@ import Image from "next/image";
 import React, { JSX, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface SocialLink {
   href: string;
@@ -25,6 +28,39 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
   );
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -149,7 +185,8 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-7xl mx-auto w-full flex justify-center items-center flex-wrap gap-4">
+      <ul className="max-w-96 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-7xl mx-auto w-full">
+      <Slider {...settings}>
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
@@ -184,6 +221,7 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
             </div>
           </motion.div>
         ))}
+      </Slider>
       </ul>
     </>
   );
