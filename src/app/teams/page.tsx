@@ -65,34 +65,38 @@ export default async function Teams() {
         <div className="mt-10">
           <Info />
         </div>
-        <h1 className="font-gidugu text-6xl text-hero text-center mt-4">
-          Community Leads
-        </h1>
-        <ExpandableCard cards={Leads} />
-        <h1 className="font-gidugu text-6xl text-hero text-center mt-4">
-          Tech Team (Cyber Security)
-        </h1>
-        <ExpandableCard cards={TechCS} />
-        <h1 className="font-gidugu text-6xl text-hero text-center mt-4">
-          Tech Team (Web Development)
-        </h1>
-        <ExpandableCard cards={TechWD} />
-        <h1 className="font-gidugu text-6xl text-hero text-center mt-4">
-          Event Management Team
-        </h1>
-        <ExpandableCard cards={EM} />
-        <h1 className="font-gidugu text-6xl text-hero text-center mt-4">
-          Graphics Team
-        </h1>
-        <ExpandableCard cards={GT} />
-        <h1 className="font-gidugu text-6xl text-hero text-center mt-4">
-          Outreach Team
-        </h1>
-        <ExpandableCard cards={OT} />
-        <h1 className="font-gidugu text-6xl text-hero text-center mt-4">
-          PR & Social Media Team
-        </h1>
-        <ExpandableCard cards={PR} />
+        <div style={{ height: '60vh', overflowY: 'auto', scrollbarWidth: 'none' }}>
+          <h1 className="font-gidugu text-6xl text-hero text-center mt-20">
+            Community Leads
+          </h1>
+          <ExpandableCard cards={Leads} />
+          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
+            Tech Team (Cyber Security)
+          </h1>
+          <ExpandableCard cards={TechCS} />
+          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
+            Tech Team (Web Development)
+          </h1>
+          <ExpandableCard cards={TechWD} />
+          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
+            Event Management Team
+          </h1>
+          <ExpandableCard cards={EM} />
+          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
+            Graphics Team
+          </h1>
+          <ExpandableCard cards={GT} />
+          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
+            Outreach Team
+          </h1>
+          <ExpandableCard cards={OT} />
+          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
+            PR & Social Media Team
+          </h1>
+          <div className="mb-40">
+          <ExpandableCard cards={PR} />
+          </div>
+        </div>
       </div>
       <EndHelix className="full-width" />
     </>
