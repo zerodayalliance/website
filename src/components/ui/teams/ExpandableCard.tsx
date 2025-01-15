@@ -26,29 +26,49 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
   );
+  const [activeSlide, setActiveSlide] = useState(0);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
   const settings = {
-    dots: false,
+    dots: true,
+    arrows: true,
     infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     initialSlide: 0,
+    // autoplay: true,
+    // speed: 2000,
+    // autoplaySpeed: 1000,
+    // cssEase: "linear",
+    beforeChange: (current:number, next:number) => setActiveSlide(next),
+    customPaging: (i:number) => (
+      <div
+        style={{
+          margin: "10px 5px",
+          width: "10px",
+          height: "10px",
+          borderRadius: "50%",
+          backgroundColor: i === activeSlide ? "#752626" : "#656565", // Active state
+        }}
+        onMouseEnter={e => e.currentTarget.style.backgroundColor = "#752626"}
+        onMouseLeave={e => e.currentTarget.style.backgroundColor = i === activeSlide ? "#752626" : "#656565"}
+      >
+        
+      </div>),
     responsive: [
       {
         breakpoint: 1280,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         }
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2
         }
       },
@@ -185,23 +205,23 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-96 sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-7xl mx-auto w-full">
+      <ul className="max-w-60 sm:max-w-md md:max-w-md lg:max-w-4xl mx-auto w-full">
       <Slider {...settings}>
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col  w-full">
+            <div className="flex mb-4 gap-4 flex-col items-center w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
                   width={100}
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-48 w-full  rounded-lg object-cover object-top"
+                  className="w-40 h-full rounded-lg object-cover object-top"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
