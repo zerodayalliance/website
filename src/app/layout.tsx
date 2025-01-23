@@ -6,6 +6,7 @@ import {
   Iceberg,
 } from "next/font/google";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import "@/styles/globals.css";
 
 const encodeSans = Encode_Sans({
@@ -49,6 +50,7 @@ export default function RootLayout({
       >
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
