@@ -1,4 +1,12 @@
 "use client";
+import {
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandGithub,
+  IconBrandFacebook,
+  IconBrandX,
+  IconMail,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import React, { JSX, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -6,26 +14,14 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Team, Member } from "@/types";
 
-interface SocialLink {
-  href: string;
-  icon: JSX.Element;
-}
-interface Card {
-  title: string;
-  description: string;
-  src: string;
-  socialLinks: SocialLink[];
-  content: JSX.Element;
-}
 interface ExpandableCardProps {
-  cards: Card[];
+  team: Team;
 }
 
-export default function LeadsCG({ cards }: ExpandableCardProps) {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
-    null
-  );
+export default function LeadsCG({ team }: ExpandableCardProps) {
+  const [active, setActive] = useState<Member | boolean | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
@@ -41,8 +37,8 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
     // speed: 2000,
     // autoplaySpeed: 1000,
     // cssEase: "linear",
-    beforeChange: (current:number, next:number) => setActiveSlide(next),
-    customPaging: (i:number) => (
+    beforeChange: (current: number, next: number) => setActiveSlide(next),
+    customPaging: (i: number) => (
       <div
         style={{
           margin: "10px 5px",
@@ -51,35 +47,39 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
           borderRadius: "50%",
           backgroundColor: i === activeSlide ? "#752626" : "#656565", // Active state
         }}
-        onMouseEnter={e => e.currentTarget.style.backgroundColor = "#752626"}
-        onMouseLeave={e => e.currentTarget.style.backgroundColor = i === activeSlide ? "#752626" : "#656565"}
-      >
-        
-      </div>),
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.backgroundColor = "#752626")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.backgroundColor =
+            i === activeSlide ? "#752626" : "#656565")
+        }
+      ></div>
+    ),
     responsive: [
       {
         breakpoint: 1280,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -118,7 +118,7 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
         {active && typeof active === "object" ? (
           <div className="fixed inset-0  grid place-items-center z-[100]">
             <motion.button
-              key={`button-${active.title}-${id}`}
+              key={`button-${active.name}-${id}`}
               layout
               initial={{
                 opacity: 0,
@@ -138,28 +138,30 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
               <CloseIcon />
             </motion.button>
             <motion.div
-              layoutId={`card-${active.title}-${id}`}
+              layoutId={`card-${active.name}-${id}`}
               ref={ref}
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden card-shadow"
             >
               <motion.div
-                layoutId={`image-${active.title}-${id}`}
+                layoutId={`image-${active.name}-${id}`}
                 className="relative"
               >
                 <Image
                   priority
                   width={200}
                   height={200}
-                  src={active.src}
-                  alt={active.title}
+                  src={
+                    "https://res.cloudinary.com/dzajsi427/image/upload/v1729787612/wanderlust_DEV/mbj0tckirk2ov2vqvvrm.png"
+                  }
+                  alt={active.name}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top [mask:linear-gradient(to_bottom,white,white,transparent)]"
                 />
                 <div className="absolute bottom-0 left-0 pl-4">
                   <motion.h3
-                    layoutId={`title-${active.title}-${id}`}
+                    layoutId={`title-${active.name}-${id}`}
                     className="font-medium text-quaternary text-4xl font-iceberg"
                   >
-                    {active.title}
+                    {active.name}
                   </motion.h3>
                 </div>
               </motion.div>
@@ -167,26 +169,90 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
               <div>
                 <div className="flex justify-between items-start px-4 py-2">
                   <motion.p
-                    layoutId={`description-${active.description}-${id}`}
+                    layoutId={`description-${active.role}-${id}`}
                     className="text-hero font-gidugu text-3xl"
                   >
-                    {active.description}
+                    {active.role}
                   </motion.p>
                   <div className="flex">
-                    {active.socialLinks?.map((link, index) => (
+                    {active.linkedin && (
                       <motion.a
-                        key={index}
                         layout
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        href={link.href}
+                        href={active.linkedin}
                         target="_blank"
                         className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
                       >
-                        {link.icon}
+                        <IconBrandLinkedin />
                       </motion.a>
-                    ))}
+                    )}
+                    {active.github && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={active.github}
+                        target="_blank"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                      >
+                        <IconBrandGithub />
+                      </motion.a>
+                    )}
+                    {active.twitter && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={active.twitter}
+                        target="_blank"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                      >
+                        <IconBrandX />
+                      </motion.a>
+                    )}
+                    {active.instagram && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={active.instagram}
+                        target="_blank"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                      >
+                        <IconBrandInstagram />
+                      </motion.a>
+                    )}
+                    {active.facebook && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={active.facebook}
+                        target="_blank"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                      >
+                        <IconBrandFacebook />
+                      </motion.a>
+                    )}
+                    {active.email && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={`mailto:${active.email}`}
+                        target="_blank"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                      >
+                        <IconMail />
+                      </motion.a>
+                    )}
                   </div>
                 </div>
                 <div className="pt-2 relative px-4">
@@ -197,7 +263,7 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
                     exit={{ opacity: 0 }}
                     className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-8 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
-                    {active && typeof active === "object" && active.content}
+                    {active && typeof active === "object" && active.bio}
                   </motion.div>
                 </div>
               </div>
@@ -206,42 +272,44 @@ export default function LeadsCG({ cards }: ExpandableCardProps) {
         ) : null}
       </AnimatePresence>
       <ul className="max-w-60 sm:max-w-md md:max-w-md lg:max-w-4xl mx-auto w-full">
-      <Slider {...settings}>
-        {cards.map((card) => (
-          <motion.div
-            layoutId={`card-${card.title}-${id}`}
-            key={card.title}
-            onClick={() => setActive(card)}
-            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
-          >
-            <div className="flex mb-4 gap-4 flex-col items-center w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
-                <Image
-                  width={100}
-                  height={100}
-                  src={card.src}
-                  alt={card.title}
-                  className="w-40 h-full rounded-lg object-cover object-top"
-                />
-              </motion.div>
-              <div className="flex justify-center items-center flex-col">
-                <motion.h3
-                  layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
-                >
-                  {card.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
-                >
-                  {card.description}
-                </motion.p>
+        <Slider {...settings}>
+          {team.membersCollection.items.map((card) => (
+            <motion.div
+              layoutId={`card-${card.name}-${id}`}
+              key={card.name}
+              onClick={() => setActive(card)}
+              className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            >
+              <div className="flex mb-4 gap-4 flex-col items-center w-full">
+                <motion.div layoutId={`image-${card.name}-${id}`}>
+                  <Image
+                    width={100}
+                    height={100}
+                    src={
+                      "https://res.cloudinary.com/dzajsi427/image/upload/v1729787612/wanderlust_DEV/mbj0tckirk2ov2vqvvrm.png"
+                    }
+                    alt={card.name}
+                    className="w-40 h-full rounded-lg object-cover object-top"
+                  />
+                </motion.div>
+                <div className="flex justify-center items-center flex-col">
+                  <motion.h3
+                    layoutId={`title-${card.name}-${id}`}
+                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                  >
+                    {card.name}
+                  </motion.h3>
+                  <motion.p
+                    layoutId={`description-${card.role}-${id}`}
+                    className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                  >
+                    {card.role}
+                  </motion.p>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </Slider>
+            </motion.div>
+          ))}
+        </Slider>
       </ul>
     </>
   );

@@ -76,3 +76,29 @@ export interface IGetTeamsQuery {
     }[];
   };
 }
+
+export interface Member {
+  _id: string;
+  uid: number;
+  name: string;
+  role: string;
+  bio: string | null;
+  linkedin: string | null;
+  github: string | null;
+  twitter: string | null;
+  instagram: string | null;
+  facebook: string | null;
+  email: string | null;
+}
+
+export interface Team {
+  _id: string;
+  id: number;
+  name: string;
+  membersCollection: {
+    total: number;
+    skip: number;
+    limit: number;
+    items: Member[];
+  };
+}

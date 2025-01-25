@@ -4,15 +4,7 @@ import StartHelix from "@/components/pages/teams/StartHelix";
 import Info from "@/components/pages/teams/Info";
 import EndHelix from "@/components/pages/teams/EndHelix";
 import ExpandableCard from "@/components/ui/teams/ExpandableCard";
-import {
-  Leads,
-  TechCS,
-  TechWD,
-  EM,
-  GT,
-  OT,
-  PR,
-} from "@/components/pages/teams/teams";
+import { data } from "@/components/pages/teams/teams";
 // import { IGetTeamsQuery } from "@/types";
 
 // const GetTeams = gql`
@@ -65,37 +57,21 @@ export default async function Teams() {
         <div className="mt-10">
           <Info />
         </div>
-        <div style={{ height: '60vh', overflowY: 'auto', scrollbarWidth: 'none' }}>
-          <h1 className="font-gidugu text-6xl text-hero text-center mt-20">
-            Community Leads
-          </h1>
-          <ExpandableCard cards={Leads} />
-          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
-            Tech Team (Cyber Security)
-          </h1>
-          <ExpandableCard cards={TechCS} />
-          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
-            Tech Team (Web Development)
-          </h1>
-          <ExpandableCard cards={TechWD} />
-          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
-            Event Management Team
-          </h1>
-          <ExpandableCard cards={EM} />
-          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
-            Graphics Team
-          </h1>
-          <ExpandableCard cards={GT} />
-          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
-            Outreach Team
-          </h1>
-          <ExpandableCard cards={OT} />
-          <h1 className="font-gidugu text-6xl text-hero text-center mt-40">
-            PR & Social Media Team
-          </h1>
-          <div className="mb-40">
-          <ExpandableCard cards={PR} />
-          </div>
+        <div
+          style={{ height: "60vh", overflowY: "auto", scrollbarWidth: "none" }}
+        >
+          <div className="mt-20"></div>
+          {data.teamsCollection.items
+            .slice()
+            .reverse()
+            .map((team) => (
+              <div key={team.id} className="mb-40">
+                <h1 className="font-gidugu text-6xl text-hero text-center">
+                  {team.name}
+                </h1>
+                <ExpandableCard team={team} />
+              </div>
+            ))}
         </div>
       </div>
       <EndHelix className="full-width" />
