@@ -9,13 +9,13 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { TnavItem } from "@/types";
+import { INavItem } from "@/types";
 
 export const FloatingNav = ({
   navItems,
   className,
 }: {
-  navItems: TnavItem[];
+  navItems: INavItem[];
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
@@ -64,7 +64,7 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: TnavItem, idx: number) => (
+        {navItems.map((navItem: INavItem, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}

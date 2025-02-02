@@ -1,10 +1,10 @@
 import { JSX } from "react";
 
-export type TnavItem = {
+export interface INavItem {
   name: string;
   link: string;
   icon?: JSX.Element;
-};
+}
 
 export interface IEvent {
   title: string;
