@@ -1,7 +1,7 @@
-import Contactvector from "@/components/Contactvector";
-import Contacttext from "@/components/Contacttext";
-import ContactEvector from "@/components/ContactEvector";
-import Contactcard from "@/components/Contactcard";
+import Contactvector from "@/components/pages/contact/Contactvector";
+import Contacttext from "@/components/pages/contact/Contacttext";
+import ContactEvector from "@/components/pages/contact/ContactEvector";
+import Contactcard from "@/components/pages/contact/Contactcard";
 
 export default function contact() {
   return (

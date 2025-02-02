@@ -10,25 +10,20 @@ export default function Contactcard() {
   );
 }
 
-
 export const projects = [
   {
     title: "Github",
-    description:
-      "ZeroDay-Alliance-SNU",
+    description: "ZeroDay-Alliance-SNU",
     link: "https://github.com/ZeroDay-Alliance-SNU",
   },
   {
     title: "LinkedIn",
-    description:
-    "zeroday-alliance-snu",
+    description: "zeroday-alliance-snu",
     link: "https://netflhttps://www.linkedin.com/company/zeroday-alliance-snu/posts/?feedView=allix.com",
   },
   {
     title: "Instagram",
-    description:
-      "zerodayalliancesnu",
+    description: "zerodayalliancesnu",
     link: "https://www.instagram.com/zerodayalliancesnu/#",
   },
 ];
-
