@@ -8,9 +8,9 @@ import {
   IconMail,
   IconTerminal2,
 } from "@tabler/icons-react";
-import { TnavItem } from "@/types";
+import { INavItem } from "@/types";
 
-const navItems: TnavItem[] = [
+const navItems: INavItem[] = [
   {
     name: "Home",
     link: "/",
@@ -22,14 +22,14 @@ const navItems: TnavItem[] = [
     icon: <IconCalendarEvent />,
   },
   {
-    name: "Contact",
-    link: "/contact",
-    icon: <IconMail />,
-  },
-  {
     name: "Teams",
     link: "/teams",
     icon: <IconUsers />,
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+    icon: <IconMail />,
   },
   {
     name: "CLI",

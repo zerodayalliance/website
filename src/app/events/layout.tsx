@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Events | ZeroDay Alliance SNU",
@@ -9,5 +11,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <>
+      <NavBar />
+      {children}
+      <Footer />
+    </>
+  );
 }

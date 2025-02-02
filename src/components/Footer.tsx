@@ -32,7 +32,7 @@ export default function Footer() {
                 <IconBrandGithub size={26} stroke={1.5} />
               </Link>
               <Link
-                href="https://www.instagram.com/zerodayalliancesnu"
+                href="https://www.instagram.com/zerodayalliance"
                 target="_blank"
               >
                 <IconBrandInstagram size={26} stroke={1.5} />
