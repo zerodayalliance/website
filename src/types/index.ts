@@ -77,9 +77,9 @@ export interface IGetTeamsQuery {
   };
 }
 
-export interface Member {
+export interface IMember {
   _id: string;
-  uid: number;
+  uid: string;
   name: string;
   role: string;
   bio: string | null;
@@ -91,14 +91,14 @@ export interface Member {
   email: string | null;
 }
 
-export interface Team {
+export interface ITeam {
   _id: string;
-  id: number;
+  id: string;
   name: string;
   membersCollection: {
     total: number;
     skip: number;
     limit: number;
-    items: Member[];
+    items: IMember[];
   };
 }
