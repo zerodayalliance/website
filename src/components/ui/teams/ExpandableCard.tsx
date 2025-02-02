@@ -8,20 +8,20 @@ import {
   IconMail,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import React, { JSX, useEffect, useId, useRef, useState } from "react";
+import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Team, Member } from "@/types";
+import { ITeam, IMember } from "@/types";
 
 interface ExpandableCardProps {
-  team: Team;
+  team: ITeam;
 }
 
-export default function LeadsCG({ team }: ExpandableCardProps) {
-  const [active, setActive] = useState<Member | boolean | null>(null);
+export default function ExpandableCard({ team }: ExpandableCardProps) {
+  const [active, setActive] = useState<IMember | boolean | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
