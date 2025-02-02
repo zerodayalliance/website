@@ -3,7 +3,7 @@ import { graphqlClient } from "@/lib/graphql/client";
 import StartHelix from "@/components/pages/teams/StartHelix";
 import Info from "@/components/pages/teams/Info";
 import EndHelix from "@/components/pages/teams/EndHelix";
-import ExpandableCard from "@/components/ui/teams/ExpandableCard";
+import ExpandableCard from "@/components/pages/teams/ExpandableCard";
 import { IGetTeamsQuery } from "@/types";
 
 const GetTeams = gql`
