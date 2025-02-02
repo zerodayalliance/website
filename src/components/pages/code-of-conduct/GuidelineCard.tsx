@@ -30,4 +30,3 @@ const GuidelineCard: React.FC<CardProps> = ({ title, description, svg }) => {
 };
 
 export default GuidelineCard;
-
