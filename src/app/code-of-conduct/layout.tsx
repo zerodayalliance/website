@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Community Guidelines| ZeroDay Alliance SNU",
+  title: "Code of Conduct | ZeroDay Alliance SNU",
 };
 
 export default function RootLayout({
