@@ -49,31 +49,25 @@ export default async function Teams() {
 
   return (
     <>
-      <div className="absolute top-0 right-0 z-0 full-width">
-        <StartHelix />
-      </div>
+      <StartHelix className="absolute top-0 right-0 z-0 max-w-full" />
       <div className="relative z-10 full-width">
         <div className="mt-10">
           <Info />
         </div>
-        <div
-          style={{ height: "60vh", overflowY: "auto", scrollbarWidth: "none" }}
-        >
-          <div className="mt-20"></div>
-          {teamsData
-            .slice()
-            .reverse()
-            .map((team) => (
-              <div key={team.id} className="mb-40">
-                <h1 className="font-gidugu text-6xl text-hero text-center">
-                  {team.name}
-                </h1>
-                <ExpandableCard team={team} />
-              </div>
-            ))}
-        </div>
+        <div className="mt-10"></div>
+        {teamsData
+          .slice()
+          .reverse()
+          .map((team) => (
+            <div key={team.id} className="mb-10">
+              <h1 className="font-gidugu text-6xl text-hero text-center">
+                {team.name}
+              </h1>
+              <ExpandableCard team={team} />
+            </div>
+          ))}
       </div>
-      <EndHelix className="full-width" />
+      <EndHelix className="float-left -mt-[26.5rem] opacity-60 max-w-full" />
     </>
   );
 }
