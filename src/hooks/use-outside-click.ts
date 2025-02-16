@@ -5,7 +5,6 @@ export const useOutsideClick = (
   callback: Function // eslint-disable-line
 ) => {
   useEffect(() => {
-    // eslint-disable-next-line
     const listener = (event: any) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;
