@@ -7,11 +7,13 @@ export const Info = () => {
           Meet Our<span className="text-hero"> Core</span>!
         </h2>
         <h2 className="font-encodesans text-1xl mt-3 text-white ">
-        Hello everyone! We’re excited to introduce our amazing team members for the tenure 2024-2025. <br />Each of them brings unique skills and passion to the club.
+          Hello everyone! We’re excited to introduce our amazing team members
+          for the tenure 2024-2025. <br />
+          Each of them brings unique skills and passion to the club.
         </h2>
       </div>
     </div>
   );
-}
+};
 
 export default Info;
