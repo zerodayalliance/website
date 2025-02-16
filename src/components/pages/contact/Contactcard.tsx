@@ -12,18 +12,18 @@ export default function Contactcard() {
 
 export const projects = [
   {
-    title: "Github",
+    title: "GitHub",
     description: "ZeroDay-Alliance-SNU",
     link: "https://github.com/ZeroDay-Alliance-SNU",
   },
   {
     title: "LinkedIn",
     description: "zeroday-alliance-snu",
-    link: "https://netflhttps://www.linkedin.com/company/zeroday-alliance-snu/posts/?feedView=allix.com",
+    link: "https://www.linkedin.com/company/zeroday-alliance-snu/",
   },
   {
     title: "Instagram",
-    description: "zerodayalliancesnu",
-    link: "https://www.instagram.com/zerodayalliancesnu/#",
+    description: "zerodayalliance",
+    link: "https://www.instagram.com/zerodayalliance/",
   },
 ];

@@ -69,15 +69,18 @@ export default function Footer() {
             </div>
           </div>
 
-          <Link
-            href="/cli"
-            className="flex justify-center items-center font-iceberg text-lg px-4 py-2 rounded-3xl bg-gradient-to-b from-quaternary to-tertiary text-secondary focus:ring-2 focus:ring-primary hover:shadow-xl transition duration-200"
-          >
-            <span>
-              <IconTerminal size={25} />
-            </span>
-            <span className="pr-1 select-none">CLI</span>
-          </Link>
+          <div>
+            <Link
+              href="/cli"
+              target="_blank"
+              className="flex justify-center items-center font-iceberg text-lg px-4 py-2 rounded-3xl bg-gradient-to-b from-quaternary to-tertiary text-secondary focus:ring-2 focus:ring-primary hover:shadow-xl transition duration-200"
+            >
+              <span>
+                <IconTerminal size={25} />
+              </span>
+              <span className="pr-1 select-none">CLI</span>
+            </Link>
+          </div>
         </div>
 
         <div className="mb-2 text-center text-sm text-black dark:text-onhold">
