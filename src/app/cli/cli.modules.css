@@ -1,4 +1,4 @@
-:root {
+#cli-container {
   font-family: "Fira Code", monospace;
   font-style: normal;
   font-synthesis: none;
@@ -6,39 +6,33 @@
   font-weight: 400;
   font-optical-sizing: auto;
 
+  margin: 0;
+  padding: 0;
+
   /* background-color: rgb(35, 35, 35); */
   color: rgba(255, 255, 255, 0.85);
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --side-gap: 0.5rem;
 }
 
-a {
+/* a {
   color: rgb(5, 125, 200);
   text-decoration: underline;
-}
+} */
 
-body {
+#cli {
   margin: 15px;
   padding: 5px;
   min-height: 95vh;
   border: 1px solid rgb(230, 220, 130);
 }
 
-body::-webkit-scrollbar {
+#cli::-webkit-scrollbar {
   display: none;
-}
-
-/* ---------- */
-
-:root {
-  --side-gap: 0.5rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
 }
 
 .command {
