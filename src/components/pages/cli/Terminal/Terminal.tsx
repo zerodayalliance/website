@@ -6,6 +6,7 @@ import StdOut from "../StdOut";
 import StdErr from "../StdErr";
 
 import { exec } from "@/lib/CmdExec";
+import decor from "@/lib/decor";
 
 import "./Terminal.modules.css";
 
@@ -52,6 +53,7 @@ const Terminal = () => {
   };
 
   useEffect(() => {
+    decor();
     const cmdIn = document.getElementById("cmd-input") as HTMLInputElement;
     document.addEventListener("click", () => {
       cmdIn.focus();
