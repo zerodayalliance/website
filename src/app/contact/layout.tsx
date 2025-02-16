@@ -3,7 +3,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Contact | ZeroDay Alliance SNU",
+  title: "Contact | ZeroDay Alliance",
 };
 
 export default function RootLayout({

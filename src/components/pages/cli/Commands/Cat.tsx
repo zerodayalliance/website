@@ -15,8 +15,11 @@ const Cat: FC<IProps> = (props) => {
       return (
         <div>
           <h4 className={classes.description}>
-            Welcome to ZeroDay Alliance, SNU students passionate about
-            cybersecurity and ethical hacking. Here’s what you can expect:
+            We, the official cybersecurity club of Sister Nivedita University,
+            are a dynamic community of students passionate about exploring the
+            ever-evolving world of cybersecurity. Our mission is to foster
+            knowledge, collaboration, and hands-on experience in the field of
+            digital security. Here’s what you can expect:
           </h4>
           <ul className={classes.catList}>
             <li>
