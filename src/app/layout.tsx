@@ -32,7 +32,7 @@ const iceberg = Iceberg({
 });
 
 export const metadata: Metadata = {
-  title: "ZeroDay Alliance SNU",
+  title: "ZeroDay Alliance",
   description: "Securing Tomorrow, One Vulnerability at a Time",
 };
 
