@@ -70,7 +70,7 @@ const Footer = () => {
             radius="xl"
             component="a"
             target="_blank"
-            href="https://www.instagram.com/zerodayalliancesnu"
+            href="https://www.instagram.com/zerodayalliance"
             aria-label="Instagram Link"
           >
             <IconBrandInstagram
@@ -84,7 +84,7 @@ const Footer = () => {
             radius="xl"
             component="a"
             target="_blank"
-            href="https://www.x.com/zerodaysnu"
+            href="https://www.x.com/zerodayalliance"
             aria-label="X Link"
           >
             <IconBrandX

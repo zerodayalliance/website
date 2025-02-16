@@ -1,5 +1,14 @@
 const upcomingEvents = [
   {
+    name: "Bug Hunt 404",
+    hash: "bug-hunt-404",
+    date: "5th January, 2025",
+    time: "7:00 PM IST",
+    mode: "Online",
+    location: "Google Meet",
+    banner: "events/e6.png",
+  },
+  {
     name: "403: Permission Denied",
     hash: "event-403-permission-denied",
     date: "9th November, 2024",

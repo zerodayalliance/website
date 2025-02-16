@@ -38,6 +38,8 @@ const Cat = (props) => {
     case "events":
       return (
         <ul className={classes.catList}>
+          <li>Bug Hunt 404</li>
+          <li>403: Permission Denied</li>
           <li>Team: Blue</li>
           <li>Cyber Security Technology</li>
           <li>Cyber Security & Cloud</li>
