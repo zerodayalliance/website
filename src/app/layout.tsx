@@ -34,6 +34,22 @@ const iceberg = Iceberg({
 export const metadata: Metadata = {
   title: "ZeroDay Alliance",
   description: "Securing Tomorrow, One Vulnerability at a Time",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://zerodayalliance.pages.dev",
+    title: "ZeroDay Alliance",
+    description: "Securing Tomorrow, One Vulnerability at a Time",
+    images: [
+      {
+        url: "https://zerodayalliance.pages.dev/banner.png",
+        width: 1200,
+        height: 630,
+        alt: "ZeroDay Alliance",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
