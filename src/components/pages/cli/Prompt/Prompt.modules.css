@@ -1,0 +1,26 @@
+.userName {
+  color: rgb(6, 197, 6);
+  /* text-shadow: 0px 0px 5px; */
+}
+
+.at {
+  color: rgb(4, 160, 207);
+  /* text-shadow: 0px 0px 5px; */
+}
+
+.hostName {
+  color: rgb(140, 197, 6);
+  /* text-shadow: 0px 0px 5px; */
+}
+
+.colon {
+  color: rgb(215, 215, 215);
+  /* text-shadow: 0px 0px 5px; */
+}
+
+.dirName {
+  font-size: larger;
+  font-weight: 900;
+  color: rgb(197, 6, 117);
+  /* text-shadow: 0px 0px 5px; */
+}
