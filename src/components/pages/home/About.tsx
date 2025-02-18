@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import groupPhoto from "@/assets/img/group.jpg";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -38,6 +39,19 @@ const About = () => {
           Alliance offers a platform to learn, innovate and contribute to the
           shared objectives.
         </h2>
+      </div>
+
+      <div className="flex flex-row items-center z-50 gap-5">
+        <Link href="/events">
+          <p className="mt-5 max-w-fit px-5 py-2 rounded-full font-bold tracking-widest transform hover:scale-105 bg-hero hover:bg-quaternary text-gray-50 hover:text-gray-200 transition-colors duration-200">
+            Our Events
+          </p>
+        </Link>
+        <Link href="/teams">
+          <p className="mt-5 max-w-fit px-5 py-2 rounded-full font-bold tracking-widest transform hover:scale-105 bg-hero hover:bg-quaternary text-gray-50 hover:text-gray-200 transition-colors duration-200">
+            Our Teams
+          </p>
+        </Link>
       </div>
     </div>
   );
