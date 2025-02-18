@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FlipWords } from "@/components/ui/flip-words";
 
 const words = [
