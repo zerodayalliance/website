@@ -34,7 +34,9 @@ export default function Card({
         />
       </Suspense>
       <div className="flex flex-col items-start justify-center min-w-full space-y-1.5 mt-4">
-        <p className="font-bold text-xl md:text-2xl md:font-normal">{title}</p>
+        <p className="h-16 mb-3 font-bold text-xl md:text-2xl md:font-normal">
+          {title}
+        </p>
         <p className="flex flex-row items-center justify-center gap-2 font-normal text-lg">
           <span>
             <IconCalendarWeek size={23} />

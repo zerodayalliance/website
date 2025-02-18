@@ -29,11 +29,11 @@ const Hero = () => {
           />
         </span>
       </h2>
-      <Link href="#about">
+      {/* <Link href="#about">
         <p className="mt-10 max-w-fit px-4 py-1.5 rounded-full font-bold tracking-widest transform hover:scale-105 bg-hero hover:bg-quaternary text-gray-50 hover:text-gray-200 transition-colors duration-200">
           Learn More
         </p>
-      </Link>
+      </Link> */}
     </div>
   );
 };
