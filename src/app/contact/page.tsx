@@ -14,7 +14,7 @@ export default function contact() {
       </div>
 
       <Contactcard />
-      <div className="mt-[-8rem]">
+      <div className="mt-[-8rem] mb-[-8rem]">
         <ContactEvector />
       </div>
     </>
