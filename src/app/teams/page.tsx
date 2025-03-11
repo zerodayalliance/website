@@ -16,7 +16,7 @@ const GetTeams = gql`
         _id
         id
         name
-        membersCollection {
+        membersCollection(limit: 50) {
           total
           skip
           limit
@@ -32,6 +32,15 @@ const GetTeams = gql`
             instagram
             facebook
             email
+            pfp {
+              title
+              description
+              contentType
+              size
+              url
+              width
+              height
+            }
           }
         }
       }
@@ -45,7 +54,10 @@ export const revalidate = 60;
 export default async function Teams() {
   const data: IGetTeamsQuery = await graphqlClient.request(GetTeams);
   const teamsData = data.teamsCollection.items;
-  console.log(teamsData);
+
+  await teamsData.sort((a, b) => {
+    return Number(b.id) - Number(a.id);
+  });
 
   return (
     <>

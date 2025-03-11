@@ -150,9 +150,7 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
                   priority
                   width={200}
                   height={200}
-                  src={
-                    "https://res.cloudinary.com/dzajsi427/image/upload/v1729787612/wanderlust_DEV/mbj0tckirk2ov2vqvvrm.png"
-                  }
+                  src={active.pfp.url}
                   alt={active.name}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top [mask:linear-gradient(to_bottom,white,white,transparent)]"
                 />
@@ -285,9 +283,7 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
                   <Image
                     width={100}
                     height={100}
-                    src={
-                      "https://res.cloudinary.com/dzajsi427/image/upload/v1729787612/wanderlust_DEV/mbj0tckirk2ov2vqvvrm.png"
-                    }
+                    src={card.pfp.url}
                     alt={card.name}
                     className="w-40 h-full rounded-lg object-cover object-top"
                   />

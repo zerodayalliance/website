@@ -62,6 +62,15 @@ export interface IGetTeamsQuery {
         items: {
           _id: string;
           uid: string;
+          pfp: {
+            title: string;
+            description: string;
+            contentType: string;
+            size: number;
+            url: string;
+            width: number;
+            height: number;
+          };
           name: string;
           role: string;
           bio: string;
@@ -80,6 +89,15 @@ export interface IGetTeamsQuery {
 export interface IMember {
   _id: string;
   uid: string;
+  pfp: {
+    title: string;
+    description: string;
+    contentType: string;
+    size: number;
+    url: string;
+    width: number;
+    height: number;
+  };
   name: string;
   role: string;
   bio: string | null;
