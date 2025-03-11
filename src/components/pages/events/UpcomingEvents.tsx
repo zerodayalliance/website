@@ -4,6 +4,8 @@ import { IEvent } from "@/types";
 export default function UpcomingEvents(props: { data: IEvent[] }) {
   const data = props.data;
 
+  console.log(data);
+
   return (
     <>
       <h2 className="font-iceberg text-5xl text-center mt-3">
@@ -14,24 +16,30 @@ export default function UpcomingEvents(props: { data: IEvent[] }) {
         Our Upcoming Events
       </p>
       <div className="flex justify-center items-center flex-row mb-10">
-        {data.map((event, index) => {
-          return (
-            <Card
-              key={index}
-              title={event.title}
-              date={event.date}
-              time={event.time}
-              mode={event.mode}
-              location={event.location}
-              rsvpLink={event.rsvpLink}
-              lumaEventId={event.lumaEventId}
-              posterUrl={event.posterUrl}
-              posterAlt={event.posterAlt}
-              posterHeight={event.posterHeight}
-              posterWidth={event.posterWidth}
-            />
-          );
-        })}
+        {data.length !== 0 ? (
+          data.map((event, index) => {
+            return (
+              <Card
+                key={index}
+                title={event.title}
+                date={event.date}
+                time={event.time}
+                mode={event.mode}
+                location={event.location}
+                rsvpLink={event.rsvpLink}
+                lumaEventId={event.lumaEventId}
+                posterUrl={event.posterUrl}
+                posterAlt={event.posterAlt}
+                posterHeight={event.posterHeight}
+                posterWidth={event.posterWidth}
+              />
+            );
+          })
+        ) : (
+          <p className="font-gidugu text-4xl text-center my-4 text-gray-800 dark:text-gray-200">
+            No upcoming events
+          </p>
+        )}
       </div>
     </>
   );

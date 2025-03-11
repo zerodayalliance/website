@@ -57,6 +57,7 @@ export default async function Events() {
 
   await eventsData.map((event) => {
     const dateTime = new Date(event.dateTime);
+
     const eventData = {
       title: event.title,
       date: `${dateTime.toDateString()}`,
@@ -70,6 +71,7 @@ export default async function Events() {
       posterHeight: event.poster.height,
       posterWidth: event.poster.width,
     };
+
     if (event.rsvpLink || event.lumaEventId) {
       upcomingEventsData.push(eventData);
     } else {
