@@ -4,8 +4,6 @@ import { IEvent } from "@/types";
 export default function UpcomingEvents(props: { data: IEvent[] }) {
   const data = props.data;
 
-  console.log(data);
-
   return (
     <>
       <h2 className="font-iceberg text-5xl text-center mt-3">

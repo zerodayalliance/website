@@ -60,8 +60,19 @@ export default async function Events() {
 
     const eventData = {
       title: event.title,
-      date: `${dateTime.toDateString()}`,
-      time: `${dateTime.toLocaleTimeString()} IST`,
+      date: `${new Intl.DateTimeFormat("en-IN", {
+        weekday: "long",
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+        timeZone: "Asia/Kolkata",
+      }).format(dateTime)}`,
+      time: `${new Intl.DateTimeFormat("en-IN", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+        timeZone: "Asia/Kolkata",
+      }).format(dateTime)} IST`,
       mode: event.mode,
       location: event.location,
       rsvpLink: event.rsvpLink,
