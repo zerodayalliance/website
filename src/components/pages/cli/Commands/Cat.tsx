@@ -77,11 +77,11 @@ const Cat: FC<IProps> = (props) => {
             <span>Website: </span>
             <span>
               <a
-                href="https://zerodayalliance.pages.dev"
+                href="https://zerodayalliance.tech"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                zerodayalliance.pages.dev
+                zerodayalliance.tech
               </a>
             </span>
           </li>
@@ -89,11 +89,11 @@ const Cat: FC<IProps> = (props) => {
             <span>GitHub: </span>
             <span>
               <a
-                href="https://github.com/ZeroDay-Alliance-SNU"
+                href="https://github.com/zerodayalliance"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @ZeroDay-Alliance-SNU
+                @zerodayalliance
               </a>
             </span>
           </li>
@@ -101,11 +101,11 @@ const Cat: FC<IProps> = (props) => {
             <span>LinkedIn: </span>
             <span>
               <a
-                href="https://www.linkedin.com/company/zeroday-alliance-snu"
+                href="https://www.linkedin.com/company/zeroday-alliance"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @zeroday-alliance-snu
+                company/zeroday-alliance
               </a>
             </span>
           </li>
@@ -113,7 +113,7 @@ const Cat: FC<IProps> = (props) => {
             <span>Instagram: </span>
             <span>
               <a
-                href="https://www.instagram.com/zerodayalliance/"
+                href="https://www.instagram.com/zerodayalliance"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -130,6 +130,30 @@ const Cat: FC<IProps> = (props) => {
                 rel="noopener noreferrer"
               >
                 @zerodayalliance
+              </a>
+            </span>
+          </li>
+          <li>
+            <span>YouTube: </span>
+            <span>
+              <a
+                href="https://youtube.com/@zerodayalliance?sub_confirmation=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @zerodayalliance
+              </a>
+            </span>
+          </li>
+          <li>
+            <span>Email: </span>
+            <span>
+              <a
+                href="mailto:hello@zerodayalliance.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                hello@zerodayalliance.tech
               </a>
             </span>
           </li>

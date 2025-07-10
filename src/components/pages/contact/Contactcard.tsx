@@ -13,18 +13,18 @@ export default function Contactcard() {
 export const projects = [
   {
     title: "LinkedIn",
-    description: "company/zeroday-alliance-snu",
-    link: "https://www.linkedin.com/company/zeroday-alliance-snu/",
+    description: "company/zeroday-alliance",
+    link: "https://www.linkedin.com/company/zeroday-alliance",
   },
   {
     title: "GitHub",
-    description: "@ZeroDay-Alliance-SNU",
-    link: "https://github.com/ZeroDay-Alliance-SNU",
+    description: "@zerodayalliance",
+    link: "https://github.com/zerodayalliance",
   },
   {
     title: "Instagram",
     description: "@zerodayalliance",
-    link: "https://www.instagram.com/zerodayalliance/",
+    link: "https://www.instagram.com/zerodayalliance",
   },
   {
     title: "X (Twitter)",
@@ -33,12 +33,12 @@ export const projects = [
   },
   {
     title: "YouTube",
-    description: "@ZeroDayAllianceSNU",
-    link: "https://youtube.com/@ZeroDayAllianceSNU?sub_confirmation=1",
+    description: "@zerodayalliance",
+    link: "https://youtube.com/@zerodayalliance?sub_confirmation=1",
   },
   {
     title: "Email",
-    description: "zerodayalliance@gmail.com",
-    link: "mailto:zerodayalliance@gmail.com",
+    description: "hello@zerodayalliance.tech",
+    link: "mailto:hello@zerodayalliance.tech",
   },
 ];

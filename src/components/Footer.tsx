@@ -20,15 +20,12 @@ export default function Footer() {
             <Banner />
             <div className="flex gap-2.5 mt-5">
               <Link
-                href="https://www.linkedin.com/company/zeroday-alliance-snu"
+                href="https://www.linkedin.com/company/zeroday-alliance"
                 target="_blank"
               >
                 <IconBrandLinkedin size={26} />
               </Link>
-              <Link
-                href="https://github.com/ZeroDay-Alliance-SNU"
-                target="_blank"
-              >
+              <Link href="https://github.com/zerodayalliance" target="_blank">
                 <IconBrandGithub size={26} stroke={1.5} />
               </Link>
               <Link
@@ -41,12 +38,12 @@ export default function Footer() {
                 <IconBrandX size={26} stroke={1.5} />
               </Link>
               <Link
-                href="https://youtube.com/@ZeroDayAllianceSNU?sub_confirmation=1"
+                href="https://youtube.com/@zerodayalliance?sub_confirmation=1"
                 target="_blank"
               >
                 <IconBrandYoutube size={26} stroke={1.5} />
               </Link>
-              <Link href="mailto:zerodayalliance@gmail.com" target="_blank">
+              <Link href="mailto:hello@zerodayalliance.tech" target="_blank">
                 <IconMail size={26} stroke={1.5} />
               </Link>
             </div>

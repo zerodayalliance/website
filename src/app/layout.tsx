@@ -38,12 +38,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://zerodayalliance.pages.dev",
+    url: "https://zerodayalliance.tech",
     title: "ZeroDay Alliance",
     description: "Securing Tomorrow, One Vulnerability at a Time",
     images: [
       {
-        url: "https://zerodayalliance.pages.dev/banner.png",
+        url: "https://zerodayalliance.tech/banner.png",
         width: 1200,
         height: 630,
         alt: "ZeroDay Alliance",
