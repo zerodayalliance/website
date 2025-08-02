@@ -42,7 +42,7 @@ const Footer = () => {
             radius="xl"
             component="a"
             target="_blank"
-            href="https://github.com/ZeroDay-Alliance-SNU"
+            href="https://github.com/zerodayalliance"
             aria-label="GitHub Link"
           >
             <IconBrandGithub
@@ -56,7 +56,7 @@ const Footer = () => {
             radius="xl"
             component="a"
             target="_blank"
-            href="https://www.linkedin.com/company/zeroday-alliance-snu/"
+            href="https://www.linkedin.com/company/zeroday-alliance"
             aria-label="LinkedIn Link"
           >
             <IconBrandLinkedin

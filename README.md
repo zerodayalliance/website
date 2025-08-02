@@ -1,6 +1,4 @@
 # website
 
-[![Cloudflare Pages Deployment](https://github.com/ZeroDay-Alliance-SNU/website/actions/workflows/cf-pages.yaml/badge.svg?branch=main)](https://github.com/ZeroDay-Alliance-SNU/website/actions/workflows/cf-pages.yaml)
-
-The Website Of ZeroDay Alliance SNU  
-Visit: [zeroday-alliance.pages.dev](https://zeroday-alliance.pages.dev)
+The Old (v1) Website Of ZeroDay Alliance  
+Visit: [v1.zerodayalliance.tech](https://v1.zerodayalliance.tech)
