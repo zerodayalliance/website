@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description: "Join ZeroDay Alliance – the official Cybersecurity Club of Sister Nivedita University, Kolkata. Hands-on ethical hacking workshops, CTF competitions & cybersecurity events.",
     images: [
       {
-        url: "https://zerodayalliance.tech/assets/images/zeroday-banner.jpg",
+        url: "https://zerodayalliance.tech/banner.png",
         width: 1200,
         height: 630,
         alt: "ZeroDay Alliance",
