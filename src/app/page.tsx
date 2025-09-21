@@ -1,7 +1,7 @@
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/pages/home/Hero";
 import About from "@/components/pages/home/About";
-import Logo from "@/components/Logo";
+// import Logo from "@/components/Logo";
 import TopLines from "@/components/pages/home/TopLines";
 import BottomLines from "@/components/pages/home/BottomLines";
 import Footer from "@/components/Footer";
