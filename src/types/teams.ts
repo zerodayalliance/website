@@ -1,5 +1,18 @@
-export interface IGetTeams202425Query {
-  teams202425Collection: {
+export interface ITenuresCollectionQuery {
+  tenuresCollection: {
+    total: number;
+    skip: number;
+    limit: number;
+    items: ITenure[];
+  };
+}
+
+export interface ITenure {
+  _id: string;
+  id: string;
+  name: string;
+  slug: string;
+  teamsCollection: {
     total: number;
     skip: number;
     limit: number;
