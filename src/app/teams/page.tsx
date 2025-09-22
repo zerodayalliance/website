@@ -30,8 +30,8 @@ export default async function Teams() {
         </div>
         <div className="mt-10"></div>
         <Tabs defaultValue={tenures[0].slug}>
-          <TabsList className="mx-auto mb-10 p-1.5 rounded-full bg-onhold dark:bg-primary">
-            {tenures.map((tenure) => (
+          <TabsList className="mx-auto mb-10 p-1.5 gap-1.5 rounded-full bg-onhold dark:bg-primary">
+            {tenures.reverse().map((tenure) => (
               <TabsTrigger
                 key={tenure.id}
                 value={tenure.slug}
