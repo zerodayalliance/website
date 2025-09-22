@@ -4,11 +4,11 @@ import StartHelix from "@/components/pages/teams/StartHelix";
 import Info from "@/components/pages/teams/Info";
 import EndHelix from "@/components/pages/teams/EndHelix";
 import ExpandableCard from "@/components/pages/teams/ExpandableCard";
-import { IGetTeamsQuery } from "@/types";
+import { IGetTeams202425Query } from "@/types/teams";
 
 const GetTeams = gql`
-  query TeamsCollection {
-    teamsCollection {
+  query Teams202425Collection {
+    teams202425Collection(limit: 15) {
       total
       skip
       limit
@@ -16,7 +16,7 @@ const GetTeams = gql`
         _id
         id
         name
-        membersCollection(limit: 50) {
+        membersCollection(limit: 15) {
           total
           skip
           limit
@@ -52,8 +52,8 @@ export const runtime = "edge";
 export const revalidate = 60;
 
 export default async function Teams() {
-  const data: IGetTeamsQuery = await graphqlClient.request(GetTeams);
-  const teamsData = data.teamsCollection.items;
+  const data: IGetTeams202425Query = await graphqlClient.request(GetTeams);
+  const teamsData = data.teams202425Collection.items;
 
   await teamsData.sort((a, b) => {
     return Number(b.id) - Number(a.id);
