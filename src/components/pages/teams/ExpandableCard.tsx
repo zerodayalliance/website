@@ -14,7 +14,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ITeam, IMember } from "@/types";
+import { ITeam, IMember } from "@/types/teams";
 
 interface ExpandableCardProps {
   team: ITeam;
