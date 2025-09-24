@@ -6,10 +6,7 @@ import TopLines from "@/components/pages/home/TopLines";
 import BottomLines from "@/components/pages/home/BottomLines";
 import Footer from "@/components/Footer";
 import DurgaLogo from "@/components/DurgaLogo";
-import { notFound } from 'next/navigation'
-
 export default function Home() {
-  notFound(); // This will trigger the 404 page
   return (
     <>
       <NavBar />
