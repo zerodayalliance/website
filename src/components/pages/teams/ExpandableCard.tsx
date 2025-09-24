@@ -6,6 +6,7 @@ import {
   IconBrandFacebook,
   IconBrandX,
   IconMail,
+  IconWorld,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
@@ -14,7 +15,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ITeam, IMember } from "@/types";
+import { ITeam, IMember } from "@/types/teams";
 
 interface ExpandableCardProps {
   team: ITeam;
@@ -167,7 +168,7 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
               <div>
                 <div className="flex justify-between items-start px-4 py-2">
                   <motion.p
-                    layoutId={`description-${active.role}-${id}`}
+                    layoutId={`description-${active.name}-${active.role}-${id}`}
                     className="text-hero font-gidugu text-3xl"
                   >
                     {active.role}
@@ -251,6 +252,19 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
                         <IconMail />
                       </motion.a>
                     )}
+                    {active.website && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={`${active.website}`}
+                        target="_blank"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                      >
+                        <IconWorld />
+                      </motion.a>
+                    )}
                   </div>
                 </div>
                 <div className="pt-2 relative px-4">
@@ -296,7 +310,7 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
                     {card.name}
                   </motion.h3>
                   <motion.p
-                    layoutId={`description-${card.role}-${id}`}
+                    layoutId={`description-${card.name}-${card.role}-${id}`}
                     className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
                   >
                     {card.role}

@@ -1,63 +1,25 @@
-import { gql } from "graphql-request";
 import { graphqlClient } from "@/lib/graphql/client";
 import StartHelix from "@/components/pages/teams/StartHelix";
 import Info from "@/components/pages/teams/Info";
 import EndHelix from "@/components/pages/teams/EndHelix";
 import ExpandableCard from "@/components/pages/teams/ExpandableCard";
-import { IGetTeamsQuery } from "@/types";
-
-const GetTeams = gql`
-  query TeamsCollection {
-    teamsCollection {
-      total
-      skip
-      limit
-      items {
-        _id
-        id
-        name
-        membersCollection(limit: 50) {
-          total
-          skip
-          limit
-          items {
-            _id
-            uid
-            name
-            role
-            bio
-            linkedin
-            github
-            twitter
-            instagram
-            facebook
-            email
-            pfp {
-              title
-              description
-              contentType
-              size
-              url
-              width
-              height
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ITenuresCollectionQuery } from "@/types/teams";
+import { GetTeams } from "./gql";
 
 export const runtime = "edge";
 export const revalidate = 60;
 
 export default async function Teams() {
-  const data: IGetTeamsQuery = await graphqlClient.request(GetTeams);
-  const teamsData = data.teamsCollection.items;
+  const data: ITenuresCollectionQuery = await graphqlClient.request(GetTeams);
 
-  await teamsData.sort((a, b) => {
-    return Number(b.id) - Number(a.id);
-  });
+  const tenures = data.tenuresCollection.items;
+
+  tenures.sort((a, b) => Number(b.id) - Number(a.id));
+
+  tenures.map((tenure) =>
+    tenure.teamsCollection.items.sort((a, b) => Number(a.id) - Number(b.id))
+  );
 
   return (
     <>
@@ -67,17 +29,31 @@ export default async function Teams() {
           <Info />
         </div>
         <div className="mt-10"></div>
-        {teamsData
-          .slice()
-          .reverse()
-          .map((team) => (
-            <div key={team.id} className="mb-10">
-              <h1 className="font-gidugu text-6xl text-hero text-center">
-                {team.name}
-              </h1>
-              <ExpandableCard team={team} />
-            </div>
+        <Tabs defaultValue={tenures[0].slug}>
+          <TabsList className="mx-auto mb-10 p-1.5 gap-1.5 rounded-full bg-onhold dark:bg-primary">
+            {tenures.reverse().map((tenure) => (
+              <TabsTrigger
+                key={tenure.id}
+                value={tenure.slug}
+                className="rounded-full data-[state=active]:bg-quaternary dark:data-[state=active]:bg-secondary"
+              >
+                {tenure.name}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          {tenures.map((tenure) => (
+            <TabsContent key={tenure.id} value={tenure.slug}>
+              {tenure.teamsCollection.items.map((team) => (
+                <div key={team.id} className="mb-10">
+                  <h1 className="font-gidugu text-6xl text-hero text-center">
+                    {team.name}
+                  </h1>
+                  <ExpandableCard team={team} />
+                </div>
+              ))}
+            </TabsContent>
           ))}
+        </Tabs>
       </div>
       <EndHelix className="float-left -mt-[26.5rem] opacity-60 max-w-full" />
     </>

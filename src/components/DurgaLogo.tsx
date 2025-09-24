@@ -6,14 +6,17 @@ function DurgaLogo() {
   return (
     <div>
       <Image 
-        src="/durgapujo.svg"   // path from the public folder
+        src="/durgapujo.svg"
         alt="Durga Puja Logo"
-        width={800}
-        height={593}
-        className="p-3 flex-grow-0 flex-shrink-0 h-38 w-38 sm:h-60 sm:w-60 md:h-60 md:w-60 "
+        width={800}   // increased width
+        height={1200} // increased height
+        className="p-3 flex-grow-0 flex-shrink-0 h-72 w-72 sm:h-80 sm:w-80 md:h-96 md:w-96 fill-current"
       />
     </div>
   )
 }
 
 export default DurgaLogo
+
+
+
