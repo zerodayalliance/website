@@ -33,10 +33,11 @@ export const GetTeams = gql`
                   linkedin
                   github
                   twitter
+                  threads
                   instagram
                   facebook
-                  email
                   website
+                  email
                   pfp {
                     title
                     description
@@ -66,10 +67,11 @@ export const GetTeams = gql`
                   linkedin
                   github
                   twitter
+                  threads
                   instagram
                   facebook
-                  email
                   website
+                  email
                   pfp {
                     title
                     description

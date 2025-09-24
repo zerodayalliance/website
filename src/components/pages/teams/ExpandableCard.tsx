@@ -1,12 +1,13 @@
 "use client";
 import {
-  IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandGithub,
-  IconBrandFacebook,
   IconBrandX,
-  IconMail,
+  IconBrandThreads,
+  IconBrandInstagram,
+  IconBrandFacebook,
   IconWorld,
+  IconMail,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
@@ -213,6 +214,19 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
                         <IconBrandX />
                       </motion.a>
                     )}
+                    {active.threads && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={active.threads}
+                        target="_blank"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                      >
+                        <IconBrandThreads />
+                      </motion.a>
+                    )}
                     {active.instagram && (
                       <motion.a
                         layout
@@ -239,19 +253,6 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
                         <IconBrandFacebook />
                       </motion.a>
                     )}
-                    {active.email && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        href={`mailto:${active.email}`}
-                        target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
-                      >
-                        <IconMail />
-                      </motion.a>
-                    )}
                     {active.website && (
                       <motion.a
                         layout
@@ -263,6 +264,19 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
                         className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
                       >
                         <IconWorld />
+                      </motion.a>
+                    )}
+                    {active.email && (
+                      <motion.a
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        href={`mailto:${active.email}`}
+                        target="_blank"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                      >
+                        <IconMail />
                       </motion.a>
                     )}
                   </div>
