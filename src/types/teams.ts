@@ -44,6 +44,7 @@ export interface IMember {
   instagram: string | null;
   facebook: string | null;
   email: string | null;
+  website: string | null;
   pfp: {
     title: string;
     description: string;

@@ -36,6 +36,7 @@ export const GetTeams = gql`
                   instagram
                   facebook
                   email
+                  website
                   pfp {
                     title
                     description
@@ -68,6 +69,7 @@ export const GetTeams = gql`
                   instagram
                   facebook
                   email
+                  website
                   pfp {
                     title
                     description
