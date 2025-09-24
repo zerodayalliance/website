@@ -98,6 +98,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${encodeSans.variable} ${encodeSansCondensed.variable} ${gidugu.variable} ${iceberg.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         {children}
       </body>
