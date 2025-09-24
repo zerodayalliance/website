@@ -6,7 +6,7 @@ export const Info = () => {
         <h2 className="font-iceberg text-6xl mt-3 text-gray-800 dark:text-white">
           Meet Our<span className="text-hero"> Core Teams</span>!
         </h2>
-        <h2 className="font-encodesans text-xl mt-3 text-gray-800 dark:text-white ">
+        <h2 className="font-encodesans text-xl mt-3 text-gray-800 dark:text-white">
           Hello everyone! We're excited to introduce our amazing Core Team
           Members of ZeroDay Alliance.
           <br />
