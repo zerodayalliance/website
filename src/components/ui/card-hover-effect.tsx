@@ -69,7 +69,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-[linear-gradient(110.775deg,rgba(23,23,23,82%)_0%,#323335_40%,rgba(75,74,74,80%)_62%,#171717_71%)] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-[linear-gradient(110.775deg,rgba(248,250,252,90%)_0%,#f1f5f9_40%,rgba(226,232,240,85%)_62%,#f8fafc_71%)] dark:bg-[linear-gradient(110.775deg,rgba(23,23,23,82%)_0%,#323335_40%,rgba(75,74,74,80%)_62%,#171717_71%)] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -79,6 +79,7 @@ export const Card = ({
     </div>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
@@ -89,7 +90,7 @@ export const CardTitle = ({
   return (
     <h4
       className={cn(
-        "text-tertiary text-2xl font-iceberg text-center font-bold tracking-wide mt-2",
+        "text-3xl mt-2 font-iceberg text-center font-bold tracking-wide text-quaternary dark:text-tertiary",
         className
       )}
     >
@@ -97,6 +98,7 @@ export const CardTitle = ({
     </h4>
   );
 };
+
 export const CardDescription = ({
   className,
   children,
@@ -107,7 +109,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8  dark:text-white text-onhold mb-5 text-center tracking-wide leading-relaxed text-sm",
+        "mt-8 mb-5 text-md text-center tracking-wide leading-relaxed text-gray-800 dark:text-white",
         className
       )}
     >
