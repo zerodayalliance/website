@@ -55,7 +55,7 @@ export default async function Teams() {
           ))}
         </Tabs>
       </div>
-      <EndHelix className="float-left -mt-[26.5rem] opacity-60 max-w-full" />
+      <EndHelix className="float-left -mt-[24rem] opacity-60 max-w-full" />
     </>
   );
 }
