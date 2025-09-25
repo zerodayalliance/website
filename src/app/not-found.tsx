@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 
 export default function Custom404() {
   const [isSmallViewport, setIsSmallViewport] = useState(false);
+
+  // Only initialize scroll effects if needed
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, -50]);
 
@@ -156,17 +158,18 @@ export default function Custom404() {
 
               {/* Mobile CTA Button */}
               <div className="pt-4">
-                <Link href="/">
-                  <button className="group relative bg-gradient-to-r from-gray-700 to-gray-800
-                                   border border-gray-600 text-white font-semibold text-sm
-                                   hover:from-gray-600 hover:to-gray-700 hover:border-gray-500
-                                   transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25
-                                   transform hover:scale-105 tracking-wide px-8 py-3 rounded-full
-                                   backdrop-blur-[50px]">
-                    <span className="relative z-10">GO BACK TO HOME</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0
-                                  opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-                  </button>
+                <Link
+                  href="/"
+                  prefetch={true}
+                  className="group relative inline-block bg-gradient-to-r from-gray-700 to-gray-800
+                           border border-gray-600 text-white font-semibold text-sm
+                           hover:from-gray-600 hover:to-gray-700 hover:border-gray-500
+                           transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25
+                           transform hover:scale-105 tracking-wide px-8 py-3 rounded-full
+                           backdrop-blur-[50px] cursor-pointer">
+                  <span className="relative z-10">GO BACK TO HOME</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
                 </Link>
               </div>
             </div>
@@ -186,28 +189,29 @@ export default function Custom404() {
               </div>
 
               {/* Desktop CTA Button */}
-              <Link href="/">
-                <button className="group relative bg-gradient-to-r from-gray-700 to-gray-800
-                                 border border-gray-600 text-white font-semibold text-sm
-                                 hover:from-gray-600 hover:to-gray-700 hover:border-gray-500
-                                 transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25
-                                 transform hover:scale-105 tracking-wide"
-                        style={{
-                          width: '180px',
-                          height: '45px',
-                          borderRadius: '100px',
-                          paddingTop: '10px',
-                          paddingRight: '12px',
-                          paddingBottom: '12px',
-                          paddingLeft: '12px',
-                          gap: '6px',
-                          backdropFilter: 'blur(50px)'
-                        }}>
-                  <span className="relative z-10">GO BACK TO HOME</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                style={{ borderRadius: '100px' }}></div>
-                </button>
+              <Link
+                href="/"
+                prefetch={true}
+                className="group relative inline-flex items-center justify-center bg-gradient-to-r from-gray-700 to-gray-800
+                         border border-gray-600 text-white font-semibold text-sm
+                         hover:from-gray-600 hover:to-gray-700 hover:border-gray-500
+                         transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25
+                         transform hover:scale-105 tracking-wide cursor-pointer"
+                style={{
+                  width: '180px',
+                  height: '45px',
+                  borderRadius: '100px',
+                  paddingTop: '10px',
+                  paddingRight: '12px',
+                  paddingBottom: '12px',
+                  paddingLeft: '12px',
+                  gap: '6px',
+                  backdropFilter: 'blur(50px)'
+                }}>
+                <span className="relative z-10">GO BACK TO HOME</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                              style={{ borderRadius: '100px' }}></div>
               </Link>
             </div>
           </div>
