@@ -1,10 +1,31 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function Custom404() {
+  const [isSmallViewport, setIsSmallViewport] = useState(false);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, -50]);
+
+  useEffect(() => {
+    const checkViewportSize = () => {
+      // Enable scroll effect only when browser tab is manually resized to small
+      // More restrictive conditions: both width AND height must be small
+      setIsSmallViewport(window.innerHeight < 700 && window.innerWidth < 1000);
+    };
+
+    checkViewportSize();
+    window.addEventListener('resize', checkViewportSize);
+    return () => window.removeEventListener('resize', checkViewportSize);
+  }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden figma-gradient">
+    <div
+      className={`min-h-screen relative overflow-hidden figma-gradient ${isSmallViewport ? 'scrollbar-hide' : ''}`}
+      style={isSmallViewport ? {scrollbarWidth: 'none', msOverflowStyle: 'none'} : {}}
+    >
       {/* Top layout element - visible gradient with smooth blending */}
       <div className="absolute opacity-100 transform rotate-180 z-[1]"
            style={{
@@ -18,7 +39,7 @@ export default function Custom404() {
            }}>
       </div>
 
-      {/* Mobile top gradient - smaller and repositioned for mobile */}
+        {/* Mobile top gradient - smaller and repositioned for mobile */}
       <div className="absolute md:hidden opacity-100 transform rotate-180 z-[1]"
            style={{
              width: '400px',
@@ -51,7 +72,10 @@ export default function Custom404() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-20 flex flex-col h-screen">
+      <motion.div
+        className="relative z-20 flex flex-col min-h-screen"
+        style={isSmallViewport ? { y } : {}}
+      >
         {/* Header with logo */}
         <header>
           {/* Desktop logo */}
@@ -85,47 +109,20 @@ export default function Custom404() {
         </header>
 
         {/* Main content area */}
-        <div className="flex-1 flex flex-col lg:flex-row items-center justify-between px-6 md:px-8 lg:px-12">
+        <div className="flex-1 flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-16 xl:px-20">
           {/* Desktop Left side content */}
-          <div className="hidden lg:block flex-1 max-w-3xl">
+          <div className="hidden lg:block flex-1 max-w-4xl">
             {/* Desktop Main heading */}
-            <div className="mb-6">
-              <h1 className="font-iceberg font-normal capitalize mb-2"
-                  style={{
-                    width: '700px',
-                    height: '240px',
-                    position: 'absolute',
-                    top: '200px',
-                    left: '120px',
-                    fontSize: '120px',
-                    fontWeight: 400,
-                    lineHeight: '115px',
-                    letterSpacing: '0%',
-                    opacity: 1,
-                    textTransform: 'capitalize'
-                  }}>
-                <span className="text-white">Hide &</span> <br />
-                <span className="dark:text-quaternary text-hero">Seek Time!</span>
+            <div className="mb-8 lg:mb-12">
+              <h1 className="font-iceberg font-normal capitalize text-6xl xl:text-7xl 2xl:text-8xl leading-tight mb-6">
+                <span className="text-white block">Hide &</span>
+                <span className="dark:text-quaternary text-hero block">Seek Time!</span>
               </h1>
             </div>
 
             {/* Desktop Subtext */}
-            <p className="font-encode-sans dark:text-gray-300 text-gray-500 mb-8"
-               style={{
-                 width: '500px',
-                 height: '60px',
-                 position: 'absolute',
-                 top: '420px',
-                 left: '120px',
-                 fontSize: '22px',
-                 fontWeight: 300,
-                 lineHeight: '30px',
-                 letterSpacing: '0%',
-                 opacity: 1,
-                 verticalAlign: 'middle'
-               }}>
-              Even we can't find this page. Come back later while we
-              keep searching for it.
+            <p className="font-encode-sans dark:text-gray-300 text-gray-400 text-lg xl:text-xl leading-relaxed max-w-lg mb-8">
+              Even we can't find this page. Come back later while we keep searching for it.
             </p>
           </div>
 
@@ -217,6 +214,9 @@ export default function Custom404() {
 
         </div>
 
+        {/* Invisible scroll area for scroll effect - only on small viewports */}
+        {isSmallViewport && <div className="h-32"></div>}
+
         {/* Bottom decorative element - Desktop */}
         <div className="hidden md:block absolute opacity-80 transform rotate-180"
              style={{
@@ -240,7 +240,7 @@ export default function Custom404() {
                filter: 'blur(40px)'
              }}>
         </div>
-      </div>
+      </motion.div>
 
 
     </div>
