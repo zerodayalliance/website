@@ -70,7 +70,7 @@ export const FloatingNav = ({
             href={navItem.link}
             className={cn(
               `relative flex justify-center items-center group px-1.5 py-1 rounded-full h-full w-full
-              dark:text-neutral-50 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500`
+              dark:text-gray-200 text-gray-800 hover:text-gray-200`
             )}
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -93,7 +93,7 @@ export const FloatingNav = ({
               )}
             </AnimatePresence>
             <span className="block sm:hidden z-[5100]">{navItem.icon}</span>
-            <span className="hidden text-md sm:block z-[5100]">
+            <span className="hidden sm:block text-md z-[5100]">
               {navItem.name}
             </span>
           </Link>

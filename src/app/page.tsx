@@ -6,7 +6,6 @@ import TopLines from "@/components/pages/home/TopLines";
 import BottomLines from "@/components/pages/home/BottomLines";
 import Footer from "@/components/Footer";
 import DurgaLogo from "@/components/DurgaLogo";
-
 export default function Home() {
   return (
     <>

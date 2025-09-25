@@ -19,7 +19,7 @@ const Cat: FC<IProps> = (props) => {
             are a dynamic community of students passionate about exploring the
             ever-evolving world of cybersecurity. Our mission is to foster
             knowledge, collaboration, and hands-on experience in the field of
-            digital security. Here’s what you can expect:
+            digital security. Here's what you can expect:
           </h4>
           <ul className={classes.catList}>
             <li>
@@ -46,6 +46,7 @@ const Cat: FC<IProps> = (props) => {
     case "events":
       return (
         <ul className={classes.catList}>
+          <li>0th Day</li>
           <li>Phantom Breach CTF</li>
           <li>Cybersecurity for AI Professionals</li>
           <li>Securing Generative AI: Risks & Strategies</li>
@@ -60,12 +61,13 @@ const Cat: FC<IProps> = (props) => {
     case "teams":
       return (
         <ul className={classes.catList}>
-          <li>Tech Team (Cyber Security)</li>
-          <li>Tech Team (Web Development)</li>
-          <li>Graphics Team</li>
+          <li>Cybersecurity Team</li>
+          <li>DevOps Team</li>
+          <li>Web Development Team</li>
+          <li>Design Team</li>
+          <li>Social Media & Content Team</li>
           <li>Event Management Team</li>
-          <li>PR & Social Media Team</li>
-          <li>Outreach Team</li>
+          <li>PR and Outreach Team</li>
         </ul>
       );
     case "faq":

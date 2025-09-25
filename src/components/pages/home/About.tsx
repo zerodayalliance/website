@@ -16,7 +16,8 @@ const About = () => {
         </Suspense>
         <div className="pt-10 pl-0 lg:pt-0 lg:pl-10 z-50">
           <h2 className="font-iceberg text-4xl md:text-5xl mb-2 dark:text-white text-onhold">
-            Discover<span className="text-hero"> Who </span>we are
+            Discover
+            <span className="text-quaternary dark:text-hero"> Who </span>we are
           </h2>
           <h2 className="font-encodesans text-xl sm:text-2xl  dark:text-gray-200 text-gray-800">
             We, the official cybersecurity club of Sister Nivedita University,
@@ -30,7 +31,8 @@ const About = () => {
 
       <div className="my-5 z-50">
         <h2 className="font-iceberg text-4xl md:text-5xl mb-2 dark:text-white text-onhold">
-          Discover<span className="text-hero"> What </span>we do
+          Discover<span className="text-quaternary dark:text-hero"> What </span>
+          we do
         </h2>
         <h2 className="font-encodesans text-xl sm:text-2xl dark:text-gray-200 text-gray-800">
           Through workshops, CTF competitions and expert talks, we equip our

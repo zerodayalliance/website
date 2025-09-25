@@ -12,7 +12,6 @@ export default function contact() {
       <div className="flex justify-center">
         <Contacttext />
       </div>
-
       <Contactcard />
       <div className="mt-[-10rem] mb-[-8rem]">
         <ContactEvector />

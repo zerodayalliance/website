@@ -41,8 +41,10 @@ export interface IMember {
   linkedin: string | null;
   github: string | null;
   twitter: string | null;
+  threads: string | null;
   instagram: string | null;
   facebook: string | null;
+  website: string | null;
   email: string | null;
   pfp: {
     title: string;

@@ -10,9 +10,9 @@ export default function UpcomingEvents(props: { data: IEvent[] }) {
         <span className="text-gray-800 dark:text-gray-200">Upcoming</span>{" "}
         <span className="text-hero">Events</span>
       </h2>
-      <p className="font-encode-sans text-center my-4 text-gray-800 dark:text-gray-200">
+      {/* <p className="font-encode-sans text-center my-4 text-gray-800 dark:text-gray-200">
         Our Upcoming Events
-      </p>
+      </p> */}
       <div className="flex justify-center items-center flex-row mb-10">
         {data.length !== 0 ? (
           data.map((event, index) => {
@@ -34,7 +34,7 @@ export default function UpcomingEvents(props: { data: IEvent[] }) {
             );
           })
         ) : (
-          <p className="font-gidugu text-4xl text-center my-4 text-gray-800 dark:text-gray-200">
+          <p className="font-gidugu text-4xl text-center my-4 text-gray-500 dark:text-onhold">
             No upcoming events
           </p>
         )}

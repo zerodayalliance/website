@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 
 export const GetTeams = gql`
   query TenuresCollection {
-    tenuresCollection(limit: 10) {
+    tenuresCollection(limit: 15) {
       total
       skip
       limit
@@ -11,7 +11,7 @@ export const GetTeams = gql`
         id
         name
         slug
-        teamsCollection(limit: 10) {
+        teamsCollection(limit: 15) {
           total
           skip
           limit
@@ -33,8 +33,10 @@ export const GetTeams = gql`
                   linkedin
                   github
                   twitter
+                  threads
                   instagram
                   facebook
+                  website
                   email
                   pfp {
                     title
@@ -65,8 +67,10 @@ export const GetTeams = gql`
                   linkedin
                   github
                   twitter
+                  threads
                   instagram
                   facebook
+                  website
                   email
                   pfp {
                     title
