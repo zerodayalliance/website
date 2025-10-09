@@ -32,32 +32,34 @@ const iceberg = Iceberg({
 });
 
 export const metadata: Metadata = {
-  title: "ZeroDay Alliance - Best Cybersecurity Club in Kolkata | Sister Nivedita University",
-  description: "ZeroDay Alliance is the official Cybersecurity Club of Sister Nivedita University, Kolkata. Join us for ethical hacking workshops, Capture the Flag (CTF) competitions, and hands-on cybersecurity training - the best student cybersecurity club in Kolkata.",
+  title: "ZeroDay Alliance",
+  description:
+    "ZeroDay Alliance is the official Cybersecurity Club of Sister Nivedita University, Kolkata. Join us for ethical hacking workshops, Capture the Flag (CTF) competitions, and hands-on cybersecurity training - the best student cybersecurity club in Kolkata.",
   keywords: [
+    "ZeroDay Alliance",
     "Cybersecurity Club Kolkata",
     "Best Cybersecurity Club in Kolkata",
     "Student Cybersecurity Club Kolkata",
     "Sister Nivedita University Cybersecurity Club",
-    "ZeroDay Alliance",
     "Ethical Hacking Club Kolkata",
     "Cybersecurity Workshops Kolkata",
-    "Capture the Flag Kolkata",
+    "Capture The Flag Kolkata",
+    "CTF Competitions Kolkata",
     "Cybersecurity Events Kolkata",
     "Ethical Hacking Workshop for Students Kolkata",
     "Cybersecurity Hackathon Kolkata",
-    "SNU Cybersecurity Club"
+    "SNU Cybersecurity Club",
   ],
   robots: "index, follow",
-  authors: [
-    { name: "ZeroDay Alliance" },
-    { name: "Sister Nivedita University" }
-  ],
+  creator: "ZeroDay Alliance",
+  authors: [{ name: "ZeroDay Alliance", url: "https://zerodayalliance.tech" }],
+
   openGraph: {
     type: "website",
-    url: "https://zerodayalliance.tech/",
-    title: "ZeroDay Alliance - Best Cybersecurity Club in Kolkata | SNU",
-    description: "Join ZeroDay Alliance - the official Cybersecurity Club of Sister Nivedita University, Kolkata. Hands-on ethical hacking workshops, CTF competitions & cybersecurity events.",
+    url: "https://zerodayalliance.tech",
+    title: "ZeroDay Alliance",
+    description:
+      "Join ZeroDay Alliance, the official Cybersecurity Club of Sister Nivedita University, Kolkata for Hands-on ethical hacking workshops, CTF competitions & cybersecurity events.",
     images: [
       {
         url: "https://zerodayalliance.tech/banner.png",
@@ -67,23 +69,26 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "ZeroDay Alliance - Best Cybersecurity Club in Kolkata | SNU",
-    description: "SNU's official Cybersecurity Club. Workshops, Hackathons, CTFs & Ethical Hacking training in Kolkata.",
+    title: "ZeroDay Alliance",
+    description:
+      "Join ZeroDay Alliance, the official Cybersecurity Club of Sister Nivedita University, Kolkata for Hands-on ethical hacking workshops, CTF competitions & cybersecurity events.",
     images: ["https://zerodayalliance.tech/banner.png"],
+    creator: "@zerodayalliance",
   },
 
-  // please follow these hierarchy to update the themed logo during festive seasons -Agnik 
+  // please follow these hierarchy to update the themed logo during festive seasons -Agnik
   icons: {
-    icon: "/images.favicon/favicon.ico",   
+    icon: "/images.favicon/favicon.ico",
     shortcut: "/images.favicon/favicon.ico",
     apple: "/images.favicon/favicon.ico",
   },
 
   other: {
-    canonical: "https://zerodayalliance.tech/",
-    copyright: "ZeroDay Alliance, Sister Nivedita University",
+    canonical: "https://zerodayalliance.tech",
+    copyright: "ZeroDay Alliance",
     rating: "General",
     "http-equiv": "X-UA-Compatible",
   },
