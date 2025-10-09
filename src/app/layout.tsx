@@ -76,9 +76,9 @@ export const metadata: Metadata = {
 
   // please follow these hierarchy to update the themed logo during festive seasons -Agnik 
   icons: {
-    icon: "/images.favicon/durga_puja_logo.ico",   
-    shortcut: "/images.favicon/durga_puja_logo.ico",
-    apple: "/images.favicon/durga_puja_logo.ico",
+    icon: "/images.favicon/favicon.ico",   
+    shortcut: "/images.favicon/favicon.ico",
+    apple: "/images.favicon/favicon.ico",
   },
 
   other: {
