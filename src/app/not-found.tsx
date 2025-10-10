@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-
+//CHANGES
 export default function Custom404() {
   return (
     <div className="min-h-screen relative overflow-hidden figma-gradient">

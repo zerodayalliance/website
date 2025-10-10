@@ -37,7 +37,7 @@ body {
 .card-shadow {
   box-shadow: 0px 2.5px 25px var(--primary);
 }
-
+//CHANGES
 .figma-gradient {
   background: radial-gradient(
     50% 50% at 50% 50%,
