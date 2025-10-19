@@ -81,9 +81,9 @@ export const metadata: Metadata = {
 
   // please follow these hierarchy to update the themed logo during festive seasons -Agnik
   icons: {
-    icon: "/images.favicon/favicon.ico",
-    shortcut: "/images.favicon/favicon.ico",
-    apple: "/images.favicon/favicon.ico",
+    icon: "/images.favicon/diwali.ico",
+    shortcut: "/images.favicon/diwali.ico",
+    apple: "/images.favicon/diwali.ico",
   },
 
   other: {
