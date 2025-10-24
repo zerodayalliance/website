@@ -49,16 +49,7 @@ export default function Custom404() {
 
       <div className="relative z-20 flex flex-col min-h-screen">
         <header>
-          <div
-            className="hidden lg:block absolute"
-            style={{
-              top: "80px",
-              left: "120px",
-              width: "150px",
-              height: "58px",
-              opacity: 1,
-            }}
-          >
+          <div className="hidden lg:block absolute top-20 left-16 xl:left-20 w-[150px] h-[58px]">
             <Image
               src="/assets/svg/zeroday-logo.png"
               alt="ZeroDay Alliance Logo"
