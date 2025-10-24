@@ -50,7 +50,7 @@ export default function Custom404() {
       <div className="relative z-20 flex flex-col min-h-screen">
         <header>
           <div
-            className="hidden md:block absolute"
+            className="hidden lg:block absolute"
             style={{
               top: "80px",
               left: "120px",
@@ -68,7 +68,7 @@ export default function Custom404() {
             />
           </div>
 
-          <div className="md:hidden absolute top-8 left-1/2 transform -translate-x-1/2 w-32 h-12 opacity-100">
+          <div className="lg:hidden absolute top-8 left-1/2 transform -translate-x-1/2 w-32 h-12 opacity-100">
             <Image
               src="/assets/svg/zeroday-logo.png"
               alt="ZeroDay Alliance Logo"
