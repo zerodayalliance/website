@@ -6,14 +6,11 @@ export default function UpcomingEvents(props: { data: IEvent[] }) {
 
   return (
     <>
-      <h2 className="font-iceberg text-5xl text-center mt-3">
+      <h2 className="font-iceberg text-5xl text-center mt-3 mb-5">
         <span className="text-gray-800 dark:text-gray-200">Upcoming</span>{" "}
         <span className="text-hero">Events</span>
       </h2>
-      {/* <p className="font-encode-sans text-center my-4 text-gray-800 dark:text-gray-200">
-        Our Upcoming Events
-      </p> */}
-      <div className="flex justify-center items-center flex-row mb-10">
+      <div className="flex justify-center items-center flex-row mb-16">
         {data.length !== 0 ? (
           data.map((event, index) => {
             return (
