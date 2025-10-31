@@ -1,5 +1,7 @@
 "use client";
 import {
+  IconArrowNarrowLeft,
+  IconArrowNarrowRight,
   IconBrandLinkedin,
   IconBrandGithub,
   IconBrandX,
@@ -13,7 +15,7 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import Slider from "react-slick";
+import Slider, { type Settings, type CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ITeam, IMember } from "@/types/teams";
@@ -22,19 +24,45 @@ interface ExpandableCardProps {
   team: ITeam;
 }
 
+const CustomPrevArrow = ({ onClick }: CustomArrowProps) => {
+  return (
+    <button
+      onClick={onClick}
+      className="absolute left-[-40px] top-1/2 -translate-y-1/2 z-10 bg-neutral-500 dark:bg-neutral-700 hover:bg-hero text-gray-200 rounded-full p-1 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+      aria-label="Previous slide"
+    >
+      <IconArrowNarrowLeft size={20} />
+    </button>
+  );
+};
+
+const CustomNextArrow = ({ onClick }: CustomArrowProps) => {
+  return (
+    <button
+      onClick={onClick}
+      className="absolute right-[-40px] top-1/2 -translate-y-1/2 z-10 bg-neutral-500 dark:bg-neutral-700 hover:bg-hero text-gray-200 rounded-full p-1 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+      aria-label="Next slide"
+    >
+      <IconArrowNarrowRight size={20} />
+    </button>
+  );
+};
+
 export default function ExpandableCard({ team }: ExpandableCardProps) {
   const [active, setActive] = useState<IMember | boolean | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
-  const settings = {
+  const settings: Settings = {
     dots: true,
     arrows: true,
     infinite: false,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     initialSlide: 0,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
     // autoplay: true,
     // speed: 2000,
     // autoplaySpeed: 1000,
@@ -63,22 +91,36 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
         breakpoint: 1280,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
+          slidesToScroll: 4,
+          prevArrow: <CustomPrevArrow />,
+          nextArrow: <CustomNextArrow />,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          prevArrow: <CustomPrevArrow />,
+          nextArrow: <CustomNextArrow />,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
+          slidesToScroll: 2,
+          prevArrow: <CustomPrevArrow />,
+          nextArrow: <CustomNextArrow />,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          prevArrow: <CustomPrevArrow />,
+          nextArrow: <CustomNextArrow />,
         },
       },
     ],

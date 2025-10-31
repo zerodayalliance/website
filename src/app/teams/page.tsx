@@ -23,7 +23,7 @@ export default async function Teams() {
 
   return (
     <>
-      <StartHelix className="absolute top-0 right-0 z-0 max-w-full" />
+      <StartHelix className="absolute top-0 right-0 z-0 opacity-70 max-w-full" />
       <div className="relative z-10 full-width">
         <div className="mt-10">
           <Info />
@@ -55,7 +55,7 @@ export default async function Teams() {
           ))}
         </Tabs>
       </div>
-      <EndHelix className="float-left -mt-[24rem] opacity-60 max-w-full" />
+      <EndHelix className="float-left -mt-[24rem] opacity-50 max-w-full" />
     </>
   );
 }
