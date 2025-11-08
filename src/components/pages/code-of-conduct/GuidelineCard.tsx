@@ -14,7 +14,7 @@ const GuidelineCard: React.FC<CardProps> = ({ title, description, svg }) => {
                  text-black bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-md 
                  border border-white/30 rounded-lg p-6 sm:p-8 pt-16 flex flex-col items-center 
                  text-center transition-all duration-300 hover:transform hover:-translate-y-2 
-                 hover:bg-opacity-25"
+                 hover:bg-opacity-25 z-10"
     >
       <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 z-10">
         {svg}
