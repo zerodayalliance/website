@@ -46,6 +46,8 @@ const Cat: FC<IProps> = (props) => {
     case "events":
       return (
         <ul className={classes.catList}>
+          <li>Orientation Protocol Initiated</li>
+          <li>Virtual Lab Setup: A Practical Guide</li>
           <li>0th Day</li>
           <li>Phantom Breach CTF</li>
           <li>Cybersecurity for AI Professionals</li>

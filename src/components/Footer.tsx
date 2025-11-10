@@ -60,8 +60,8 @@ export default function Footer() {
               <Link href="/gallery" className="hover:underline">
                 Gallery
               </Link>
-              <Link href="/blog" className="hover:underline">
-                Blog
+              <Link href="/quiz" className="hover:underline">
+                Quiz
               </Link>
             </div>
           </div>
