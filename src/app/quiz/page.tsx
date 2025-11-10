@@ -2,7 +2,7 @@ export default function page() {
   return (
     <>
       <iframe
-        src="https://app.sli.do/event/icEi3YmP3K3jmVqefsweat"
+        src="https://app.sli.do/event/pFuA5qSYainKGYmUhQvSYE"
         height="100%"
         width="100%"
         frameBorder="0"
