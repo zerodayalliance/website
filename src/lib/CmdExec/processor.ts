@@ -5,7 +5,7 @@ import {
   Ls,
   Sudo,
   Whoami,
-} from "@/components/pages/cli/Commands";
+} from "@/app/cli/_components/Commands";
 
 const process = (command: string, args: string[]) => {
   switch (command) {
