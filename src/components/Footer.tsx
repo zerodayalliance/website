@@ -57,8 +57,8 @@ export default function Footer() {
               <Link href="/code-of-conduct" className="hover:underline">
                 Code of Conduct
               </Link>
-              <Link href="/gallery" className="hover:underline">
-                Gallery
+              <Link href="/rules" className="hover:underline">
+                Rules & Regulations
               </Link>
               <Link href="/quiz" className="hover:underline">
                 Quiz

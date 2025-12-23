@@ -1,10 +1,10 @@
 import NavBar from "@/components/NavBar";
-import Hero from "@/components/pages/home/Hero";
-import About from "@/components/pages/home/About";
-import Logo from "@/components/Logo";
-// import FestiveLogo from "@/components/FestiveLogo";
-import TopLines from "@/components/pages/home/TopLines";
-import BottomLines from "@/components/pages/home/BottomLines";
+import TopLines from "./_components/TopLines";
+import Hero from "./_components/Hero";
+import About from "./_components/About";
+import Logo from "./_components/Logo";
+// import FestiveLogo from "./_components/FestiveLogo";
+import BottomLines from "./_components/BottomLines";
 import Footer from "@/components/Footer";
 
 export default function Home() {

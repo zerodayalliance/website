@@ -1,7 +1,7 @@
 import React from "react";
-import TopLines from "@/components/pages/home/TopLines";
-import BottomLines from "@/components/pages/home/BottomLines";
-import Guidelines from "@/components/pages/code-of-conduct/Guidelines";
+import TopLines from "./_components/TopLines";
+import Guidelines from "./_components/Guidelines";
+import BottomLines from "./_components/BottomLines";
 
 const page = () => {
   return (

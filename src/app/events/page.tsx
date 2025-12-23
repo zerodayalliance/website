@@ -1,9 +1,9 @@
 import { gql } from "graphql-request";
 import { graphqlClient } from "@/lib/graphql/client";
 import NavBar from "@/components/NavBar";
-import TopLines from "@/components/pages/home/TopLines";
-import UpcomingEvents from "@/components/pages/events/UpcomingEvents";
-import PastEvents from "@/components/pages/events/PastEvents";
+import TopLines from "./_components/TopLines";
+import UpcomingEvents from "./_components/UpcomingEvents";
+import PastEvents from "./_components/PastEvents";
 import Footer from "@/components/Footer";
 import { IEvent, IGetEventsQuery } from "@/types";
 
@@ -95,7 +95,7 @@ export default async function Events() {
   return (
     <>
       <NavBar />
-      <TopLines className="absolute top-0 left-0 -ml-72 -mt-5 sm:-ml-28 sm:-mt-14 md:-ml-16 md:-mt-14 opacity-60 -z-10" />
+      <TopLines className="absolute top-0 left-0 -ml-72 -mt-5 sm:-ml-28 sm:-mt-14 md:-ml-16 md:-mt-14 opacity-60 z-10" />
       <h1 className="font-encode-sans font-semibold text-2xl text-center mt-28 text-hero">
         Events
       </h1>

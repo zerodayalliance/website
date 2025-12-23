@@ -1,7 +1,7 @@
 "use client";
 
-import Terminal from "@/components/pages/cli/Terminal";
-import WelcomeMsg from "@/components/pages/cli/WelcomeMsg";
+import Terminal from "./_components/Terminal";
+import WelcomeMsg from "./_components/WelcomeMsg";
 
 import "./cli.modules.css";
 
