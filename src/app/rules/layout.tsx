@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gallery | ZeroDay Alliance",
+  title: "Rules & Regulations | ZeroDay Alliance",
 };
 
 export default function RootLayout({
