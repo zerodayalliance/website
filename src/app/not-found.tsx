@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import pageNotFoundImg from "@/assets/svg/not-found/page-not-found.svg";
+import bannerWhite from "@/assets/img/banner-white.png";
 //changes2
 export default function Custom404() {
   return (
@@ -51,7 +53,7 @@ export default function Custom404() {
         <header>
           <div className="hidden lg:block absolute top-20 left-16 xl:left-20 w-[150px] h-[58px]">
             <Image
-              src="/assets/svg/zeroday-logo.png"
+              src={bannerWhite}
               alt="ZeroDay Alliance Logo"
               width={150}
               height={58}
@@ -61,7 +63,7 @@ export default function Custom404() {
 
           <div className="lg:hidden absolute top-8 left-1/2 transform -translate-x-1/2 w-32 h-12 opacity-100">
             <Image
-              src="/assets/svg/zeroday-logo.png"
+              src={bannerWhite}
               alt="ZeroDay Alliance Logo"
               width={128}
               height={48}
@@ -100,7 +102,7 @@ export default function Custom404() {
 
               <div className="flex items-center justify-center py-4">
                 <Image
-                  src="/assets/svg/page-not-found.svg"
+                  src={pageNotFoundImg}
                   alt="Page Not Found"
                   width={280}
                   height={360}
@@ -130,7 +132,7 @@ export default function Custom404() {
             <div className="flex flex-col items-center gap-4">
               <div className="flex justify-center">
                 <Image
-                  src="/assets/svg/page-not-found.svg"
+                  src={pageNotFoundImg}
                   alt="Page Not Found"
                   width={400}
                   height={520}

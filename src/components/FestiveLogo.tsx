@@ -6,7 +6,7 @@ function FestiveLogo() {
   return (
     <div>
       <Image
-        src="/diwali.png"
+        src="/logo/diwali.png"
         alt="Festive Logo"
         width={1500}
         height={1500}
