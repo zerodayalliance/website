@@ -1,9 +1,9 @@
 import { gql } from "graphql-request";
 import { graphqlClient } from "@/lib/graphql/client";
 import NavBar from "@/components/NavBar";
-import TopLines from "@/components/pages/home/TopLines";
-import UpcomingEvents from "@/components/pages/events/UpcomingEvents";
-import PastEvents from "@/components/pages/events/PastEvents";
+import TopLines from "./_components/TopLines";
+import UpcomingEvents from "./_components/UpcomingEvents";
+import PastEvents from "./_components/PastEvents";
 import Footer from "@/components/Footer";
 import { IEvent, IGetEventsQuery } from "@/types";
 
