@@ -1,8 +1,8 @@
 import { graphqlClient } from "@/lib/graphql/client";
-import StartHelix from "@/components/pages/teams/StartHelix";
-import Info from "@/components/pages/teams/Info";
-import EndHelix from "@/components/pages/teams/EndHelix";
-import ExpandableCard from "@/components/pages/teams/ExpandableCard";
+import StartHelix from "./_components/StartHelix";
+import Info from "./_components/Info";
+import EndHelix from "./_components/EndHelix";
+import ExpandableCard from "./_components/ExpandableCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ITenuresCollectionQuery } from "@/types/teams";
 import { GetTeams } from "./gql";
