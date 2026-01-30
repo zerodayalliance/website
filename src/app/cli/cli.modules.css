@@ -1,5 +1,6 @@
-:root {
+body:has(#cli-container) {
   background-color: rgb(35, 35, 35);
+  overflow: hidden;
 }
 
 #cli-container {

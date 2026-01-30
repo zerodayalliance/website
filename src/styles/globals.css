@@ -52,3 +52,25 @@ body {
   ) !important;
   background-color: #0f0808 !important;
 }
+
+.custom-dots {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.custom-dots li {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-dots li.slick-active .custom-dot {
+  background-color: #752626 !important;
+}
+
+.custom-dots li:hover .custom-dot {
+  background-color: #752626 !important;
+}

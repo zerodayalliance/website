@@ -50,7 +50,6 @@ const CustomNextArrow = ({ onClick }: CustomArrowProps) => {
 
 export default function ExpandableCard({ team }: ExpandableCardProps) {
   const [active, setActive] = useState<IMember | boolean | null>(null);
-  const [activeSlide, setActiveSlide] = useState(0);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -67,23 +66,18 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
     // speed: 2000,
     // autoplaySpeed: 1000,
     // cssEase: "linear",
-    beforeChange: (current: number, next: number) => setActiveSlide(next),
-    customPaging: (i: number) => (
+    dotsClass: "slick-dots custom-dots",
+    customPaging: () => (
       <div
+        className="custom-dot"
         style={{
           margin: "10px 5px",
           width: "10px",
           height: "10px",
           borderRadius: "50%",
-          backgroundColor: i === activeSlide ? "#752626" : "#656565", // Active state
+          backgroundColor: "#656565",
+          transition: "background-color 0.2s",
         }}
-        onMouseEnter={(e) =>
-          (e.currentTarget.style.backgroundColor = "#752626")
-        }
-        onMouseLeave={(e) =>
-          (e.currentTarget.style.backgroundColor =
-            i === activeSlide ? "#752626" : "#656565")
-        }
       ></div>
     ),
     responsive: [

@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import {
   IconBrandLinkedin,
@@ -81,13 +80,13 @@ export default function Footer() {
         </div>
 
         <div className="mb-2 text-center text-sm text-black dark:text-onhold">
-          <p className="mb-1">
+          {/* <p className="mb-1">
             <span>🛠️ Developed by Web Dev Team (2024-25)</span>
             <br className="sm:hidden block" />
             <span className="hidden sm:inline">&nbsp;⦁&nbsp;</span>
             <span>🎨 Designed by Graphics Team (2024-25)</span>
-          </p>
-          <p className="mt-1">
+          </p> */}
+          <p className="mb-4">
             &copy; 2024-{new Date().getFullYear()} ZeroDay Alliance. All rights
             reserved.
           </p>
