@@ -1,11 +1,13 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import groupPhoto from "@/assets/img/group.jpg";
-import Link from "next/link";
 
 const About = () => {
   return (
-    <div id="#about" className="flex justify-center items-center flex-col">
+    <div id="about" className="flex justify-center items-center flex-col">
+      <h1 className="font-gidugu text-6xl text-hero text-center">About Us</h1>
+
       <div className="flex justify-center items-center flex-col lg:flex-row my-5">
         <Suspense fallback={<p>Loading...</p>}>
           <Image
