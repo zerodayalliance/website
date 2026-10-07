@@ -1,4 +1,4 @@
 # website
 
 The Website Of ZeroDay Alliance  
-Visit: [zerodayalliance.tech](https://zerodayalliance.tech)
+Visit: [zerodayalliance.com](https://zerodayalliance.com)
