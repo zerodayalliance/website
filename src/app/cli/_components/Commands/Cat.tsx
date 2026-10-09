@@ -81,11 +81,11 @@ const Cat: FC<IProps> = (props) => {
             <span>Website: </span>
             <span>
               <a
-                href="https://zerodayalliance.tech"
+                href="https://zerodayalliance.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                zerodayalliance.tech
+                zerodayalliance.com
               </a>
             </span>
           </li>
@@ -153,11 +153,11 @@ const Cat: FC<IProps> = (props) => {
             <span>Email: </span>
             <span>
               <a
-                href="mailto:hello@zerodayalliance.tech"
+                href="mailto:hello@zerodayalliance.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                hello@zerodayalliance.tech
+                hello@zerodayalliance.com
               </a>
             </span>
           </li>

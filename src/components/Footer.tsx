@@ -42,7 +42,7 @@ export default function Footer() {
               >
                 <IconBrandYoutube size={26} stroke={1.5} />
               </Link>
-              <Link href="mailto:hello@zerodayalliance.tech" target="_blank">
+              <Link href="mailto:hello@zerodayalliance.com" target="_blank">
                 <IconMail size={26} stroke={1.5} />
               </Link>
             </div>

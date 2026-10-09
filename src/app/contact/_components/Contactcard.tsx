@@ -38,7 +38,7 @@ export const projects = [
   },
   {
     title: "Email",
-    description: "hello@zerodayalliance.tech",
-    link: "mailto:hello@zerodayalliance.tech",
+    description: "hello@zerodayalliance.com",
+    link: "mailto:hello@zerodayalliance.com",
   },
 ];

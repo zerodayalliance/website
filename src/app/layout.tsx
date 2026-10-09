@@ -54,17 +54,17 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   creator: "ZeroDay Alliance",
-  authors: [{ name: "ZeroDay Alliance", url: "https://zerodayalliance.tech" }],
+  authors: [{ name: "ZeroDay Alliance", url: "https://zerodayalliance.com" }],
 
   openGraph: {
     type: "website",
-    url: "https://zerodayalliance.tech",
+    url: "https://zerodayalliance.com",
     title: "ZeroDay Alliance",
     description:
       "Join ZeroDay Alliance, the official Cybersecurity Club of Sister Nivedita University, Kolkata for Hands-on ethical hacking workshops, CTF competitions & cybersecurity events.",
     images: [
       {
-        url: "https://zerodayalliance.tech/banner.png",
+        url: "https://zerodayalliance.com/banner.png",
         width: 1200,
         height: 630,
         alt: "ZeroDay Alliance",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     title: "ZeroDay Alliance",
     description:
       "Join ZeroDay Alliance, the official Cybersecurity Club of Sister Nivedita University, Kolkata for Hands-on ethical hacking workshops, CTF competitions & cybersecurity events.",
-    images: ["https://zerodayalliance.tech/banner.png"],
+    images: ["https://zerodayalliance.com/banner.png"],
     creator: "@zerodayalliance",
   },
 
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   },
 
   other: {
-    canonical: "https://zerodayalliance.tech",
+    canonical: "https://zerodayalliance.com",
     copyright: "ZeroDay Alliance",
     rating: "General",
     "http-equiv": "X-UA-Compatible",
