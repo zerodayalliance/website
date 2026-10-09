@@ -43,8 +43,7 @@ declare global {
   }
 }
 
-export const runtime = "edge";
-export const revalidate = 300;
+export const revalidate = 1800; // 30 Minutes
 
 export default async function Events() {
   const res: IGetEventsQuery = await graphqlClient.request(GetEvents);

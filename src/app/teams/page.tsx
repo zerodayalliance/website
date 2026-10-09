@@ -7,8 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ITenuresCollectionQuery } from "@/types/teams";
 import { GetTeams } from "./gql";
 
-export const runtime = "edge";
-export const revalidate = 300;
+export const revalidate = 1800; // 30 Minutes
 
 export default async function Teams() {
   const data: ITenuresCollectionQuery = await graphqlClient.request(GetTeams);
