@@ -77,12 +77,26 @@ const Logo = ({
   const { logo, glow } = currentTheme;
   const scale = scaleOverride ?? logo.scale ?? 1;
 
+  const contentStyle: React.CSSProperties =
+    scale !== 1
+      ? {
+          width: `${scale * 100}%`,
+          height: `${scale * 100}%`,
+          position: "absolute",
+          top: `${(1 - scale) * 50}%`,
+          left: `${(1 - scale) * 50}%`,
+        }
+      : {
+          width: "100%",
+          height: "100%",
+        };
+
   return (
     <div className={`relative ${className}`} {...props}>
       {showGlow && (
         <div
           className="absolute inset-0 blur-3xl scale-150 pointer-events-none"
-          style={{ opacity: glow.opacity ?? 0.75 }}
+          style={{ opacity: glow.opacity ?? 0.6 }}
         >
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-2/3 rounded-full"
@@ -107,16 +121,13 @@ const Logo = ({
         </div>
       )}
 
-      {logo.type === "svg" ? (
-        <DefaultSvgLogo
-          className="relative z-10 w-full h-full transition-transform duration-300"
-          style={{ transform: `scale(${scale})` }}
-        />
-      ) : (
-        <div
-          className="relative z-10 w-full h-full flex items-center justify-center transition-transform duration-300"
-          style={{ transform: `scale(${scale})` }}
-        >
+      <div
+        className="relative z-10 flex items-center justify-center pointer-events-none"
+        style={contentStyle}
+      >
+        {logo.type === "svg" ? (
+          <DefaultSvgLogo className="w-full h-full" />
+        ) : (
           <Image
             src={logo.src}
             alt={logo.alt}
@@ -125,8 +136,8 @@ const Logo = ({
             priority={priority}
             className="w-full h-full object-contain"
           />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

@@ -57,7 +57,7 @@ export const THEMES: Record<ThemeKey, ThemeConfig> = {
       type: "image",
       src: "/logo/durga_puja.png",
       alt: "ZeroDay Alliance Durga Puja Logo",
-      scale: 1.38,
+      scale: 1.5,
     },
     glow: {
       topColor: "rgba(220, 38, 38, 0.65)", // soft sindoor red
