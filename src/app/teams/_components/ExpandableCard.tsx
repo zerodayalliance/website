@@ -24,11 +24,15 @@ interface ExpandableCardProps {
   team: ITeam;
 }
 
-const CustomPrevArrow = ({ onClick }: CustomArrowProps) => {
+const CustomPrevArrow = ({ onClick, className }: CustomArrowProps) => {
+  const isDisabled = className?.includes("slick-disabled");
   return (
     <button
       onClick={onClick}
-      className="absolute left-[-40px] top-1/2 -translate-y-1/2 z-10 bg-neutral-500 dark:bg-neutral-700 hover:bg-hero text-gray-200 rounded-full p-1 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+      disabled={isDisabled}
+      className={`absolute left-[-40px] top-1/2 -translate-y-1/2 z-10 bg-neutral-500 dark:bg-neutral-700 hover:bg-hero text-gray-200 rounded-full p-1 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${
+        isDisabled ? "opacity-50 cursor-not-allowed pointer-events-none" : ""
+      }`}
       aria-label="Previous slide"
     >
       <IconArrowNarrowLeft size={20} />
@@ -36,11 +40,15 @@ const CustomPrevArrow = ({ onClick }: CustomArrowProps) => {
   );
 };
 
-const CustomNextArrow = ({ onClick }: CustomArrowProps) => {
+const CustomNextArrow = ({ onClick, className }: CustomArrowProps) => {
+  const isDisabled = className?.includes("slick-disabled");
   return (
     <button
       onClick={onClick}
-      className="absolute right-[-40px] top-1/2 -translate-y-1/2 z-10 bg-neutral-500 dark:bg-neutral-700 hover:bg-hero text-gray-200 rounded-full p-1 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+      disabled={isDisabled}
+      className={`absolute right-[-40px] top-1/2 -translate-y-1/2 z-10 bg-neutral-500 dark:bg-neutral-700 hover:bg-hero text-gray-200 rounded-full p-1 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${
+        isDisabled ? "opacity-50 cursor-not-allowed pointer-events-none" : ""
+      }`}
       aria-label="Next slide"
     >
       <IconArrowNarrowRight size={20} />
@@ -52,20 +60,28 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
   const [active, setActive] = useState<IMember | boolean | null>(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
+  const isDraggingRef = useRef(false);
+
+  const memberCount = team.membersCollection.items.length;
 
   const settings: Settings = {
-    dots: true,
-    arrows: true,
-    infinite: false,
+    dots: memberCount > 1,
+    arrows: memberCount > 1,
+    infinite: memberCount > 4,
+    autoplaySpeed: 2000,
+    speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     initialSlide: 0,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
-    // autoplay: true,
-    // speed: 2000,
-    // autoplaySpeed: 1000,
-    // cssEase: "linear",
+    autoplay: true,
+    beforeChange: () => {
+      isDraggingRef.current = true;
+    },
+    afterChange: () => {
+      isDraggingRef.current = false;
+    },
     dotsClass: "slick-dots custom-dots",
     customPaging: () => (
       <div
@@ -85,27 +101,24 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
         breakpoint: 1280,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 4,
-          prevArrow: <CustomPrevArrow />,
-          nextArrow: <CustomNextArrow />,
+          slidesToScroll: 1,
+          infinite: memberCount > 4,
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          prevArrow: <CustomPrevArrow />,
-          nextArrow: <CustomNextArrow />,
+          slidesToScroll: 1,
+          infinite: memberCount > 3,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          prevArrow: <CustomPrevArrow />,
-          nextArrow: <CustomNextArrow />,
+          slidesToScroll: 1,
+          infinite: memberCount > 2,
         },
       },
       {
@@ -113,8 +126,7 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          prevArrow: <CustomPrevArrow />,
-          nextArrow: <CustomNextArrow />,
+          infinite: memberCount > 1,
         },
       },
     ],
@@ -157,7 +169,6 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
           <div className="fixed inset-0  grid place-items-center z-[100]">
             <motion.button
               key={`button-${active.name}-${id}`}
-              layout
               initial={{
                 opacity: 0,
               }}
@@ -176,14 +187,14 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
               <CloseIcon />
             </motion.button>
             <motion.div
-              layoutId={`card-${active.name}-${id}`}
               ref={ref}
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              transition={{ duration: 0.2 }}
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden card-shadow"
             >
-              <motion.div
-                layoutId={`image-${active.name}-${id}`}
-                className="relative"
-              >
+              <div className="relative">
                 <Image
                   priority
                   width={200}
@@ -193,140 +204,104 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top [mask:linear-gradient(to_bottom,white,white,transparent)]"
                 />
                 <div className="absolute bottom-0 left-0 pl-4">
-                  <motion.h3
-                    layoutId={`title-${active.name}-${id}`}
-                    className="font-medium text-quaternary text-4xl font-iceberg"
-                  >
+                  <h3 className="font-medium text-quaternary text-4xl font-iceberg">
                     {active.name}
-                  </motion.h3>
+                  </h3>
                 </div>
-              </motion.div>
+              </div>
 
               <div>
                 <div className="flex justify-between items-start px-4 py-2">
-                  <motion.p
-                    layoutId={`description-${active.name}-${active.role}-${id}`}
-                    className="text-hero font-gidugu text-3xl"
-                  >
+                  <p className="text-hero font-gidugu text-3xl">
                     {active.role}
-                  </motion.p>
+                  </p>
                   <div className="flex">
                     {active.linkedin && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <a
                         href={active.linkedin}
                         target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                        rel="noopener noreferrer"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4 hover:opacity-80 transition-opacity"
                       >
                         <IconBrandLinkedin />
-                      </motion.a>
+                      </a>
                     )}
                     {active.github && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <a
                         href={active.github}
                         target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                        rel="noopener noreferrer"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4 hover:opacity-80 transition-opacity"
                       >
                         <IconBrandGithub />
-                      </motion.a>
+                      </a>
                     )}
                     {active.twitter && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <a
                         href={active.twitter}
                         target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                        rel="noopener noreferrer"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4 hover:opacity-80 transition-opacity"
                       >
                         <IconBrandX />
-                      </motion.a>
+                      </a>
                     )}
                     {active.threads && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <a
                         href={active.threads}
                         target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                        rel="noopener noreferrer"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4 hover:opacity-80 transition-opacity"
                       >
                         <IconBrandThreads />
-                      </motion.a>
+                      </a>
                     )}
                     {active.instagram && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <a
                         href={active.instagram}
                         target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                        rel="noopener noreferrer"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4 hover:opacity-80 transition-opacity"
                       >
                         <IconBrandInstagram />
-                      </motion.a>
+                      </a>
                     )}
                     {active.facebook && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <a
                         href={active.facebook}
                         target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                        rel="noopener noreferrer"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4 hover:opacity-80 transition-opacity"
                       >
                         <IconBrandFacebook />
-                      </motion.a>
+                      </a>
                     )}
                     {active.website && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <a
                         href={`${active.website}`}
                         target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                        rel="noopener noreferrer"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4 hover:opacity-80 transition-opacity"
                       >
                         <IconWorld />
-                      </motion.a>
+                      </a>
                     )}
                     {active.email && (
-                      <motion.a
-                        layout
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <a
                         href={`mailto:${active.email}`}
                         target="_blank"
-                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4"
+                        rel="noopener noreferrer"
+                        className="px-2 py-2 text-sm rounded-full font-bold bg-onhold text-primary ml-4 hover:opacity-80 transition-opacity"
                       >
                         <IconMail />
-                      </motion.a>
+                      </a>
                     )}
                   </div>
                 </div>
                 <div className="pt-2 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-8 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
-                  >
+                  <div className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-8 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]">
                     {active && typeof active === "object" && active.bio}
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -336,38 +311,34 @@ export default function ExpandableCard({ team }: ExpandableCardProps) {
       <ul className="max-w-60 sm:max-w-md md:max-w-md lg:max-w-4xl mx-auto w-full">
         <Slider {...settings}>
           {team.membersCollection.items.map((card) => (
-            <motion.div
-              layoutId={`card-${card.name}-${id}`}
+            <div
               key={card.name}
-              onClick={() => setActive(card)}
-              className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+              onClick={() => {
+                if (isDraggingRef.current) return;
+                setActive(card);
+              }}
+              className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer transition-colors duration-200 outline-none select-none"
             >
               <div className="flex mb-4 gap-4 flex-col items-center w-full">
-                <motion.div layoutId={`image-${card.name}-${id}`}>
+                <div>
                   <Image
                     width={100}
                     height={100}
                     src={card.pfp.url}
                     alt={card.name}
-                    className="w-40 h-full rounded-lg object-cover object-top"
+                    className="w-40 h-full rounded-lg object-cover object-top pointer-events-none"
                   />
-                </motion.div>
+                </div>
                 <div className="flex justify-center items-center flex-col">
-                  <motion.h3
-                    layoutId={`title-${card.name}-${id}`}
-                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
-                  >
+                  <h3 className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base">
                     {card.name}
-                  </motion.h3>
-                  <motion.p
-                    layoutId={`description-${card.name}-${card.role}-${id}`}
-                    className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
-                  >
+                  </h3>
+                  <p className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base">
                     {card.role}
-                  </motion.p>
+                  </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </Slider>
       </ul>

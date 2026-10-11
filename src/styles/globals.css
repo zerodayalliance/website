@@ -54,11 +54,14 @@ body {
 }
 
 .custom-dots {
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0 !important;
   display: flex !important;
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 0;
   list-style: none;
 }
 

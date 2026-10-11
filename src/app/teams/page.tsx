@@ -44,7 +44,7 @@ export default async function Teams() {
             <TabsContent key={tenure.id} value={tenure.slug}>
               {tenure.teamsCollection.items.map((team) => (
                 <div key={team.id} className="mb-10">
-                  <h1 className="font-gidugu text-6xl text-hero text-center">
+                  <h1 className="font-gidugu text-6xl text-hero text-center mb-2">
                     {team.name}
                   </h1>
                   <ExpandableCard team={team} />
