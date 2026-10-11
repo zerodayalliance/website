@@ -2,7 +2,6 @@
 
 import { FlipWords } from "@/components/ui/flip-words";
 import Logo from "./Logo";
-// import FestiveLogo from "./FestiveLogo";
 
 const words = [
   "secure",
@@ -41,7 +40,6 @@ const Hero = () => {
       </div>
 
       <Logo className="p-3 flex-grow-0 flex-shrink-0 h-40 w-40 sm:h-48 sm:w-48 md:h-60 md:w-60 mb-6 md:mb-0" />
-      {/* <FestiveLogo /> */}
     </section>
   );
 };

@@ -1,5 +1,5 @@
-import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import {
   Encode_Sans,
@@ -7,6 +7,7 @@ import {
   Gidugu,
   Iceberg,
 } from "next/font/google";
+import { getThemeFavicons } from "@/config/branding";
 import "@/styles/globals.css";
 
 const encodeSans = Encode_Sans({
@@ -81,12 +82,7 @@ export const metadata: Metadata = {
     creator: "@zerodayalliance",
   },
 
-  // please follow these hierarchy to update the themed logo during festive seasons -Agnik
-  icons: {
-    icon: "/favicon/default.ico",
-    shortcut: "/favicon/default.ico",
-    apple: "/favicon/default.ico",
-  },
+  icons: getThemeFavicons(),
 
   other: {
     canonical: "https://zerodayalliance.com",
