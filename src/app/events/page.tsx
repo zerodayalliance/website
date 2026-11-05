@@ -43,7 +43,7 @@ declare global {
   }
 }
 
-export const revalidate = 1800; // 30 Minutes
+export const revalidate = 3600; // 1 Hour fallback (revalidated on-demand via webhook)
 
 export default async function Events() {
   const res: IGetEventsQuery = await graphqlClient.request(GetEvents);
